@@ -1,0 +1,1049 @@
+Script started on Thu Jul  9 16:16:09 2015
+command: make build
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/check_build_host.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/check_sandbox.sh
+NOTICE: You are building from the INTERNAL git repo.
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/build_jail.sh
+00:00:00 # NanoBSD image FreeNAS-9.3-MASTER-201507092316 build starting
+00:00:00 ## Construct build make.conf (/tmp/bld/freenas/objs/os-base/amd64/make.conf.build)
+00:00:00 ## building make
+00:00:00 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.make
+00:00:04 ## run buildworld
+00:00:04 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.bw
+
+
+00:17:38 ## build kernel (/tmp/bld/freenas/build/nanobsd-cfg/FREENAS.amd64)
+00:17:38 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.bk
+00:23:40 ## Construct install make.conf (/tmp/bld/freenas/objs/os-base/amd64/make.conf.install)
+00:23:40 ## installworld
+00:23:40 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.ij
+00:27:33 ## install /etc
+00:27:33 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.etc
+00:27:34 ## configure nanobsd /etc
+00:27:34 ## install kernel (/tmp/bld/freenas/build/nanobsd-cfg/FREENAS.amd64)
+00:27:34 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.ikj
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/create-poudriere-conf.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/create-poudriere-make.conf.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/prepare-jail.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/fetch-ports-srcs.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/create-ports-list.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/build-ports.sh
+[00:00:00] ====>> Creating the reference jail... done
+[00:00:04] ====>> Mounting system devices for ja-p
+[00:00:04] ====>> Mounting ports/packages/distfiles
+[00:00:04] ====>> Converting package repository to new format
+[00:00:04] ====>> Stashing existing package repository
+[00:00:04] ====>> Mounting packages from: /tmp/bld/freenas/objs/os-base/amd64/ports/packages/ja-p
+[00:00:04] ====>> Mounting /var/db/ports from: /tmp/bld/freenas/objs/os-base/amd64/poudriere/etc/poudriere.d/options
+[00:00:04] ====>> Appending to make.conf: /tmp/bld/freenas/objs/os-base/amd64/poudriere/etc/poudriere.d/make.conf
+/etc/resolv.conf -> /tmp/bld/freenas/objs/os-base/amd64/ports/.m/ja-p/ref/etc/resolv.conf
+[00:00:04] ====>> Starting jail ja-p
+[00:00:05] ====>> Logs: /tmp/bld/freenas/objs/os-base/amd64/ports/logs/bulk/ja-p/2015-07-09_16h43m55s
+[00:00:05] ====>> Loading MOVED
+[00:00:05] ====>> Calculating ports order and dependencies
+[00:01:11] ====>> pkg package missing, skipping sanity
+[00:01:11] ====>> Skipping incremental rebuild and repository sanity checks
+[00:01:11] ====>> Cleaning the build queue
+[00:01:23] ====>> Recording filesystem state for prepkg... done
+[00:01:32] ====>> Building 328 packages using 4 builders
+[00:01:32] ====>> Starting/Cloning builders
+[00:05:20] ====>> Hit CTRL+t at any time to see build progress and stats
+[00:05:20] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mports-mgmt/pkg[0;0m[0;0m
+[00:06:26] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:06] [0;32mFinished build of [0;36mports-mgmt/pkg[0;32m: Success[0;0m
+[00:06:27] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mprint/indexinfo[0;0m[0;0m
+[00:06:27] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/pkgconf[0;0m[0;0m
+[00:06:27] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mconverters/libiconv[0;0m[0;0m
+[00:06:27] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mlang/perl5.16[0;0m[0;0m
+[00:06:32] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:05] [0;32mFinished build of [0;36mdevel/pkgconf[0;32m: Success[0;0m
+[00:06:33] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mlang/python27[0;0m[0;0m
+[00:06:36] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:09] [0;32mFinished build of [0;36mprint/indexinfo[0;32m: Success[0;0m
+[00:06:36] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/xorg-macros[0;0m[0;0m
+[00:06:46] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:10] [0;32mFinished build of [0;36mdevel/xorg-macros[0;32m: Success[0;0m
+[00:06:46] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/gmake-lite[0;0m[0;0m
+[00:06:55] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:28] [0;32mFinished build of [0;36mconverters/libiconv[0;32m: Success[0;0m
+[00:06:56] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/gettext[0;0m[0;0m
+[00:07:00] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:14] [0;32mFinished build of [0;36mdevel/gmake-lite[0;32m: Success[0;0m
+[00:07:01] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/m4[0;0m[0;0m
+[00:07:38] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:37] [0;32mFinished build of [0;36mdevel/m4[0;32m: Success[0;0m
+[00:07:39] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/autoconf-wrapper[0;0m[0;0m
+[00:07:50] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:11] [0;32mFinished build of [0;36mdevel/autoconf-wrapper[0;32m: Success[0;0m
+[00:07:51] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mx11/xproto[0;0m[0;0m
+[00:08:08] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:17] [0;32mFinished build of [0;36mx11/xproto[0;32m: Success[0;0m
+[00:08:10] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/xmlcatmgr[0;0m[0;0m
+[00:10:12] [0;32m====>>[0;0m [[0;32m02[0;0m][00:03:39] [0;32mFinished build of [0;36mlang/python27[0;32m: Success[0;0m
+[00:12:29] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-setuptools27[0;0m[0;0m
+[00:15:40] [0;32m====>>[0;0m [[0;31m01[0;0m][00:07:30] [0;32mFinished build of [0;36mtextproc/xmlcatmgr[0;32m: Success[0;0m
+[00:15:41] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mlang/python2[0;0m[0;0m
+[00:15:47] [0;32m====>>[0;0m [[0;32m02[0;0m][00:03:18] [0;32mFinished build of [0;36mdevel/py-setuptools27[0;32m: Success[0;0m
+[00:15:53] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-pytz[0;0m[0;0m
+[00:16:21] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:40] [0;32mFinished build of [0;36mlang/python2[0;32m: Success[0;0m
+[00:16:23] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/py-MarkupSafe[0;0m[0;0m
+[00:16:25] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:32] [0;32mFinished build of [0;36mdevel/py-pytz[0;32m: Success[0;0m
+[00:16:27] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-babel[0;0m[0;0m
+[00:16:50] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:27] [0;32mFinished build of [0;36mtextproc/py-MarkupSafe[0;32m: Success[0;0m
+[00:16:52] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/py-pygments[0;0m[0;0m
+[00:17:02] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:35] [0;32mFinished build of [0;36mdevel/py-babel[0;32m: Success[0;0m
+[00:17:04] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mtextproc/xmlcharent[0;0m[0;0m
+[00:17:18] [0;32m====>>[0;0m [[0;33m03[0;0m][00:10:22] [0;32mFinished build of [0;36mdevel/gettext[0;32m: Success[0;0m
+[00:17:19] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/gmake[0;0m[0;0m
+[00:17:23] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:31] [0;32mFinished build of [0;36mtextproc/py-pygments[0;32m: Success[0;0m
+[00:17:23] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:19] [0;32mFinished build of [0;36mtextproc/xmlcharent[0;32m: Success[0;0m
+[00:17:24] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mx11/libXdmcp[0;0m[0;0m
+[00:17:25] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/py-docutils[0;0m[0;0m
+[00:17:45] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:20] [0;32mFinished build of [0;36mtextproc/py-docutils[0;32m: Success[0;0m
+[00:17:46] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/libpthread-stubs[0;0m[0;0m
+[00:17:53] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:29] [0;32mFinished build of [0;36mx11/libXdmcp[0;32m: Success[0;0m
+[00:17:55] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-Jinja2[0;0m[0;0m
+[00:18:06] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:20] [0;32mFinished build of [0;36mdevel/libpthread-stubs[0;32m: Success[0;0m
+[00:18:07] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/iso8879[0;0m[0;0m
+[00:18:09] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:50] [0;32mFinished build of [0;36mdevel/gmake[0;32m: Success[0;0m
+[00:18:10] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msecurity/libgpg-error[0;0m[0;0m
+[00:18:14] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:07] [0;32mFinished build of [0;36mtextproc/iso8879[0;32m: Success[0;0m
+[00:18:15] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/libxml2[0;0m[0;0m
+[00:18:17] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:22] [0;32mFinished build of [0;36mdevel/py-Jinja2[0;32m: Success[0;0m
+[00:18:19] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/libcheck[0;0m[0;0m
+[00:18:49] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:39] [0;32mFinished build of [0;36msecurity/libgpg-error[0;32m: Success[0;0m
+[00:18:51] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msecurity/libgcrypt[0;0m[0;0m
+[00:18:57] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:38] [0;32mFinished build of [0;36mdevel/libcheck[0;32m: Success[0;0m
+[00:18:58] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mx11/libXau[0;0m[0;0m
+[00:19:31] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:33] [0;32mFinished build of [0;36mx11/libXau[0;32m: Success[0;0m
+[00:19:32] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/automake-wrapper[0;0m[0;0m
+[00:19:34] [0;32m====>>[0;0m [[0;34m04[0;0m][00:13:07] [0;32mFinished build of [0;36mlang/perl5.16[0;32m: Success[0;0m
+[00:19:35] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/p5-Locale-gettext[0;0m[0;0m
+[00:19:40] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:08] [0;32mFinished build of [0;36mdevel/automake-wrapper[0;32m: Success[0;0m
+[00:19:41] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/ca_root_nss[0;0m[0;0m
+[00:19:43] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:28] [0;32mFinished build of [0;36mtextproc/libxml2[0;32m: Success[0;0m
+[00:19:44] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mx11/xcb-proto[0;0m[0;0m
+[00:19:53] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:18] [0;32mFinished build of [0;36mdevel/p5-Locale-gettext[0;32m: Success[0;0m
+[00:19:54] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mmisc/help2man[0;0m[0;0m
+[00:19:58] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:17] [0;32mFinished build of [0;36msecurity/ca_root_nss[0;32m: Success[0;0m
+[00:19:59] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mx11/xcmiscproto[0;0m[0;0m
+[00:20:05] [0;32m====>>[0;0m [[0;33m03[0;0m][00:01:14] [0;32mFinished build of [0;36msecurity/libgcrypt[0;32m: Success[0;0m
+[00:20:06] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mtextproc/libxslt[0;0m[0;0m
+[00:20:13] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:29] [0;32mFinished build of [0;36mx11/xcb-proto[0;32m: Success[0;0m
+[00:20:15] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mx11/inputproto[0;0m[0;0m
+[00:20:22] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:23] [0;32mFinished build of [0;36mx11/xcmiscproto[0;32m: Success[0;0m
+[00:20:23] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mtextproc/py-sphinx[0;0m[0;0m
+[00:20:23] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:29] [0;32mFinished build of [0;36mmisc/help2man[0;32m: Success[0;0m
+[00:20:24] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/autoconf[0;0m[0;0m
+[00:20:41] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:26] [0;32mFinished build of [0;36mx11/inputproto[0;32m: Success[0;0m
+[00:21:01] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/libtool[0;0m[0;0m
+[00:21:45] [0;32m====>>[0;0m [[0;33m03[0;0m][00:01:39] [0;32mFinished build of [0;36mtextproc/libxslt[0;32m: Success[0;0m
+[00:21:47] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mx11/libxcb[0;0m[0;0m
+[00:21:48] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:25] [0;32mFinished build of [0;36mtextproc/py-sphinx[0;32m: Success[0;0m
+[00:21:50] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/cmake-modules[0;0m[0;0m
+[00:21:55] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:31] [0;32mFinished build of [0;36mdevel/autoconf[0;32m: Success[0;0m
+[00:21:57] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/automake[0;0m[0;0m
+[00:22:03] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:13] [0;32mFinished build of [0;36mdevel/cmake-modules[0;32m: Success[0;0m
+[00:22:04] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mtextproc/expat2[0;0m[0;0m
+[00:22:06] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:05] [0;32mFinished build of [0;36mdevel/libtool[0;32m: Success[0;0m
+[00:22:07] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mx11/bigreqsproto[0;0m[0;0m
+[00:23:09] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:12] [0;32mFinished build of [0;36mdevel/automake[0;32m: Success[0;0m
+[00:23:10] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mx11/kbproto[0;0m[0;0m
+[00:24:12] [0;32m====>>[0;0m [[0;31m01[0;0m][00:02:05] [0;32mFinished build of [0;36mx11/bigreqsproto[0;32m: Success[0;0m
+[00:24:12] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:08] [0;32mFinished build of [0;36mtextproc/expat2[0;32m: Success[0;0m
+[00:24:13] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/libatomic_ops[0;0m[0;0m
+[00:24:13] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mtextproc/docbook-xml[0;0m[0;0m
+[00:24:28] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:15] [0;32mFinished build of [0;36mtextproc/docbook-xml[0;32m: Success[0;0m
+[00:24:28] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mx11-fonts/fontsproto[0;0m[0;0m
+[00:24:30] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:20] [0;32mFinished build of [0;36mx11/kbproto[0;32m: Success[0;0m
+[00:24:31] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mx11/xtrans[0;0m[0;0m
+[00:24:34] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:21] [0;32mFinished build of [0;36mdevel/libatomic_ops[0;32m: Success[0;0m
+[00:24:35] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mprint/freetype2[0;0m[0;0m
+[00:26:30] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:02] [0;32mFinished build of [0;36mx11-fonts/fontsproto[0;32m: Success[0;0m
+[00:26:31] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:00] [0;32mFinished build of [0;36mx11/xtrans[0;32m: Success[0;0m
+[00:26:31] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mtextproc/docbook-sgml[0;0m[0;0m
+[00:26:32] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mx11-fonts/xf86bigfontproto[0;0m[0;0m
+[00:26:42] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:11] [0;32mFinished build of [0;36mtextproc/docbook-sgml[0;32m: Success[0;0m
+[00:26:43] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:11] [0;32mFinished build of [0;36mx11-fonts/xf86bigfontproto[0;32m: Success[0;0m
+[00:26:43] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mx11-fonts/libfontenc[0;0m[0;0m
+[00:26:44] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mtextproc/sdocbook-xml[0;0m[0;0m
+[00:26:51] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:07] [0;32mFinished build of [0;36mtextproc/sdocbook-xml[0;32m: Success[0;0m
+[00:27:52] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mx11/xextproto[0;0m[0;0m
+[00:27:56] [0;32m====>>[0;0m [[0;33m03[0;0m][00:06:09] [0;32mFinished build of [0;36mx11/libxcb[0;32m: Success[0;0m
+[00:27:58] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mftp/curl[0;0m[0;0m
+[00:28:04] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:21] [0;32mFinished build of [0;36mx11-fonts/libfontenc[0;32m: Success[0;0m
+[00:28:05] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:13] [0;32mFinished build of [0;36mx11/xextproto[0;32m: Success[0;0m
+[00:28:06] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/boehm-gc[0;0m[0;0m
+[00:28:06] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mmath/gmp[0;0m[0;0m
+[00:28:09] [0;32m====>>[0;0m [[0;31m01[0;0m][00:03:34] [0;32mFinished build of [0;36mprint/freetype2[0;32m: Success[0;0m
+[00:28:10] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/pcre[0;0m[0;0m
+[00:29:08] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:02] [0;32mFinished build of [0;36mdevel/boehm-gc[0;32m: Success[0;0m
+[00:29:10] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/libffi[0;0m[0;0m
+[00:29:48] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:38] [0;32mFinished build of [0;36mdevel/libffi[0;32m: Success[0;0m
+[00:29:50] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/bison[0;0m[0;0m
+[00:29:50] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:40] [0;32mFinished build of [0;36mdevel/pcre[0;32m: Success[0;0m
+[00:29:52] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mx11/libX11[0;0m[0;0m
+[00:30:48] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:42] [0;32mFinished build of [0;36mmath/gmp[0;32m: Success[0;0m
+[00:30:49] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mtextproc/docbook[0;0m[0;0m
+[00:30:59] [0;32m====>>[0;0m [[0;33m03[0;0m][00:03:01] [0;32mFinished build of [0;36mftp/curl[0;32m: Success[0;0m
+[00:31:00] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mx11-fonts/mkfontscale[0;0m[0;0m
+[00:31:08] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:19] [0;32mFinished build of [0;36mtextproc/docbook[0;32m: Success[0;0m
+[00:31:09] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/cmake[0;0m[0;0m
+[00:31:28] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:28] [0;32mFinished build of [0;36mx11-fonts/mkfontscale[0;32m: Success[0;0m
+[00:31:29] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mx11-fonts/libXfont[0;0m[0;0m
+[00:31:38] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:48] [0;32mFinished build of [0;36mdevel/bison[0;32m: Success[0;0m
+[00:31:40] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/talloc[0;0m[0;0m
+[00:32:32] [0;32m====>>[0;0m [[0;33m03[0;0m][00:01:03] [0;32mFinished build of [0;36mx11-fonts/libXfont[0;32m: Success[0;0m
+[00:32:35] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mtextproc/p5-XML-NamespaceSupport[0;0m[0;0m
+[00:32:56] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:21] [0;32mFinished build of [0;36mtextproc/p5-XML-NamespaceSupport[0;32m: Success[0;0m
+[00:32:57] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msecurity/openssl[0;0m[0;0m
+[00:33:00] [0;32m====>>[0;0m [[0;31m01[0;0m][00:03:08] [0;32mFinished build of [0;36mx11/libX11[0;32m: Success[0;0m
+[00:33:04] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/docbook-xsl[0;0m[0;0m
+[00:33:06] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:26] [0;32mFinished build of [0;36mdevel/talloc[0;32m: Success[0;0m
+[00:33:07] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/cyrus-sasl2[0;0m[0;0m
+[00:33:45] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:41] [0;32mFinished build of [0;36mtextproc/docbook-xsl[0;32m: Success[0;0m
+[00:33:46] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mx11/pixman[0;0m[0;0m
+[00:34:50] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:43] [0;32mFinished build of [0;36msecurity/cyrus-sasl2[0;32m: Success[0;0m
+[00:34:54] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mshells/bash[0;0m[0;0m
+[00:35:25] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:39] [0;32mFinished build of [0;36mx11/pixman[0;32m: Success[0;0m
+[00:35:26] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mwww/w3m[0;0m[0;0m
+[00:36:22] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:56] [0;32mFinished build of [0;36mwww/w3m[0;32m: Success[0;0m
+[00:36:23] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36msecurity/libtasn1[0;0m[0;0m
+[00:37:02] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:08] [0;32mFinished build of [0;36mshells/bash[0;32m: Success[0;0m
+[00:37:04] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mprint/libpaper[0;0m[0;0m
+[00:37:08] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:45] [0;32mFinished build of [0;36msecurity/libtasn1[0;32m: Success[0;0m
+[00:37:10] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mx11-fonts/fontconfig[0;0m[0;0m
+[00:37:16] [0;32m====>>[0;0m [[0;33m03[0;0m][00:04:19] [0;32mFinished build of [0;36msecurity/openssl[0;32m: Success[0;0m
+[00:37:17] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mmisc/getopt[0;0m[0;0m
+[00:37:24] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:20] [0;32mFinished build of [0;36mprint/libpaper[0;32m: Success[0;0m
+[00:37:25] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/glib20[0;0m[0;0m
+[00:37:40] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:23] [0;32mFinished build of [0;36mmisc/getopt[0;32m: Success[0;0m
+[00:37:43] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mx11-fonts/font-util[0;0m[0;0m
+[00:38:05] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:22] [0;32mFinished build of [0;36mx11-fonts/font-util[0;32m: Success[0;0m
+[00:38:06] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mx11/libXext[0;0m[0;0m
+[00:38:13] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:03] [0;32mFinished build of [0;36mx11-fonts/fontconfig[0;32m: Success[0;0m
+[00:38:15] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mmath/mpfr[0;0m[0;0m
+[00:38:42] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:36] [0;32mFinished build of [0;36mx11/libXext[0;32m: Success[0;0m
+[00:38:44] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mx11-fonts/mkfontdir[0;0m[0;0m
+[00:39:13] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:29] [0;32mFinished build of [0;36mx11-fonts/mkfontdir[0;32m: Success[0;0m
+[00:39:17] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mtextproc/p5-XML-SAX-Base[0;0m[0;0m
+[00:39:35] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:18] [0;32mFinished build of [0;36mtextproc/p5-XML-SAX-Base[0;32m: Success[0;0m
+[00:39:36] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mx11-fonts/bdftopcf[0;0m[0;0m
+[00:40:01] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:46] [0;32mFinished build of [0;36mmath/mpfr[0;32m: Success[0;0m
+[00:40:03] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/p5-XML-SAX[0;0m[0;0m
+[00:40:07] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:31] [0;32mFinished build of [0;36mx11-fonts/bdftopcf[0;32m: Success[0;0m
+[00:40:09] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mx11-fonts/dejavu[0;0m[0;0m
+[00:40:10] [0;32m====>>[0;0m [[0;34m04[0;0m][00:09:01] [0;32mFinished build of [0;36mdevel/cmake[0;32m: Success[0;0m
+[00:40:13] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mgraphics/png[0;0m[0;0m
+[00:42:26] [0;32m====>>[0;0m [[0;31m01[0;0m][00:02:23] [0;32mFinished build of [0;36mtextproc/p5-XML-SAX[0;32m: Success[0;0m
+[00:42:27] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mgraphics/graphite2[0;0m[0;0m
+[00:42:33] [0;32m====>>[0;0m [[0;33m03[0;0m][00:02:24] [0;32mFinished build of [0;36mx11-fonts/dejavu[0;32m: Success[0;0m
+[00:42:34] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/binutils[0;0m[0;0m
+[00:43:03] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:50] [0;32mFinished build of [0;36mgraphics/png[0;32m: Success[0;0m
+[00:43:06] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mx11-fonts/encodings[0;0m[0;0m
+[00:43:28] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:22] [0;32mFinished build of [0;36mx11-fonts/encodings[0;32m: Success[0;0m
+[00:43:28] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:01] [0;32mFinished build of [0;36mgraphics/graphite2[0;32m: Success[0;0m
+[00:43:29] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mtextproc/xmlto[0;0m[0;0m
+[00:43:30] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/popt[0;0m[0;0m
+[00:43:58] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:29] [0;32mFinished build of [0;36mtextproc/xmlto[0;32m: Success[0;0m
+[00:44:00] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mx11-fonts/font-misc-ethiopic[0;0m[0;0m
+[00:44:02] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:32] [0;32mFinished build of [0;36mdevel/popt[0;32m: Success[0;0m
+[00:44:04] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mmath/mpc[0;0m[0;0m
+[00:44:18] [0;32m====>>[0;0m [[0;32m02[0;0m][00:06:53] [0;32mFinished build of [0;36mdevel/glib20[0;32m: Success[0;0m
+[00:44:20] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/p11-kit[0;0m[0;0m
+[00:44:22] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:22] [0;32mFinished build of [0;36mx11-fonts/font-misc-ethiopic[0;32m: Success[0;0m
+[00:44:24] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdatabases/sqlite3[0;0m[0;0m
+[00:44:44] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:40] [0;32mFinished build of [0;36mmath/mpc[0;32m: Success[0;0m
+[00:44:46] ====>>[0;0m [[0;31m01[0;0m][00:00:01] Starting build of [0;36mx11-fonts/font-bh-ttf[0;0m[0;0m
+[00:45:08] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:23] [0;32mFinished build of [0;36mx11-fonts/font-bh-ttf[0;32m: Success[0;0m
+[00:45:10] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdatabases/tdb[0;0m[0;0m
+[00:45:19] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:55] [0;32mFinished build of [0;36mdatabases/sqlite3[0;32m: Success[0;0m
+[00:45:20] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/icu[0;0m[0;0m
+[00:46:21] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:01] [0;32mFinished build of [0;36msecurity/p11-kit[0;32m: Success[0;0m
+[00:46:22] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdns/libidn[0;0m[0;0m
+[00:46:52] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:42] [0;32mFinished build of [0;36mdatabases/tdb[0;32m: Success[0;0m
+[00:46:56] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mgraphics/cairo[0;0m[0;0m
+[00:51:34] [0;32m====>>[0;0m [[0;32m02[0;0m][00:05:12] [0;32mFinished build of [0;36mdns/libidn[0;32m: Success[0;0m
+[00:51:36] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msysutils/gnome_subr[0;0m[0;0m
+[00:51:44] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:08] [0;32mFinished build of [0;36msysutils/gnome_subr[0;32m: Success[0;0m
+[00:51:44] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/nettle[0;0m[0;0m
+[00:54:31] [0;32m====>>[0;0m [[0;31m01[0;0m][00:07:35] [0;32mFinished build of [0;36mgraphics/cairo[0;32m: Success[0;0m
+[00:54:40] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/py-pycparser[0;0m[0;0m
+[00:54:46] [0;32m====>>[0;0m [[0;33m03[0;0m][00:12:12] [0;32mFinished build of [0;36mdevel/binutils[0;32m: Success[0;0m
+[00:54:48] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/p5-Parse-Yapp[0;0m[0;0m
+[00:56:07] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:27] [0;32mFinished build of [0;36mdevel/py-pycparser[0;32m: Success[0;0m
+[00:56:10] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mlang/gcc-ecj45[0;0m[0;0m
+[00:56:15] [0;32m====>>[0;0m [[0;32m02[0;0m][00:04:31] [0;32mFinished build of [0;36msecurity/nettle[0;32m: Success[0;0m
+[00:56:16] [0;32m====>>[0;0m [[0;33m03[0;0m][00:01:28] [0;32mFinished build of [0;36mdevel/p5-Parse-Yapp[0;32m: Success[0;0m
+[00:56:16] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet/openldap24-sasl-client[0;0m[0;0m
+[00:56:17] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36marchivers/zip[0;0m[0;0m
+[00:56:17] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:07] [0;32mFinished build of [0;36mlang/gcc-ecj45[0;32m: Success[0;0m
+[00:56:18] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mx11-fonts/font-misc-meltho[0;0m[0;0m
+[00:56:33] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:15] [0;32mFinished build of [0;36mx11-fonts/font-misc-meltho[0;32m: Success[0;0m
+[00:56:34] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:17] [0;32mFinished build of [0;36marchivers/zip[0;32m: Success[0;0m
+[00:56:34] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/tevent[0;0m[0;0m
+[00:56:35] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mmisc/gnomehier[0;0m[0;0m
+[00:56:43] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:08] [0;32mFinished build of [0;36mmisc/gnomehier[0;32m: Success[0;0m
+[00:56:43] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mnet/p5-Socket[0;0m[0;0m
+[00:56:59] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:16] [0;32mFinished build of [0;36mnet/p5-Socket[0;32m: Success[0;0m
+[00:57:00] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/libexecinfo[0;0m[0;0m
+[00:57:09] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:09] [0;32mFinished build of [0;36mdevel/libexecinfo[0;32m: Success[0;0m
+[00:57:10] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdatabases/db5[0;0m[0;0m
+[00:57:50] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:16] [0;32mFinished build of [0;36mdevel/tevent[0;32m: Success[0;0m
+[00:57:53] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mnet/mDNSResponder[0;0m[0;0m
+[00:58:26] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:33] [0;32mFinished build of [0;36mnet/mDNSResponder[0;32m: Success[0;0m
+[00:58:28] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/p5-XML-Filter-BufferText[0;0m[0;0m
+[00:58:46] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:18] [0;32mFinished build of [0;36mtextproc/p5-XML-Filter-BufferText[0;32m: Success[0;0m
+[00:58:47] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdns/py-dnspython[0;0m[0;0m
+[01:00:50] [0;32m====>>[0;0m [[0;31m01[0;0m][00:02:03] [0;32mFinished build of [0;36mdns/py-dnspython[0;32m: Success[0;0m
+[01:00:54] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdevel/p5-Parse-Pidl[0;0m[0;0m
+[01:01:18] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:24] [0;32mFinished build of [0;36mdevel/p5-Parse-Pidl[0;32m: Success[0;0m
+[01:01:19] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mtextproc/p5-XML-Parser[0;0m[0;0m
+[01:01:36] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:17] [0;32mFinished build of [0;36mtextproc/p5-XML-Parser[0;32m: Success[0;0m
+[01:01:37] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mwww/p5-Mozilla-CA[0;0m[0;0m
+[01:03:05] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:28] [0;32mFinished build of [0;36mwww/p5-Mozilla-CA[0;32m: Success[0;0m
+[01:03:06] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mlang/gcc[0;0m[0;0m
+[01:04:08] [0;32m====>>[0;0m [[0;32m02[0;0m][00:07:52] [0;32mFinished build of [0;36mnet/openldap24-sasl-client[0;32m: Success[0;0m
+[01:04:11] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-pip[0;0m[0;0m
+[01:04:38] [0;32m====>>[0;0m [[0;33m03[0;0m][00:07:28] [0;32mFinished build of [0;36mdatabases/db5[0;32m: Success[0;0m
+[01:04:40] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/py-six[0;0m[0;0m
+[01:04:58] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:47] [0;32mFinished build of [0;36mdevel/py-pip[0;32m: Success[0;0m
+[01:05:00] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/gobject-introspection[0;0m[0;0m
+[01:05:01] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:21] [0;32mFinished build of [0;36mdevel/py-six[0;32m: Success[0;0m
+[01:05:03] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdatabases/py-sqlite3[0;0m[0;0m
+[01:09:10] [0;32m====>>[0;0m [[0;33m03[0;0m][00:04:07] [0;32mFinished build of [0;36mdatabases/py-sqlite3[0;32m: Success[0;0m
+[01:09:12] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/py-asn1[0;0m[0;0m
+[01:11:24] [0;32m====>>[0;0m [[0;33m03[0;0m][00:02:12] [0;32mFinished build of [0;36mdevel/py-asn1[0;32m: Success[0;0m
+[01:11:26] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdatabases/ldb[0;0m[0;0m
+[01:14:02] [0;32m====>>[0;0m [[0;34m04[0;0m][00:28:42] [0;32mFinished build of [0;36mdevel/icu[0;32m: Success[0;0m
+[01:14:04] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/fakeroot[0;0m[0;0m
+[01:15:19] [0;32m====>>[0;0m [[0;32m02[0;0m][00:10:19] [0;32mFinished build of [0;36mdevel/gobject-introspection[0;32m: Success[0;0m
+[01:15:22] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/p5-GSSAPI[0;0m[0;0m
+[01:16:17] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:13] [0;32mFinished build of [0;36msecurity/fakeroot[0;32m: Success[0;0m
+[01:16:19] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/p5-Digest-HMAC[0;0m[0;0m
+[01:16:27] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:05] [0;32mFinished build of [0;36msecurity/p5-GSSAPI[0;32m: Success[0;0m
+[01:16:29] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdns/samba-nsupdate[0;0m[0;0m
+[01:17:42] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:23] [0;32mFinished build of [0;36msecurity/p5-Digest-HMAC[0;32m: Success[0;0m
+[01:17:43] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msysutils/libsunacl[0;0m[0;0m
+[01:17:45] [0;32m====>>[0;0m [[0;33m03[0;0m][00:06:19] [0;32mFinished build of [0;36mdatabases/ldb[0;32m: Success[0;0m
+[01:19:01] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mx11-fonts/xorg-fonts-truetype[0;0m[0;0m
+[01:19:08] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:25] [0;32mFinished build of [0;36msysutils/libsunacl[0;32m: Success[0;0m
+[01:19:08] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mwww/py-flup[0;0m[0;0m
+[01:19:21] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:13] [0;32mFinished build of [0;36mwww/py-flup[0;32m: Success[0;0m
+[01:19:22] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:21] [0;32mFinished build of [0;36mx11-fonts/xorg-fonts-truetype[0;32m: Success[0;0m
+[01:19:22] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/nspr[0;0m[0;0m
+[01:19:24] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdatabases/ntdb[0;0m[0;0m
+[01:22:24] [0;32m====>>[0;0m [[0;34m04[0;0m][00:03:02] [0;32mFinished build of [0;36mdevel/nspr[0;32m: Success[0;0m
+[01:22:27] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mprint/harfbuzz[0;0m[0;0m
+[01:22:52] [0;32m====>>[0;0m [[0;32m02[0;0m][00:06:23] [0;32mFinished build of [0;36mdns/samba-nsupdate[0;32m: Success[0;0m
+[01:23:23] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mconverters/p5-Unicode-String[0;0m[0;0m
+[01:24:43] [0;32m====>>[0;0m [[0;33m03[0;0m][00:05:19] [0;32mFinished build of [0;36mdatabases/ntdb[0;32m: Success[0;0m
+[01:25:01] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msecurity/p5-Net-SSLeay[0;0m[0;0m
+[01:25:50] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:26] [0;32mFinished build of [0;36mconverters/p5-Unicode-String[0;32m: Success[0;0m
+[01:25:51] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mmath/p5-Math-BigInt[0;0m[0;0m
+[01:26:12] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:21] [0;32mFinished build of [0;36mmath/p5-Math-BigInt[0;32m: Success[0;0m
+[01:27:22] [0;32m====>>[0;0m [[0;33m03[0;0m][00:02:21] [0;32mFinished build of [0;36msecurity/p5-Net-SSLeay[0;32m: Success[0;0m
+[01:27:22] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/dbus[0;0m[0;0m
+[01:27:24] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/libinotify[0;0m[0;0m
+[01:27:27] [0;32m====>>[0;0m [[0;34m04[0;0m][00:05:01] [0;32mFinished build of [0;36mprint/harfbuzz[0;32m: Success[0;0m
+[01:27:32] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/gnutls[0;0m[0;0m
+[01:27:39] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:14] [0;32mFinished build of [0;36mdevel/libinotify[0;32m: Success[0;0m
+[01:27:53] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mnet/p5-IO-Socket-IP[0;0m[0;0m
+[01:31:06] [0;32m====>>[0;0m [[0;33m03[0;0m][00:03:13] [0;32mFinished build of [0;36mnet/p5-IO-Socket-IP[0;32m: Success[0;0m
+[01:31:08] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdatabases/gdbm[0;0m[0;0m
+[01:31:48] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:40] [0;32mFinished build of [0;36mdatabases/gdbm[0;32m: Success[0;0m
+[01:31:49] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/py-cffi[0;0m[0;0m
+[01:32:12] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:23] [0;32mFinished build of [0;36mdevel/py-cffi[0;32m: Success[0;0m
+[01:32:45] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/gamin[0;0m[0;0m
+[01:32:55] [0;32m====>>[0;0m [[0;32m02[0;0m][00:05:33] [0;32mFinished build of [0;36mdevel/dbus[0;32m: Success[0;0m
+[01:32:56] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/dbus-glib[0;0m[0;0m
+[01:37:46] [0;32m====>>[0;0m [[0;33m03[0;0m][00:05:01] [0;32mFinished build of [0;36mdevel/gamin[0;32m: Success[0;0m
+[01:37:49] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdns/bind99[0;0m[0;0m
+[01:38:00] [0;32m====>>[0;0m [[0;32m02[0;0m][00:05:04] [0;32mFinished build of [0;36mdevel/dbus-glib[0;32m: Success[0;0m
+[01:38:01] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mjapanese/p5-Jcode[0;0m[0;0m
+[01:42:11] [0;32m====>>[0;0m [[0;32m02[0;0m][00:04:10] [0;32mFinished build of [0;36mjapanese/p5-Jcode[0;32m: Success[0;0m
+[01:42:12] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-enum34[0;0m[0;0m
+[01:42:24] [0;32m====>>[0;0m [[0;34m04[0;0m][00:14:52] [0;32mFinished build of [0;36msecurity/gnutls[0;32m: Success[0;0m
+[01:42:26] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msysutils/fusefs-libs[0;0m[0;0m
+[01:43:11] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:59] [0;32mFinished build of [0;36mdevel/py-enum34[0;32m: Success[0;0m
+[01:43:14] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-dateutil[0;0m[0;0m
+[01:47:22] [0;32m====>>[0;0m [[0;32m02[0;0m][00:04:09] [0;32mFinished build of [0;36mdevel/py-dateutil[0;32m: Success[0;0m
+[01:47:23] [0;32m====>>[0;0m [[0;34m04[0;0m][00:04:57] [0;32mFinished build of [0;36msysutils/fusefs-libs[0;32m: Success[0;0m
+[01:47:25] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mx11-toolkits/pango[0;0m[0;0m
+[01:47:26] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdns/c-ares[0;0m[0;0m
+[01:54:40] [0;32m====>>[0;0m [[0;33m03[0;0m][00:16:51] [0;32mFinished build of [0;36mdns/bind99[0;32m: Success[0;0m
+[01:54:42] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msecurity/krb5[0;0m[0;0m
+[01:58:20] [0;32m====>>[0;0m [[0;34m04[0;0m][00:10:54] [0;32mFinished build of [0;36mdns/c-ares[0;32m: Success[0;0m
+[01:58:21] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/py-cryptography[0;0m[0;0m
+[02:00:01] [0;32m====>>[0;0m [[0;32m02[0;0m][00:12:36] [0;32mFinished build of [0;36mx11-toolkits/pango[0;32m: Success[0;0m
+[02:00:04] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/nss[0;0m[0;0m
+[02:03:23] [0;32m====>>[0;0m [[0;34m04[0;0m][00:05:02] [0;32mFinished build of [0;36msecurity/py-cryptography[0;32m: Success[0;0m
+[02:03:26] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/p5-IO-Socket-SSL[0;0m[0;0m
+[02:06:39] [0;32m====>>[0;0m [[0;34m04[0;0m][00:03:13] [0;32mFinished build of [0;36msecurity/p5-IO-Socket-SSL[0;32m: Success[0;0m
+[02:06:41] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/py-pbr[0;0m[0;0m
+[02:09:03] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:22] [0;32mFinished build of [0;36mdevel/py-pbr[0;32m: Success[0;0m
+[02:09:06] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/py-mimeparse[0;0m[0;0m
+[02:10:06] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:00] [0;32mFinished build of [0;36mdevel/py-mimeparse[0;32m: Success[0;0m
+[02:10:08] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mconverters/p5-Convert-ASN1[0;0m[0;0m
+[02:10:14] [0;32m====>>[0;0m [[0;33m03[0;0m][00:15:32] [0;32mFinished build of [0;36msecurity/krb5[0;32m: Success[0;0m
+[02:10:16] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mconverters/p5-Unicode-Map[0;0m[0;0m
+[02:10:26] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:18] [0;32mFinished build of [0;36mconverters/p5-Convert-ASN1[0;32m: Success[0;0m
+[02:10:27] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mnet/p5-URI[0;0m[0;0m
+[02:10:57] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:42] [0;32mFinished build of [0;36mconverters/p5-Unicode-Map[0;32m: Success[0;0m
+[02:11:38] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mwww/py-django[0;0m[0;0m
+[02:11:45] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:18] [0;32mFinished build of [0;36mnet/p5-URI[0;32m: Success[0;0m
+[02:11:46] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/apr1[0;0m[0;0m
+[02:17:21] [0;32m====>>[0;0m [[0;33m03[0;0m][00:05:43] [0;32mFinished build of [0;36mwww/py-django[0;32m: Success[0;0m
+[02:17:24] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mtextproc/p5-XML-SAX-Writer[0;0m[0;0m
+[02:17:27] [0;32m====>>[0;0m [[0;32m02[0;0m][00:17:23] [0;32mFinished build of [0;36msecurity/nss[0;32m: Success[0;0m
+[02:17:29] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mconverters/p5-Unicode-Map8[0;0m[0;0m
+[02:18:54] [0;32m====>>[0;0m [[0;33m03[0;0m][00:01:30] [0;32mFinished build of [0;36mtextproc/p5-XML-SAX-Writer[0;32m: Success[0;0m
+[02:18:55] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/py-asn1-modules[0;0m[0;0m
+[02:18:59] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:30] [0;32mFinished build of [0;36mconverters/p5-Unicode-Map8[0;32m: Success[0;0m
+[02:19:00] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdns/ldns[0;0m[0;0m
+[02:20:00] [0;32m====>>[0;0m [[0;33m03[0;0m][00:01:05] [0;32mFinished build of [0;36mdevel/py-asn1-modules[0;32m: Success[0;0m
+[02:20:02] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/git[0;0m[0;0m
+[02:21:44] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:44] [0;32mFinished build of [0;36mdns/ldns[0;32m: Success[0;0m
+[02:21:46] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/libunistring[0;0m[0;0m
+[02:22:04] [0;32m====>>[0;0m [[0;34m04[0;0m][00:10:18] [0;32mFinished build of [0;36mdevel/apr1[0;32m: Success[0;0m
+[02:22:05] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/ding-libs[0;0m[0;0m
+[02:22:21] [0;32m====>>[0;0m [[0;33m03[0;0m][00:02:19] [0;32mFinished build of [0;36mdevel/git[0;32m: Success[0;0m
+[02:22:23] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mtextproc/flex[0;0m[0;0m
+[02:22:33] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:28] [0;32mFinished build of [0;36mdevel/ding-libs[0;32m: Success[0;0m
+[02:22:34] ====>>[0;0m [[0;34m04[0;0m][00:00:01] Starting build of [0;36mmisc/pciids[0;0m[0;0m
+[02:23:46] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:13] [0;32mFinished build of [0;36mmisc/pciids[0;32m: Success[0;0m
+[02:23:47] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/p5-Authen-SASL[0;0m[0;0m
+[02:26:41] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:54] [0;32mFinished build of [0;36msecurity/p5-Authen-SASL[0;32m: Success[0;0m
+[02:26:42] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mtextproc/intltool[0;0m[0;0m
+[02:26:49] [0;32m====>>[0;0m [[0;33m03[0;0m][00:04:26] [0;32mFinished build of [0;36mtextproc/flex[0;32m: Success[0;0m
+[02:26:50] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msysutils/fusefs-kmod[0;0m[0;0m
+[02:26:58] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:16] [0;32mFinished build of [0;36mtextproc/intltool[0;32m: Success[0;0m
+[02:26:59] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mwww/py-django-tastypie[0;0m[0;0m
+[02:27:01] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:11] [0;32mFinished build of [0;36msysutils/fusefs-kmod[0;32m: Success[0;0m
+[02:27:02] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdatabases/rrdtool[0;0m[0;0m
+[02:28:39] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:40] [0;32mFinished build of [0;36mwww/py-django-tastypie[0;32m: Success[0;0m
+[02:28:41] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mnet/libdnet[0;0m[0;0m
+[02:33:05] [0;32m====>>[0;0m [[0;34m04[0;0m][00:04:24] [0;32mFinished build of [0;36mnet/libdnet[0;32m: Success[0;0m
+[02:33:06] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/py-simplejson[0;0m[0;0m
+[02:34:27] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:21] [0;32mFinished build of [0;36mdevel/py-simplejson[0;32m: Success[0;0m
+[02:34:29] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mtextproc/py-xml[0;0m[0;0m
+[02:34:56] [0;32m====>>[0;0m [[0;32m02[0;0m][00:13:10] [0;32mFinished build of [0;36mdevel/libunistring[0;32m: Success[0;0m
+[02:34:57] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/py-openssl[0;0m[0;0m
+[02:35:01] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:32] [0;32mFinished build of [0;36mtextproc/py-xml[0;32m: Success[0;0m
+[02:35:03] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mx11-fonts/gnu-unifont[0;0m[0;0m
+[02:36:12] [0;32m====>>[0;0m [[0;33m03[0;0m][00:09:10] [0;32mFinished build of [0;36mdatabases/rrdtool[0;32m: Success[0;0m
+[02:36:15] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mwww/py-requests[0;0m[0;0m
+[02:36:40] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:37] [0;32mFinished build of [0;36mx11-fonts/gnu-unifont[0;32m: Success[0;0m
+[02:36:42] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/libevent2[0;0m[0;0m
+[02:36:45] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:48] [0;32mFinished build of [0;36msecurity/py-openssl[0;32m: Success[0;0m
+[02:36:48] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mftp/wget[0;0m[0;0m
+[02:38:26] [0;32m====>>[0;0m [[0;33m03[0;0m][00:02:11] [0;32mFinished build of [0;36mwww/py-requests[0;32m: Success[0;0m
+[02:38:29] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msecurity/openssh-portable[0;0m[0;0m
+[02:43:21] [0;32m====>>[0;0m [[0;34m04[0;0m][00:06:39] [0;32mFinished build of [0;36mdevel/libevent2[0;32m: Success[0;0m
+[02:43:21] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/py-greenlet[0;0m[0;0m
+[02:46:57] [0;32m====>>[0;0m [[0;34m04[0;0m][00:03:36] [0;32mFinished build of [0;36mdevel/py-greenlet[0;32m: Success[0;0m
+[02:46:59] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mnet/rsync[0;0m[0;0m
+[02:49:16] [0;32m====>>[0;0m [[0;32m02[0;0m][00:12:28] [0;32mFinished build of [0;36mftp/wget[0;32m: Success[0;0m
+[02:49:18] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-lxml[0;0m[0;0m
+[02:52:38] [0;32m====>>[0;0m [[0;33m03[0;0m][00:14:09] [0;32mFinished build of [0;36msecurity/openssh-portable[0;32m: Success[0;0m
+[02:52:40] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/kBuild[0;0m[0;0m
+[02:55:13] [0;32m====>>[0;0m [[0;34m04[0;0m][00:08:14] [0;32mFinished build of [0;36mnet/rsync[0;32m: Success[0;0m
+[02:55:14] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36marchivers/lzlib[0;0m[0;0m
+[02:55:23] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:09] [0;32mFinished build of [0;36marchivers/lzlib[0;32m: Success[0;0m
+[02:55:54] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/py-polib[0;0m[0;0m
+[02:56:13] [0;32m====>>[0;0m [[0;32m02[0;0m][00:06:55] [0;32mFinished build of [0;36mdevel/py-lxml[0;32m: Success[0;0m
+[02:56:15] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-sysctl[0;0m[0;0m
+[02:56:26] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:32] [0;32mFinished build of [0;36mdevel/py-polib[0;32m: Success[0;0m
+[02:56:31] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mwww/py-dojango[0;0m[0;0m
+[02:56:58] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:43] [0;32mFinished build of [0;36mdevel/py-sysctl[0;32m: Success[0;0m
+[02:57:02] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/py-pycrypto[0;0m[0;0m
+[02:57:06] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:35] [0;32mFinished build of [0;36mwww/py-dojango[0;32m: Success[0;0m
+[02:57:10] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msysutils/lsof[0;0m[0;0m
+[02:59:05] [0;32m====>>[0;0m [[0;33m03[0;0m][00:06:25] [0;32mFinished build of [0;36mdevel/kBuild[0;32m: Success[0;0m
+[02:59:07] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/libublio[0;0m[0;0m
+[02:59:13] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:03] [0;32mFinished build of [0;36msysutils/lsof[0;32m: Success[0;0m
+[02:59:14] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/easy-rsa[0;0m[0;0m
+[02:59:20] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:13] [0;32mFinished build of [0;36mdevel/libublio[0;32m: Success[0;0m
+[02:59:22] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdatabases/py-sqlparse[0;0m[0;0m
+[02:59:28] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:26] [0;32mFinished build of [0;36msecurity/py-pycrypto[0;32m: Success[0;0m
+[02:59:30] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:16] [0;32mFinished build of [0;36msecurity/easy-rsa[0;32m: Success[0;0m
+[02:59:31] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet/py-ldap2[0;0m[0;0m
+[02:59:31] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/libpci[0;0m[0;0m
+[02:59:45] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:23] [0;32mFinished build of [0;36mdatabases/py-sqlparse[0;32m: Success[0;0m
+[02:59:47] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mconverters/p5-Unicode-MapUTF8[0;0m[0;0m
+[02:59:50] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:19] [0;32mFinished build of [0;36mdevel/libpci[0;32m: Success[0;0m
+[03:00:14] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdns/py-bonjour[0;0m[0;0m
+[03:00:31] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:44] [0;32mFinished build of [0;36mconverters/p5-Unicode-MapUTF8[0;32m: Success[0;0m
+[03:00:33] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:02] [0;32mFinished build of [0;36mnet/py-ldap2[0;32m: Success[0;0m
+[03:00:36] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/rcs[0;0m[0;0m
+[03:00:40] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:26] [0;32mFinished build of [0;36mdns/py-bonjour[0;32m: Success[0;0m
+[03:00:42] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mfreenas/py-licenselib[0;0m[0;0m
+[03:03:56] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/p5-Crypt-SmbHash[0;0m[0;0m
+[03:06:40] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:44] [0;32mFinished build of [0;36msecurity/p5-Crypt-SmbHash[0;32m: Success[0;0m
+[03:06:42] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/libltdl[0;0m[0;0m
+[03:06:46] [0;32m====>>[0;0m [[0;32m02[0;0m][00:06:05] [0;32mFinished build of [0;36mfreenas/py-licenselib[0;32m: Success[0;0m
+[03:06:49] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/p5-Digest-SHA1[0;0m[0;0m
+[03:07:18] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:29] [0;32mFinished build of [0;36msecurity/p5-Digest-SHA1[0;32m: Success[0;0m
+[03:10:37] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-lockfile[0;0m[0;0m
+[03:10:47] [0;32m====>>[0;0m [[0;34m04[0;0m][00:04:05] [0;32mFinished build of [0;36mdevel/libltdl[0;32m: Success[0;0m
+[03:10:48] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/protobuf[0;0m[0;0m
+[03:13:37] [0;32m====>>[0;0m [[0;32m02[0;0m][00:03:00] [0;32mFinished build of [0;36mdevel/py-lockfile[0;32m: Success[0;0m
+[03:13:40] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mtextproc/py-libxml2[0;0m[0;0m
+[03:13:52] [0;32m====>>[0;0m [[0;33m03[0;0m][00:13:16] [0;32mFinished build of [0;36mdevel/rcs[0;32m: Success[0;0m
+[03:13:54] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/py-ipaddr[0;0m[0;0m
+[03:16:25] [0;32m====>>[0;0m [[0;33m03[0;0m][00:02:31] [0;32mFinished build of [0;36mdevel/py-ipaddr[0;32m: Success[0;0m
+[03:18:13] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mnet/p5-perl-ldap[0;0m[0;0m
+[03:18:40] [0;32m====>>[0;0m [[0;32m02[0;0m][00:05:00] [0;32mFinished build of [0;36mtextproc/py-libxml2[0;32m: Success[0;0m
+[03:18:44] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdatabases/py-south[0;0m[0;0m
+[03:18:54] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:41] [0;32mFinished build of [0;36mnet/p5-perl-ldap[0;32m: Success[0;0m
+[03:18:57] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msecurity/py-ecdsa[0;0m[0;0m
+[03:19:12] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:28] [0;32mFinished build of [0;36mdatabases/py-south[0;32m: Success[0;0m
+[03:19:16] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet-mgmt/net-snmp[0;0m[0;0m
+[03:19:25] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:28] [0;32mFinished build of [0;36msecurity/py-ecdsa[0;32m: Success[0;0m
+[03:19:28] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdatabases/py-bsddb3[0;0m[0;0m
+[03:20:04] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:36] [0;32mFinished build of [0;36mdatabases/py-bsddb3[0;32m: Success[0;0m
+[03:20:06] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/libstatgrab[0;0m[0;0m
+[03:20:42] [0;32m====>>[0;0m [[0;34m04[0;0m][00:09:54] [0;32mFinished build of [0;36mdevel/protobuf[0;32m: Success[0;0m
+[03:20:44] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msysutils/eventlog[0;0m[0;0m
+[03:21:02] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:19] [0;32mFinished build of [0;36msysutils/eventlog[0;32m: Success[0;0m
+[03:21:03] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mwww/py-httplib2[0;0m[0;0m
+[03:21:20] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:17] [0;32mFinished build of [0;36mwww/py-httplib2[0;32m: Success[0;0m
+[03:21:21] [0;32m====>>[0;0m [[0;33m03[0;0m][00:01:15] [0;32mFinished build of [0;36mdevel/libstatgrab[0;32m: Success[0;0m
+[03:21:22] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36marchivers/lzo2[0;0m[0;0m
+[03:21:23] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/pydbus-common[0;0m[0;0m
+[03:22:04] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:41] [0;32mFinished build of [0;36mdevel/pydbus-common[0;32m: Success[0;0m
+[03:22:06] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mwww/apache24[0;0m[0;0m
+[03:22:28] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:06] [0;32mFinished build of [0;36marchivers/lzo2[0;32m: Success[0;0m
+[03:22:29] ====>>[0;0m [[0;34m04[0;0m][00:00:01] Starting build of [0;36mdevel/libdaemon[0;0m[0;0m
+[03:22:56] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:28] [0;32mFinished build of [0;36mdevel/libdaemon[0;32m: Success[0;0m
+[03:23:27] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msysutils/syslog-ng[0;0m[0;0m
+[03:27:59] [0;32m====>>[0;0m [[0;32m02[0;0m][00:08:43] [0;32mFinished build of [0;36mnet-mgmt/net-snmp[0;32m: Success[0;0m
+[03:28:00] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mfreenas/pcbsd-pbi[0;0m[0;0m
+[03:28:07] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:07] [0;32mFinished build of [0;36mfreenas/pcbsd-pbi[0;32m: Success[0;0m
+[03:28:08] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/pam_mkhomedir[0;0m[0;0m
+[03:28:18] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:10] [0;32mFinished build of [0;36msecurity/pam_mkhomedir[0;32m: Success[0;0m
+[03:28:22] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msysutils/htop[0;0m[0;0m
+[03:28:27] [0;32m====>>[0;0m [[0;33m03[0;0m][00:06:21] [0;32mFinished build of [0;36mwww/apache24[0;32m: Success[0;0m
+[03:28:30] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mbenchmarks/fio[0;0m[0;0m
+[03:33:19] [0;32m====>>[0;0m [[0;33m03[0;0m][00:04:49] [0;32mFinished build of [0;36mbenchmarks/fio[0;32m: Success[0;0m
+[03:33:20] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/py-rose[0;0m[0;0m
+[03:33:23] [0;32m====>>[0;0m [[0;32m02[0;0m][00:05:01] [0;32mFinished build of [0;36msysutils/htop[0;32m: Success[0;0m
+[03:33:24] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msysutils/screen[0;0m[0;0m
+[03:33:28] [0;32m====>>[0;0m [[0;34m04[0;0m][00:10:01] [0;32mFinished build of [0;36msysutils/syslog-ng[0;32m: Success[0;0m
+[03:33:56] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/py-daemon[0;0m[0;0m
+[03:34:01] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:41] [0;32mFinished build of [0;36mdevel/py-rose[0;32m: Success[0;0m
+[03:34:02] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mshells/zsh[0;0m[0;0m
+[03:34:59] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:03] [0;32mFinished build of [0;36mdevel/py-daemon[0;32m: Success[0;0m
+[03:35:04] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mshells/scponly[0;0m[0;0m
+[03:35:08] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:44] [0;32mFinished build of [0;36msysutils/screen[0;32m: Success[0;0m
+[03:35:10] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msysutils/smp_utils[0;0m[0;0m
+[03:35:23] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:19] [0;32mFinished build of [0;36mshells/scponly[0;32m: Success[0;0m
+[03:35:24] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mnet/nss_ldap[0;0m[0;0m
+[03:41:37] [0;32m====>>[0;0m [[0;32m02[0;0m][00:06:27] [0;32mFinished build of [0;36msysutils/smp_utils[0;32m: Success[0;0m
+[03:41:38] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mfreenas/freenas-files[0;0m[0;0m
+[03:43:46] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:08] [0;32mFinished build of [0;36mfreenas/freenas-files[0;32m: Success[0;0m
+[03:43:47] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mshells/mksh[0;0m[0;0m
+[03:43:55] [0;32m====>>[0;0m [[0;34m04[0;0m][00:08:31] [0;32mFinished build of [0;36mnet/nss_ldap[0;32m: Success[0;0m
+[03:43:57] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mmisc/cpuid[0;0m[0;0m
+[03:44:05] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:08] [0;32mFinished build of [0;36mmisc/cpuid[0;32m: Success[0;0m
+[03:44:05] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mnet/trafshow[0;0m[0;0m
+[03:44:20] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:33] [0;32mFinished build of [0;36mshells/mksh[0;32m: Success[0;0m
+[03:44:21] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/pam_ldap[0;0m[0;0m
+[03:44:42] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:37] [0;32mFinished build of [0;36mnet/trafshow[0;32m: Success[0;0m
+[03:44:43] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/py-parsing[0;0m[0;0m
+[03:46:47] [0;32m====>>[0;0m [[0;33m03[0;0m][00:12:45] [0;32mFinished build of [0;36mshells/zsh[0;32m: Success[0;0m
+[03:46:49] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mwww/py-django-json-rpc[0;0m[0;0m
+[03:46:51] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:08] [0;32mFinished build of [0;36mdevel/py-parsing[0;32m: Success[0;0m
+[03:46:53] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/pam_google_authenticator[0;0m[0;0m
+[03:46:56] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:35] [0;32mFinished build of [0;36msecurity/pam_ldap[0;32m: Success[0;0m
+[03:46:57] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet/vblade[0;0m[0;0m
+[03:47:05] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:12] [0;32mFinished build of [0;36msecurity/pam_google_authenticator[0;32m: Success[0;0m
+[03:47:06] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mx11-fonts/bitstream-vera[0;0m[0;0m
+[03:47:06] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:09] [0;32mFinished build of [0;36mnet/vblade[0;32m: Success[0;0m
+[03:47:07] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mconverters/iconv[0;0m[0;0m
+[03:47:09] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:20] [0;32mFinished build of [0;36mwww/py-django-json-rpc[0;32m: Success[0;0m
+[03:47:11] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msysutils/hptcli[0;0m[0;0m
+[03:47:21] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:15] [0;32mFinished build of [0;36mx11-fonts/bitstream-vera[0;32m: Success[0;0m
+[03:47:22] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msysutils/arcconf[0;0m[0;0m
+[03:47:31] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:20] [0;32mFinished build of [0;36msysutils/hptcli[0;32m: Success[0;0m
+[03:47:31] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:09] [0;32mFinished build of [0;36msysutils/arcconf[0;32m: Success[0;0m
+[03:47:32] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mwww/dojo[0;0m[0;0m
+[03:47:32] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/openvpn[0;0m[0;0m
+[03:47:34] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:27] [0;32mFinished build of [0;36mconverters/iconv[0;32m: Success[0;0m
+[03:47:36] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msysutils/graid5[0;0m[0;0m
+[03:48:31] [0;32m====>>[0;0m [[0;31m01[0;0m][02:45:25] [0;32mFinished build of [0;36mlang/gcc[0;32m: Success[0;0m
+[03:48:55] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mnet/samba41[0;0m[0;0m
+[03:48:56] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:20] [0;32mFinished build of [0;36msysutils/graid5[0;32m: Success[0;0m
+[03:48:56] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdatabases/db48[0;0m[0;0m
+[03:50:44] [0;32m====>>[0;0m [[0;34m04[0;0m][00:03:12] [0;32mFinished build of [0;36msecurity/openvpn[0;32m: Success[0;0m
+[03:50:48] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mnet/py-eventlet[0;0m[0;0m
+[03:50:49] [0;32m====>>[0;0m [[0;33m03[0;0m][00:03:17] [0;32mFinished build of [0;36mwww/dojo[0;32m: Success[0;0m
+[03:51:07] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mbenchmarks/iozone[0;0m[0;0m
+[03:53:48] [0;32m====>>[0;0m [[0;33m03[0;0m][00:02:41] [0;32mFinished build of [0;36mbenchmarks/iozone[0;32m: Success[0;0m
+[03:53:48] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mnet/py-oauth2[0;0m[0;0m
+[03:54:46] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:58] [0;32mFinished build of [0;36mnet/py-oauth2[0;32m: Success[0;0m
+[03:54:47] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msysutils/throttle[0;0m[0;0m
+[03:54:47] [0;32m====>>[0;0m [[0;34m04[0;0m][00:03:59] [0;32mFinished build of [0;36mnet/py-eventlet[0;32m: Success[0;0m
+[03:55:52] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mgames/cowsay[0;0m[0;0m
+[03:58:13] [0;32m====>>[0;0m [[0;32m02[0;0m][00:09:17] [0;32mFinished build of [0;36mdatabases/db48[0;32m: Success[0;0m
+[03:59:12] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36memulators/virtualbox-ose-kmod[0;0m[0;0m
+[03:59:12] [0;32m====>>[0;0m [[0;34m04[0;0m][00:03:20] [0;32mFinished build of [0;36mgames/cowsay[0;32m: Success[0;0m
+[03:59:13] [0;32m====>>[0;0m [[0;33m03[0;0m][00:04:26] [0;32mFinished build of [0;36msysutils/throttle[0;32m: Success[0;0m
+[03:59:14] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msecurity/stunnel[0;0m[0;0m
+[03:59:15] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msysutils/tmux[0;0m[0;0m
+[04:02:09] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:57] [0;32mFinished build of [0;36memulators/virtualbox-ose-kmod[0;32m: Success[0;0m
+[04:02:10] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mfreenas/arcsas[0;0m[0;0m
+[04:02:13] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:59] [0;32mFinished build of [0;36msecurity/stunnel[0;32m: Success[0;0m
+[04:02:14] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mwww/wgetpaste[0;0m[0;0m
+[04:02:17] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:07] [0;32mFinished build of [0;36mfreenas/arcsas[0;32m: Success[0;0m
+[04:02:18] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet-mgmt/clog[0;0m[0;0m
+[04:02:22] [0;32m====>>[0;0m [[0;33m03[0;0m][00:03:07] [0;32mFinished build of [0;36msysutils/tmux[0;32m: Success[0;0m
+[04:02:23] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msecurity/cyrus-sasl2-gssapi[0;0m[0;0m
+[04:02:25] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:11] [0;32mFinished build of [0;36mwww/wgetpaste[0;32m: Success[0;0m
+[04:02:27] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36memulators/open-vm-tools-nox11[0;0m[0;0m
+[04:02:27] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:09] [0;32mFinished build of [0;36mnet-mgmt/clog[0;32m: Success[0;0m
+[04:02:29] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-tabulate[0;0m[0;0m
+[04:02:45] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:16] [0;32mFinished build of [0;36mdevel/py-tabulate[0;32m: Success[0;0m
+[04:02:47] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36marchivers/pigz[0;0m[0;0m
+[04:03:39] [0;32m====>>[0;0m [[0;33m03[0;0m][00:01:16] [0;32mFinished build of [0;36msecurity/cyrus-sasl2-gssapi[0;32m: Success[0;0m
+[04:03:40] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdevel/py-dbus[0;0m[0;0m
+[04:03:42] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:55] [0;32mFinished build of [0;36marchivers/pigz[0;32m: Success[0;0m
+[04:03:43] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mlang/python[0;0m[0;0m
+[04:04:02] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:19] [0;32mFinished build of [0;36mlang/python[0;32m: Success[0;0m
+[04:04:04] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet/mosh[0;0m[0;0m
+[04:07:51] [0;32m====>>[0;0m [[0;33m03[0;0m][00:04:11] [0;32mFinished build of [0;36mdevel/py-dbus[0;32m: Success[0;0m
+[04:07:57] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36memulators/mtools[0;0m[0;0m
+[04:08:58] [0;32m====>>[0;0m [[0;32m02[0;0m][00:04:54] [0;32mFinished build of [0;36mnet/mosh[0;32m: Success[0;0m
+[04:09:07] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msecurity/py-htpasswd[0;0m[0;0m
+[04:10:23] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:16] [0;32mFinished build of [0;36msecurity/py-htpasswd[0;32m: Success[0;0m
+[04:10:27] [0;32m====>>[0;0m [[0;33m03[0;0m][00:02:30] [0;32mFinished build of [0;36memulators/mtools[0;32m: Success[0;0m
+[04:10:30] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mdevel/py-ujson[0;0m[0;0m
+[04:10:34] ====>>[0;0m [[0;33m03[0;0m][00:00:01] Starting build of [0;36mftp/proftpd[0;0m[0;0m
+[04:12:13] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:43] [0;32mFinished build of [0;36mdevel/py-ujson[0;32m: Success[0;0m
+[04:12:19] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet/liboping[0;0m[0;0m
+[04:14:11] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:52] [0;32mFinished build of [0;36mnet/liboping[0;32m: Success[0;0m
+[04:14:15] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet-mgmt/sipcalc[0;0m[0;0m
+[04:14:29] [0;32m====>>[0;0m [[0;34m04[0;0m][00:12:02] [0;32mFinished build of [0;36memulators/open-vm-tools-nox11[0;32m: Success[0;0m
+[04:14:38] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mconverters/base64[0;0m[0;0m
+[04:15:23] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:08] [0;32mFinished build of [0;36mnet-mgmt/sipcalc[0;32m: Success[0;0m
+[04:15:27] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet/ladvd[0;0m[0;0m
+[04:15:37] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:59] [0;32mFinished build of [0;36mconverters/base64[0;32m: Success[0;0m
+[04:15:39] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mfreenas/pcbsd-warden[0;0m[0;0m
+[04:16:15] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:36] [0;32mFinished build of [0;36mfreenas/pcbsd-warden[0;32m: Success[0;0m
+[04:16:49] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/cdialog[0;0m[0;0m
+[04:17:04] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:37] [0;32mFinished build of [0;36mnet/ladvd[0;32m: Success[0;0m
+[04:17:08] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msysutils/ipmitool[0;0m[0;0m
+[04:19:08] [0;32m====>>[0;0m [[0;34m04[0;0m][00:02:19] [0;32mFinished build of [0;36mdevel/cdialog[0;32m: Success[0;0m
+[04:19:10] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msysutils/nut[0;0m[0;0m
+[04:19:34] [0;32m====>>[0;0m [[0;33m03[0;0m][00:09:01] [0;32mFinished build of [0;36mftp/proftpd[0;32m: Success[0;0m
+[04:19:38] [0;32m====>>[0;0m [[0;32m02[0;0m][00:02:30] [0;32mFinished build of [0;36msysutils/ipmitool[0;32m: Success[0;0m
+[04:19:39] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msysutils/sg3_utils[0;0m[0;0m
+[04:19:41] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msysutils/e2fsprogs[0;0m[0;0m
+[04:20:32] [0;32m====>>[0;0m [[0;31m01[0;0m][00:31:37] [0;32mFinished build of [0;36mnet/samba41[0;32m: Success[0;0m
+[04:20:48] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36msecurity/sssd[0;0m[0;0m
+[04:22:49] [0;32m====>>[0;0m [[0;33m03[0;0m][00:03:10] [0;32mFinished build of [0;36msysutils/sg3_utils[0;32m: Success[0;0m
+[04:22:50] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mbenchmarks/iperf[0;0m[0;0m
+[04:25:30] [0;32m====>>[0;0m [[0;32m02[0;0m][00:05:49] [0;32mFinished build of [0;36msysutils/e2fsprogs[0;32m: Success[0;0m
+[04:25:32] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36msysutils/dmidecode[0;0m[0;0m
+[04:25:56] [0;32m====>>[0;0m [[0;34m04[0;0m][00:06:46] [0;32mFinished build of [0;36msysutils/nut[0;32m: Success[0;0m
+[04:26:05] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mnet/py-pyvmomi[0;0m[0;0m
+[04:26:36] [0;32m====>>[0;0m [[0;32m02[0;0m][00:01:04] [0;32mFinished build of [0;36msysutils/dmidecode[0;32m: Success[0;0m
+[04:26:37] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mwww/mod_mpm_itk[0;0m[0;0m
+[04:30:06] [0;32m====>>[0;0m [[0;33m03[0;0m][00:07:16] [0;32mFinished build of [0;36mbenchmarks/iperf[0;32m: Success[0;0m
+[04:33:43] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mnet-mgmt/collectd5[0;0m[0;0m
+[04:38:24] [0;32m====>>[0;0m [[0;34m04[0;0m][00:12:19] [0;32mFinished build of [0;36mnet/py-pyvmomi[0;32m: Success[0;0m
+[04:38:26] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msysutils/grub2-pcbsd[0;0m[0;0m
+[04:38:30] [0;32m====>>[0;0m [[0;32m02[0;0m][00:11:53] [0;32mFinished build of [0;36mwww/mod_mpm_itk[0;32m: Success[0;0m
+[04:38:51] ====>>[0;0m [[0;32m02[0;0m][00:00:01] Starting build of [0;36msysutils/smartmontools[0;0m[0;0m
+[04:45:43] [0;32m====>>[0;0m [[0;32m02[0;0m][00:06:53] [0;32mFinished build of [0;36msysutils/smartmontools[0;32m: Success[0;0m
+[04:45:44] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mnet/smbldap-tools[0;0m[0;0m
+[04:46:29] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:45] [0;32mFinished build of [0;36mnet/smbldap-tools[0;32m: Success[0;0m
+[04:46:34] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mcomms/lrzsz[0;0m[0;0m
+[04:47:04] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:30] [0;32mFinished build of [0;36mcomms/lrzsz[0;32m: Success[0;0m
+[04:47:05] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mshells/ksh93[0;0m[0;0m
+[04:47:39] [0;32m====>>[0;0m [[0;33m03[0;0m][00:13:56] [0;32mFinished build of [0;36mnet-mgmt/collectd5[0;32m: Success[0;0m
+[04:47:41] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36marchivers/plzip[0;0m[0;0m
+[04:48:04] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:23] [0;32mFinished build of [0;36marchivers/plzip[0;32m: Success[0;0m
+[04:48:05] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mwww/nginx[0;0m[0;0m
+[04:51:11] [0;32m====>>[0;0m [[0;33m03[0;0m][00:03:06] [0;32mFinished build of [0;36mwww/nginx[0;32m: Success[0;0m
+[04:51:14] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mfreenas/freenas-ui[0;0m[0;0m
+[04:52:21] [0;32m====>>[0;0m [[0;31m01[0;0m][00:31:33] [0;32mFinished build of [0;36msecurity/sssd[0;32m: Success[0;0m
+[04:52:30] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36msecurity/sudo[0;0m[0;0m
+[04:53:12] [0;32m====>>[0;0m [[0;33m03[0;0m][00:01:58] [0;32mFinished build of [0;36mfreenas/freenas-ui[0;32m: Success[0;0m
+[04:53:20] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mdns/mDNSResponder_nss[0;0m[0;0m
+[04:54:10] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:50] [0;32mFinished build of [0;36mdns/mDNSResponder_nss[0;32m: Success[0;0m
+[04:54:12] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36marchivers/lz4[0;0m[0;0m
+[04:54:21] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:09] [0;32mFinished build of [0;36marchivers/lz4[0;32m: Success[0;0m
+[04:54:22] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msysutils/fusefs-ntfs[0;0m[0;0m
+[04:56:55] [0;32m====>>[0;0m [[0;31m01[0;0m][00:04:25] [0;32mFinished build of [0;36msecurity/sudo[0;32m: Success[0;0m
+[04:56:56] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36msysutils/pciutils[0;0m[0;0m
+[04:57:19] [0;32m====>>[0;0m [[0;34m04[0;0m][00:18:53] [0;32mFinished build of [0;36msysutils/grub2-pcbsd[0;32m: Success[0;0m
+[04:57:20] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:24] [0;32mFinished build of [0;36msysutils/pciutils[0;32m: Success[0;0m
+[04:57:21] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36msysutils/ataidle[0;0m[0;0m
+[04:57:22] [0;32m====>>[0;0m [[0;33m03[0;0m][00:03:00] [0;32mFinished build of [0;36msysutils/fusefs-ntfs[0;32m: Success[0;0m
+[04:57:22] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mmisc/xtail[0;0m[0;0m
+[04:57:23] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36msysutils/areca-cli[0;0m[0;0m
+[04:57:26] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:05] [0;32mFinished build of [0;36msysutils/ataidle[0;32m: Success[0;0m
+[04:57:27] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36msysutils/beadm[0;0m[0;0m
+[04:57:30] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:07] [0;32mFinished build of [0;36msysutils/areca-cli[0;32m: Success[0;0m
+[04:57:31] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mnet/netatalk3[0;0m[0;0m
+[04:57:34] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:07] [0;32mFinished build of [0;36msysutils/beadm[0;32m: Success[0;0m
+[04:57:35] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mdns/inadyn-mt[0;0m[0;0m
+[04:57:54] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:32] [0;32mFinished build of [0;36mmisc/xtail[0;32m: Success[0;0m
+[04:57:54] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36msysutils/megacli[0;0m[0;0m
+[05:02:21] [0;32m====>>[0;0m [[0;34m04[0;0m][00:04:27] [0;32mFinished build of [0;36msysutils/megacli[0;32m: Success[0;0m
+[05:02:21] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mgraphics/jpeg[0;0m[0;0m
+[05:02:29] [0;32m====>>[0;0m [[0;31m01[0;0m][00:04:54] [0;32mFinished build of [0;36mdns/inadyn-mt[0;32m: Success[0;0m
+[05:02:30] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36msysutils/jailme[0;0m[0;0m
+[05:02:36] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:06] [0;32mFinished build of [0;36msysutils/jailme[0;32m: Success[0;0m
+[05:02:37] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36meditors/nano[0;0m[0;0m
+[05:04:10] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:49] [0;32mFinished build of [0;36mgraphics/jpeg[0;32m: Success[0;0m
+[05:04:11] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mdevel/py-setproctitle[0;0m[0;0m
+[05:04:51] [0;32m====>>[0;0m [[0;31m01[0;0m][00:02:14] [0;32mFinished build of [0;36meditors/nano[0;32m: Success[0;0m
+[05:04:52] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36msysutils/tw_cli[0;0m[0;0m
+[05:04:57] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:46] [0;32mFinished build of [0;36mdevel/py-setproctitle[0;32m: Success[0;0m
+[05:04:59] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mnet/py-pysphere[0;0m[0;0m
+[05:05:01] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:09] [0;32mFinished build of [0;36msysutils/tw_cli[0;32m: Success[0;0m
+[05:05:02] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36msecurity/py-paramiko[0;0m[0;0m
+[05:06:45] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:43] [0;32mFinished build of [0;36msecurity/py-paramiko[0;32m: Success[0;0m
+[05:06:47] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mbenchmarks/netperf[0;0m[0;0m
+[05:06:51] [0;32m====>>[0;0m [[0;34m04[0;0m][00:01:52] [0;32mFinished build of [0;36mnet/py-pysphere[0;32m: Success[0;0m
+[05:06:52] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mlang/gcc47[0;0m[0;0m
+[05:07:40] [0;32m====>>[0;0m [[0;33m03[0;0m][00:10:09] [0;32mFinished build of [0;36mnet/netatalk3[0;32m: Success[0;0m
+[05:07:56] [0;32m====>>[0;0m [[0;31m01[0;0m][00:01:09] [0;32mFinished build of [0;36mbenchmarks/netperf[0;32m: Success[0;0m
+[05:11:26] [0;32m====>>[0;0m [[0;32m02[0;0m][00:24:21] [0;32mFinished build of [0;36mshells/ksh93[0;32m: Success[0;0m
+[05:44:05] [0;32m====>>[0;0m [[0;34m04[0;0m][00:37:13] [0;32mFinished build of [0;36mlang/gcc47[0;32m: Success[0;0m
+[05:44:06] ====>> Stopping 4 builders
+[05:44:14] ====>> Creating pkgng repository
+Creating repository in /tmp/packages:   0%Creating repository in /tmp/packages:   0%Creating repository in /tmp/packages:   1%Creating repository in /tmp/packages:   2%Creating repository in /tmp/packages:   3%Creating repository in /tmp/packages:   4%Creating repository in /tmp/packages:   5%Creating repository in /tmp/packages:   6%Creating repository in /tmp/packages:   7%Creating repository in /tmp/packages:   8%Creating repository in /tmp/packages:   9%Creating repository in /tmp/packages:  10%Creating repository in /tmp/packages:  11%Creating repository in /tmp/packages:  12%Creating repository in /tmp/packages:  13%Creating repository in /tmp/packages:  14%Creating repository in /tmp/packages:  15%Creating repository in /tmp/packages:  16%Creating repository in /tmp/packages:  17%Creating repository in /tmp/packages:  18%Creating repository in /tmp/packages:  19%Creating repository in /tmp/packages:  20%Creating repository in /tmp/packages:  21%Creating repository in /tmp/packages:  22%Creating repository in /tmp/packages:  23%Creating repository in /tmp/packages:  24%Creating repository in /tmp/packages:  25%Creating repository in /tmp/packages:  26%Creating repository in /tmp/packages:  27%Creating repository in /tmp/packages:  28%Creating repository in /tmp/packages:  29%Creating repository in /tmp/packages:  30%Creating repository in /tmp/packages:  31%Creating repository in /tmp/packages:  32%Creating repository in /tmp/packages:  33%Creating repository in /tmp/packages:  34%Creating repository in /tmp/packages:  35%Creating repository in /tmp/packages:  36%Creating repository in /tmp/packages:  37%Creating repository in /tmp/packages:  38%Creating repository in /tmp/packages:  39%Creating repository in /tmp/packages:  40%Creating repository in /tmp/packages:  41%Creating repository in /tmp/packages:  42%Creating repository in /tmp/packages:  43%Creating repository in /tmp/packages:  44%Creating repository in /tmp/packages:  45%Creating repository in /tmp/packages:  46%Creating repository in /tmp/packages:  47%Creating repository in /tmp/packages:  48%Creating repository in /tmp/packages:  49%Creating repository in /tmp/packages:  50%Creating repository in /tmp/packages:  51%Creating repository in /tmp/packages:  52%Creating repository in /tmp/packages:  53%Creating repository in /tmp/packages:  54%Creating repository in /tmp/packages:  55%Creating repository in /tmp/packages:  56%Creating repository in /tmp/packages:  57%Creating repository in /tmp/packages:  58%Creating repository in /tmp/packages:  59%Creating repository in /tmp/packages:  60%Creating repository in /tmp/packages:  61%Creating repository in /tmp/packages:  62%Creating repository in /tmp/packages:  63%Creating repository in /tmp/packages:  64%Creating repository in /tmp/packages:  65%Creating repository in /tmp/packages:  66%Creating repository in /tmp/packages:  67%Creating repository in /tmp/packages:  68%Creating repository in /tmp/packages:  69%Creating repository in /tmp/packages:  70%Creating repository in /tmp/packages:  71%Creating repository in /tmp/packages:  72%Creating repository in /tmp/packages:  73%Creating repository in /tmp/packages:  74%Creating repository in /tmp/packages:  75%Creating repository in /tmp/packages:  76%Creating repository in /tmp/packages:  77%Creating repository in /tmp/packages:  78%Creating repository in /tmp/packages:  79%Creating repository in /tmp/packages:  80%Creating repository in /tmp/packages:  81%Creating repository in /tmp/packages:  82%Creating repository in /tmp/packages:  83%Creating repository in /tmp/packages:  84%Creating repository in /tmp/packages:  85%Creating repository in /tmp/packages:  86%Creating repository in /tmp/packages:  87%Creating repository in /tmp/packages:  88%Creating repository in /tmp/packages:  89%Creating repository in /tmp/packages:  90%Creating repository in /tmp/packages:  91%Creating repository in /tmp/packages:  92%Creating repository in /tmp/packages:  93%Creating repository in /tmp/packages:  94%Creating repository in /tmp/packages:  95%Creating repository in /tmp/packages:  96%Creating repository in /tmp/packages:  97%Creating repository in /tmp/packages:  98%Creating repository in /tmp/packages:  99%Creating repository in /tmp/packages: 100%
+Packing files for repository:   0%Packing files for repository:   0%Packing files for repository:  25%Packing files for repository:  50%Packing files for repository:  75%Packing files for repository: 100%
+[05:44:16] ====>> Committing packages to repository
+[05:44:16] ====>> Removing old packages
+[05:44:16] [0;32m====>>[0;0m [0;32mBuilt ports: [0;36mports-mgmt/pkg devel/pkgconf print/indexinfo devel/xorg-macros converters/libiconv devel/gmake-lite devel/m4 devel/autoconf-wrapper x11/xproto lang/python27 textproc/xmlcatmgr devel/py-setuptools27 lang/python2 devel/py-pytz textproc/py-MarkupSafe devel/py-babel devel/gettext textproc/py-pygments textproc/xmlcharent textproc/py-docutils x11/libXdmcp devel/libpthread-stubs devel/gmake textproc/iso8879 devel/py-Jinja2 security/libgpg-error devel/libcheck x11/libXau lang/perl5.16 devel/automake-wrapper textproc/libxml2 devel/p5-Locale-gettext security/ca_root_nss security/libgcrypt x11/xcb-proto x11/xcmiscproto misc/help2man x11/inputproto textproc/libxslt textproc/py-sphinx devel/autoconf devel/cmake-modules devel/libtool devel/automake x11/bigreqsproto textproc/expat2 textproc/docbook-xml x11/kbproto devel/libatomic_ops x11-fonts/fontsproto x11/xtrans textproc/docbook-sgml x11-fonts/xf86bigfontproto textproc/sdocbook-xml x11/libxcb x11-fonts/libfontenc x11/xextproto print/freetype2 devel/boehm-gc devel/libffi devel/pcre math/gmp ftp/curl textproc/docbook x11-fonts/mkfontscale devel/bison x11-fonts/libXfont textproc/p5-XML-NamespaceSupport x11/libX11 devel/talloc textproc/docbook-xsl security/cyrus-sasl2 x11/pixman www/w3m shells/bash security/libtasn1 security/openssl print/libpaper misc/getopt x11-fonts/font-util x11-fonts/fontconfig x11/libXext x11-fonts/mkfontdir textproc/p5-XML-SAX-Base math/mpfr x11-fonts/bdftopcf devel/cmake textproc/p5-XML-SAX x11-fonts/dejavu graphics/png x11-fonts/encodings graphics/graphite2 textproc/xmlto devel/popt devel/glib20 x11-fonts/font-misc-ethiopic math/mpc x11-fonts/font-bh-ttf databases/sqlite3 security/p11-kit databases/tdb dns/libidn sysutils/gnome_subr graphics/cairo devel/binutils devel/py-pycparser security/nettle devel/p5-Parse-Yapp lang/gcc-ecj45 x11-fonts/font-misc-meltho archivers/zip misc/gnomehier net/p5-Socket devel/libexecinfo devel/tevent net/mDNSResponder textproc/p5-XML-Filter-BufferText dns/py-dnspython devel/p5-Parse-Pidl textproc/p5-XML-Parser www/p5-Mozilla-CA net/openldap24-sasl-client databases/db5 devel/py-pip devel/py-six databases/py-sqlite3 devel/py-asn1 devel/icu devel/gobject-introspection security/fakeroot security/p5-GSSAPI security/p5-Digest-HMAC databases/ldb sysutils/libsunacl www/py-flup x11-fonts/xorg-fonts-truetype devel/nspr dns/samba-nsupdate databases/ntdb converters/p5-Unicode-String math/p5-Math-BigInt security/p5-Net-SSLeay print/harfbuzz devel/libinotify net/p5-IO-Socket-IP databases/gdbm devel/py-cffi devel/dbus devel/gamin devel/dbus-glib japanese/p5-Jcode security/gnutls devel/py-enum34 devel/py-dateutil sysutils/fusefs-libs dns/bind99 dns/c-ares x11-toolkits/pango security/py-cryptography security/p5-IO-Socket-SSL devel/py-pbr devel/py-mimeparse security/krb5 converters/p5-Convert-ASN1 converters/p5-Unicode-Map net/p5-URI www/py-django security/nss textproc/p5-XML-SAX-Writer converters/p5-Unicode-Map8 devel/py-asn1-modules dns/ldns devel/apr1 devel/git devel/ding-libs misc/pciids security/p5-Authen-SASL textproc/flex textproc/intltool sysutils/fusefs-kmod www/py-django-tastypie net/libdnet devel/py-simplejson devel/libunistring textproc/py-xml databases/rrdtool x11-fonts/gnu-unifont security/py-openssl www/py-requests devel/libevent2 devel/py-greenlet ftp/wget security/openssh-portable net/rsync archivers/lzlib devel/py-lxml devel/py-polib devel/py-sysctl www/py-dojango devel/kBuild sysutils/lsof devel/libublio security/py-pycrypto security/easy-rsa databases/py-sqlparse devel/libpci converters/p5-Unicode-MapUTF8 net/py-ldap2 dns/py-bonjour security/p5-Crypt-SmbHash freenas/py-licenselib security/p5-Digest-SHA1 devel/libltdl devel/py-lockfile devel/rcs devel/py-ipaddr textproc/py-libxml2 net/p5-perl-ldap databases/py-south security/py-ecdsa databases/py-bsddb3 devel/protobuf sysutils/eventlog www/py-httplib2 devel/libstatgrab devel/pydbus-common archivers/lzo2 devel/libdaemon net-mgmt/net-snmp freenas/pcbsd-pbi security/pam_mkhomedir www/apache24 benchmarks/fio sysutils/htop sysutils/syslog-ng devel/py-rose devel/py-daemon sysutils/screen shells/scponly sysutils/smp_utils freenas/freenas-files net/nss_ldap misc/cpuid shells/mksh net/trafshow shells/zsh devel/py-parsing security/pam_ldap security/pam_google_authenticator net/vblade www/py-django-json-rpc x11-fonts/bitstream-vera sysutils/hptcli sysutils/arcconf converters/iconv lang/gcc sysutils/graid5 security/openvpn www/dojo benchmarks/iozone net/py-oauth2 net/py-eventlet databases/db48 games/cowsay sysutils/throttle emulators/virtualbox-ose-kmod security/stunnel freenas/arcsas sysutils/tmux www/wgetpaste net-mgmt/clog devel/py-tabulate security/cyrus-sasl2-gssapi archivers/pigz lang/python devel/py-dbus net/mosh security/py-htpasswd emulators/mtools devel/py-ujson net/liboping emulators/open-vm-tools-nox11 net-mgmt/sipcalc converters/base64 freenas/pcbsd-warden net/ladvd devel/cdialog ftp/proftpd sysutils/ipmitool net/samba41 sysutils/sg3_utils sysutils/e2fsprogs sysutils/nut sysutils/dmidecode benchmarks/iperf net/py-pyvmomi www/mod_mpm_itk sysutils/smartmontools net/smbldap-tools comms/lrzsz net-mgmt/collectd5 archivers/plzip www/nginx security/sssd freenas/freenas-ui dns/mDNSResponder_nss archivers/lz4 security/sudo sysutils/grub2-pcbsd sysutils/pciutils sysutils/fusefs-ntfs sysutils/ataidle sysutils/areca-cli sysutils/beadm misc/xtail sysutils/megacli dns/inadyn-mt sysutils/jailme graphics/jpeg editors/nano devel/py-setproctitle sysutils/tw_cli security/py-paramiko net/py-pysphere net/netatalk3 benchmarks/netperf shells/ksh93 lang/gcc47[0;0m
+[ja-p] [2015-07-09_16h43m55s] [committing:] Queued: 328 [0;32mBuilt: 328 [0;31mFailed: 0   [1;33mSkipped: 0   [1;30mIgnored: 0  [0;0m Tobuild: 0    Time: 05:44:11
+[05:44:16] ====>> Logs: /tmp/bld/freenas/objs/os-base/amd64/ports/logs/bulk/ja-p/2015-07-09_16h43m55s
+[05:44:16] ====>> Cleaning up
+[05:44:16] ====>> Umounting file systems
+Cleaning up jail....
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507092316 SEQUENCE=FreeNAS-9.3-MASTER-201507092316 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/do_build.sh
+/tmp/bld/freenas/build/nanobsd/nanobsd.sh -c /tmp/bld/freenas/build/nanobsd-cfg/os-base -w -k -j 9
+Sourcing /tmp/bld/freenas/build/nanobsd-cfg/os-base
+Nano media size rounded down for SWAP backing 7812500 -> 7811072
+00:00:00 # NanoBSD image FreeNAS-9.3-MASTER-201507092316 build starting
+00:00:00 ## Skipping buildworld (as instructed)
+00:00:00 ## Skipping buildkernel (as instructed)
+00:00:00 ## Construct install make.conf (/tmp/bld/freenas/objs/os-base/amd64/make.conf.install)
+00:00:00 ## installworld
+00:00:00 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.iw
+00:00:35 ## install /etc
+00:00:35 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.etc
+00:00:36 ## configure nanobsd /etc
+00:00:36 ## install kernel (/tmp/bld/freenas/build/nanobsd-cfg/FREENAS.amd64)
+00:00:36 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.ik
+00:00:43 ## run customize scripts
+00:00:43 ## NANO_CUSTOMIZE:  clean_packages cust_install_files cust_install_machine_files generate_avatar_conf build_debug_kernel install_debug_kernel write_version_file install_ports hack_nsswitch_conf move_data select_httpd remove_patch_divots configure_mnt_md shrink_md_fbsize clean_etc remove_gcc47 remove_gcc remove_packages remove_var_cache_pkg create_var_home_symlink
+00:00:43 ## [1/20] customize "clean_packages"
+00:00:43 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.clean_packages
+00:00:43 ## Clean and create world directory (/tmp/bld/freenas/objs/os-base/amd64/_.w/usr/local)
+00:00:43 ## [2/20] customize "cust_install_files"
+00:00:43 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.cust_install_files
+00:00:43 ## [3/20] customize "cust_install_machine_files"
+00:00:43 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.cust_install_machine_files
+00:00:43 ## [4/20] customize "generate_avatar_conf"
+00:00:43 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.generate_avatar_conf
+00:00:43 ## [5/20] customize "build_debug_kernel"
+00:00:43 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.build_debug_kernel
+00:00:43 ## build kernel (/tmp/bld/freenas/objs/os-base/amd64/FREENAS.amd64-DEBUG)
+00:00:43 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.bk_FREENAS.amd64-DEBUG
+00:04:45 ## [6/20] customize "install_debug_kernel"
+00:04:45 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.install_debug_kernel
+00:04:45 ## install kernel (/tmp/bld/freenas/objs/os-base/amd64/FREENAS.amd64-DEBUG)
+00:04:45 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.ik_FREENAS.amd64-DEBUG
+00:05:14 ## [7/20] customize "write_version_file"
+00:05:14 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.write_version_file
+00:05:14 ## [8/20] customize "install_ports"
+00:05:14 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.install_ports
+00:59:51 ## [9/20] customize "hack_nsswitch_conf"
+00:59:51 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.hack_nsswitch_conf
+00:59:51 ## [10/20] customize "move_data"
+00:59:51 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.move_data
+00:59:51 ## [11/20] customize "select_httpd"
+00:59:51 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.select_httpd
+00:59:51 ## [12/20] customize "remove_patch_divots"
+00:59:51 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.remove_patch_divots
+00:59:52 ## [13/20] customize "configure_mnt_md"
+00:59:52 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.configure_mnt_md
+00:59:52 ## [14/20] customize "shrink_md_fbsize"
+00:59:52 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.shrink_md_fbsize
+00:59:52 ## [15/20] customize "clean_etc"
+00:59:52 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.clean_etc
+00:59:52 ## [16/20] customize "remove_gcc47"
+00:59:52 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.remove_gcc47
+01:01:08 ## [17/20] customize "remove_gcc"
+01:01:08 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.remove_gcc
+01:01:12 ## [18/20] customize "remove_packages"
+01:01:12 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.remove_packages
+01:01:16 ## [19/20] customize "remove_var_cache_pkg"
+01:01:16 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.remove_var_cache_pkg
+01:01:16 ## [20/20] customize "create_var_home_symlink"
+01:01:16 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cust.create_var_home_symlink
+01:01:16 ## configure nanobsd setup
+01:01:16 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.dl
+Building documentation
+sphinx-build -b html -d _build/doctrees   . _build/html
+Making output directory...
+[01mRunning Sphinx v1.2.3[39;49;00m
+[01mloading pickled environment... [39;49;00mnot yet created
+[01mbuilding [html]: [39;49;00mtargets for 27 source files that are out of date
+[01mupdating environment: [39;49;00m27 added, 0 changed, 0 removed
+[01mreading sources... [39;49;00m[  3%] [35mfreenas[39;49;00m                                                                                            [01mreading sources... [39;49;00m[  7%] [35mfreenas_account[39;49;00m                                                                                    [01mreading sources... [39;49;00m[ 11%] [35mfreenas_alert[39;49;00m                                                                                      [01mreading sources... [39;49;00m[ 14%] [35mfreenas_api[39;49;00m                                                                                        [01mreading sources... [39;49;00m[ 18%] [35mfreenas_cli[39;49;00m                                                                                        [01mreading sources... [39;49;00m[ 22%] [35mfreenas_contribute[39;49;00m                                                                                 [01mreading sources... [39;49;00m[ 25%] [35mfreenas_directoryservice[39;49;00m                                                                           [01mreading sources... [39;49;00m[ 29%] [35mfreenas_help[39;49;00m                                                                                       [01mreading sources... [39;49;00m[ 33%] [35mfreenas_install[39;49;00m                                                                                    [01mreading sources... [39;49;00m[ 37%] [35mfreenas_intro[39;49;00m                                                                                      [01mreading sources... [39;49;00m[ 40%] [35mfreenas_jails[39;49;00m                                                                                      [01mreading sources... [39;49;00m[ 44%] [35mfreenas_logout[39;49;00m                                                                                     [01mreading sources... [39;49;00m[ 48%] [35mfreenas_network[39;49;00m                                                                                    [01mreading sources... [39;49;00m[ 51%] [35mfreenas_plugins[39;49;00m                                                                                    [01mreading sources... [39;49;00m[ 55%] [35mfreenas_processes[39;49;00m                                                                                  [01mreading sources... [39;49;00m[ 59%] [35mfreenas_quick[39;49;00m                                                                                      [01mreading sources... [39;49;00m[ 62%] [35mfreenas_reboot[39;49;00m                                                                                     [01mreading sources... [39;49;00m[ 66%] [35mfreenas_reporting[39;49;00m                                                                                  [01mreading sources... [39;49;00m[ 70%] [35mfreenas_services[39;49;00m                                                                                   [01mreading sources... [39;49;00m[ 74%] [35mfreenas_sharing[39;49;00m                                                                                    [01mreading sources... [39;49;00m[ 77%] [35mfreenas_shell[39;49;00m                                                                                      [01mreading sources... [39;49;00m[ 81%] [35mfreenas_shutdown[39;49;00m                                                                                   [01mreading sources... [39;49;00m[ 85%] [35mfreenas_storage[39;49;00m                                                                                    [01mreading sources... [39;49;00m[ 88%] [35mfreenas_support[39;49;00m                                                                                    [01mreading sources... [39;49;00m[ 92%] [35mfreenas_system[39;49;00m                                                                                     [01mreading sources... [39;49;00m[ 96%] [35mfreenas_tasks[39;49;00m                                                                                      [01mreading sources... [39;49;00m[100%] [35mzfsprimer[39;49;00m                                                                                          
+/tmp/bld/freenas/docs/userguide/freenas_cli.rst:4: WARNING: Duplicate explicit target name: "forum post".
+/tmp/bld/freenas/docs/userguide/freenas_install.rst:4: WARNING: Duplicate explicit target name: "virtualbox".
+/tmp/bld/freenas/docs/userguide/freenas_intro.rst:87: WARNING: Duplicate explicit target name: "forum post".
+/tmp/bld/freenas/docs/userguide/freenas_intro.rst:87: WARNING: Duplicate explicit target name: "forum post".
+/tmp/bld/freenas/docs/userguide/freenas_intro.rst:87: WARNING: Duplicate explicit target name: "forum post".
+/tmp/bld/freenas/docs/userguide/freenas_sharing.rst:4: WARNING: Duplicate explicit target name: "here".
+/tmp/bld/freenas/docs/userguide/freenas_sharing.rst:4: WARNING: Duplicate explicit target name: "here".
+/tmp/bld/freenas/docs/userguide/freenas_storage.rst:4: WARNING: Duplicate explicit target name: "this forum post".
+/tmp/bld/freenas/docs/userguide/freenas_storage.rst:4: WARNING: Duplicate explicit target name: "forum post".
+/tmp/bld/freenas/docs/userguide/freenas_support.rst:4: WARNING: Duplicate explicit target name: "installation".
+/tmp/bld/freenas/docs/userguide/freenas_support.rst:4: WARNING: Duplicate explicit target name: "hardware".
+/tmp/bld/freenas/docs/userguide/freenas_system.rst:4: WARNING: Duplicate explicit target name: "bugs.freenas.org".
+/tmp/bld/freenas/docs/userguide/freenas_system.rst:4: WARNING: Duplicate explicit target name: "bugs.freenas.org".
+/tmp/bld/freenas/docs/userguide/freenas_system.rst:4: WARNING: Duplicate explicit target name: "bugs.freenas.org".
+/tmp/bld/freenas/docs/userguide/freenas_system.rst:4: WARNING: Duplicate explicit target name: "bugs.freenas.org".
+/tmp/bld/freenas/docs/userguide/zfsprimer.rst:4: WARNING: duplicate label zfs primer, other instance in /tmp/bld/freenas/docs/userguide/freenas_intro.rst
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00m/tmp/bld/freenas/docs/userguide/zfsprimer.rst:: WARNING: document isn't included in any toctree
+done
+[01mpreparing documents... [39;49;00mdone
+[01mwriting output... [39;49;00m[  3%] [32mfreenas[39;49;00m                                                                                             [01mwriting output... [39;49;00m[  7%] [32mfreenas_account[39;49;00m                                                                                     [01mwriting output... [39;49;00m[ 11%] [32mfreenas_alert[39;49;00m                                                                                       [01mwriting output... [39;49;00m[ 14%] [32mfreenas_api[39;49;00m                                                                                         [01mwriting output... [39;49;00m[ 18%] [32mfreenas_cli[39;49;00m                                                                                         [01mwriting output... [39;49;00m[ 22%] [32mfreenas_contribute[39;49;00m                                                                                  [01mwriting output... [39;49;00m[ 25%] [32mfreenas_directoryservice[39;49;00m                                                                            [01mwriting output... [39;49;00m[ 29%] [32mfreenas_help[39;49;00m                                                                                        [01mwriting output... [39;49;00m[ 33%] [32mfreenas_install[39;49;00m                                                                                     [01mwriting output... [39;49;00m[ 37%] [32mfreenas_intro[39;49;00m                                                                                       [01mwriting output... [39;49;00m[ 40%] [32mfreenas_jails[39;49;00m                                                                                       [01mwriting output... [39;49;00m[ 44%] [32mfreenas_logout[39;49;00m                                                                                      [01mwriting output... [39;49;00m[ 48%] [32mfreenas_network[39;49;00m                                                                                     [01mwriting output... [39;49;00m[ 51%] [32mfreenas_plugins[39;49;00m                                                                                     [01mwriting output... [39;49;00m[ 55%] [32mfreenas_processes[39;49;00m                                                                                   [01mwriting output... [39;49;00m[ 59%] [32mfreenas_quick[39;49;00m                                                                                       [01mwriting output... [39;49;00m[ 62%] [32mfreenas_reboot[39;49;00m                                                                                      [01mwriting output... [39;49;00m[ 66%] [32mfreenas_reporting[39;49;00m                                                                                   [01mwriting output... [39;49;00m[ 70%] [32mfreenas_services[39;49;00m                                                                                    [01mwriting output... [39;49;00m[ 74%] [32mfreenas_sharing[39;49;00m                                                                                     [01mwriting output... [39;49;00m[ 77%] [32mfreenas_shell[39;49;00m                                                                                       [01mwriting output... [39;49;00m[ 81%] [32mfreenas_shutdown[39;49;00m                                                                                    [01mwriting output... [39;49;00m[ 85%] [32mfreenas_storage[39;49;00m                                                                                     [01mwriting output... [39;49;00m[ 88%] [32mfreenas_support[39;49;00m                                                                                     [01mwriting output... [39;49;00m[ 92%] [32mfreenas_system[39;49;00m                                                                                      [01mwriting output... [39;49;00m[ 96%] [32mfreenas_tasks[39;49;00m                                                                                       [01mwriting output... [39;49;00m[100%] [32mzfsprimer[39;49;00m                                                                                           
+[01mwriting additional files...[39;49;00m genindex search
+[01mcopying images... [39;49;00m[  0%] [33mimages/esxi1a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[  1%] [33mimages/jails1.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[  1%] [33mimages/zvol1.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[  2%] [33mimages/mirror1.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[  2%] [33mimages/update2.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[  3%] [33mimages/cifs8.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[  3%] [33mimages/ca1a.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[  4%] [33mimages/system5a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[  4%] [33mimages/lagg3.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[  5%] [33mimages/volume1a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[  6%] [33mimages/ftp1.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[  6%] [33mimages/virtualbox9.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[  7%] [33mimages/install3.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[  7%] [33mimages/extent2a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[  8%] [33mimages/jails6.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[  8%] [33mimages/jails7.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[  9%] [33mimages/cifs1.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[  9%] [33mimages/nfs1a.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 10%] [33mimages/nt1.png[39;49;00m                                                                                      [01mcopying images... [39;49;00m[ 10%] [33mimages/ipmi1.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 11%] [33mimages/virtualbox4.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 12%] [33mimages/shutdown.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 12%] [33mimages/cert3a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 13%] [33mimages/realm1a.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 13%] [33mimages/translate2.png[39;49;00m                                                                               [01mcopying images... [39;49;00m[ 14%] [33mimages/kerberos1.png[39;49;00m                                                                                [01mcopying images... [39;49;00m[ 14%] [33mimages/ca3.png[39;49;00m                                                                                      [01mcopying images... [39;49;00m[ 15%] [33mimages/scrub1.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 15%] [33mimages/virtualbox6.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 16%] [33mimages/manual.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 16%] [33mimages/ca2a.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 17%] [33mimages/jails3a.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 18%] [33mimages/virtualbox3.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 18%] [33mimages/jails10a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 19%] [33mimages/global1.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 19%] [33mimages/wizard5.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 20%] [33mimages/filezilla.png[39;49;00m                                                                                [01mcopying images... [39;49;00m[ 20%] [33mimages/jails4a.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 21%] [33mimages/view.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 21%] [33mimages/wizard.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 22%] [33mimages/process.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 22%] [33mimages/afp6.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 23%] [33mimages/wizard1.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 24%] [33mimages/plugins4.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 24%] [33mimages/tunable.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 25%] [33mimages/esxi5a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 25%] [33mimages/system2a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 26%] [33mimages/cifs7.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 26%] [33mimages/be1e.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 27%] [33mimages/boot1.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 27%] [33mimages/encrypt1.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 28%] [33mimages/volume2.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 28%] [33mimages/cert2a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 29%] [33mimages/plugins2.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 30%] [33mimages/afp2.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 30%] [33mimages/afp3.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 31%] [33mimages/lagg1.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 31%] [33mimages/nfs6.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 32%] [33mimages/nfs5.jpg[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 32%] [33mimages/nfs2.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 33%] [33mimages/jails11a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 33%] [33mimages/static.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 34%] [33mimages/directory1a.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 34%] [33mimages/install1.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 35%] [33mimages/be3a.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 36%] [33mimages/jails5.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 36%] [33mimages/upgrade4a.png[39;49;00m                                                                                [01mcopying images... [39;49;00m[ 37%] [33mimages/vmware1a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 37%] [33mimages/user1a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 38%] [33mimages/cert4.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 38%] [33mimages/system3a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 39%] [33mimages/system1a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 39%] [33mimages/interface.png[39;49;00m                                                                                [01mcopying images... [39;49;00m[ 40%] [33mimages/lagg2.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 40%] [33mimages/esxi3a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 41%] [33mimages/reboot.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 42%] [33mimages/smart2.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 42%] [33mimages/ports2.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 43%] [33mimages/auto2.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 43%] [33mimages/dataset.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 44%] [33mimages/webdav.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 44%] [33mimages/group3.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 45%] [33mimages/shell.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 45%] [33mimages/upgrade2.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 46%] [33mimages/afp9.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 46%] [33mimages/ports1.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 47%] [33mimages/system4b.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 48%] [33mimages/cron.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 48%] [33mimages/disk.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 49%] [33mimages/upgrade1.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 49%] [33mimages/api.png[39;49;00m                                                                                      [01mcopying images... [39;49;00m[ 50%] [33mimages/nfs3.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 50%] [33mimages/authorized2.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 51%] [33mimages/replace.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 51%] [33mimages/translate.png[39;49;00m                                                                                [01mcopying images... [39;49;00m[ 52%] [33mimages/lldp.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 53%] [33mimages/auto1.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 53%] [33mimages/replace2.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 54%] [33mimages/plugins1.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 54%] [33mimages/wizard4.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 55%] [33mimages/plugins5.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 55%] [33mimages/initiator1.png[39;49;00m                                                                               [01mcopying images... [39;49;00m[ 56%] [33mimages/esxi6a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 56%] [33mimages/afp8.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 57%] [33mimages/services.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 57%] [33mimages/periodic3a.png[39;49;00m                                                                               [01mcopying images... [39;49;00m[ 58%] [33mimages/cifs6.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 59%] [33mimages/network1.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 59%] [33mimages/target1.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 60%] [33mimages/ddns.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 60%] [33mimages/replication2a.png[39;49;00m                                                                            [01mcopying images... [39;49;00m[ 61%] [33mimages/snmp2a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 61%] [33mimages/rsyncd.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 62%] [33mimages/portal.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 62%] [33mimages/plugins3.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 63%] [33mimages/wizard6.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 63%] [33mimages/initiator2.png[39;49;00m                                                                               [01mcopying images... [39;49;00m[ 64%] [33mimages/wizard2.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 65%] [33mimages/upgrade3a.png[39;49;00m                                                                                [01mcopying images... [39;49;00m[ 65%] [33mimages/grow1.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 66%] [33mimages/rsync2.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 66%] [33mimages/esxi4a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 67%] [33mimages/afp1a.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 67%] [33mimages/support1a.png[39;49;00m                                                                                [01mcopying images... [39;49;00m[ 68%] [33mimages/pool1.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 68%] [33mimages/install4.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 69%] [33mimages/cdrom3.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 69%] [33mimages/vlan.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 70%] [33mimages/cert1a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 71%] [33mimages/authorized1.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 71%] [33mimages/zfs1a.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 72%] [33mimages/virtualbox7.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 72%] [33mimages/virtualbox11.png[39;49;00m                                                                             [01mcopying images... [39;49;00m[ 73%] [33mimages/virtualbox2.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 73%] [33mimages/tftp.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 74%] [33mimages/install2.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 74%] [33mimages/target2a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 75%] [33mimages/alert2.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 75%] [33mimages/update1a.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 76%] [33mimages/login.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 77%] [33mimages/virtualbox5.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 77%] [33mimages/detach1.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 78%] [33mimages/virtualbox1.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 78%] [33mimages/decrypt.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 79%] [33mimages/ups.png[39;49;00m                                                                                      [01mcopying images... [39;49;00m[ 79%] [33mimages/backup1.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 80%] [33mimages/mirror2.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 80%] [33mimages/console1a.png[39;49;00m                                                                                [01mcopying images... [39;49;00m[ 81%] [33mimages/virtualbox10.png[39;49;00m                                                                             [01mcopying images... [39;49;00m[ 81%] [33mimages/periodic1b.png[39;49;00m                                                                               [01mcopying images... [39;49;00m[ 82%] [33mimages/tmux.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 83%] [33mimages/cifs3.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 83%] [33mimages/rsync3.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 84%] [33mimages/smart1.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 84%] [33mimages/be2.png[39;49;00m                                                                                      [01mcopying images... [39;49;00m[ 85%] [33mimages/nis1.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 85%] [33mimages/iperf.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 86%] [33mimages/ntp1.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 86%] [33mimages/nfs4.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 87%] [33mimages/perms1.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 87%] [33mimages/import1.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 88%] [33mimages/cdrom4.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 89%] [33mimages/jails9.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 89%] [33mimages/afp5.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 90%] [33mimages/initial.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 90%] [33mimages/esxi2a.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 91%] [33mimages/ldap1.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 91%] [33mimages/group2.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 92%] [33mimages/reporting.png[39;49;00m                                                                                [01mcopying images... [39;49;00m[ 92%] [33mimages/user2.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 93%] [33mimages/virtualbox8.png[39;49;00m                                                                              [01mcopying images... [39;49;00m[ 93%] [33mimages/cifs2.png[39;49;00m                                                                                    [01mcopying images... [39;49;00m[ 94%] [33mimages/ad1.png[39;49;00m                                                                                      [01mcopying images... [39;49;00m[ 95%] [33mimages/replication1a.png[39;49;00m                                                                            [01mcopying images... [39;49;00m[ 95%] [33mimages/group1.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 96%] [33mimages/jails8.png[39;49;00m                                                                                   [01mcopying images... [39;49;00m[ 96%] [33mimages/rsync1a.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 97%] [33mimages/afp7.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 97%] [33mimages/wizard3.png[39;49;00m                                                                                  [01mcopying images... [39;49;00m[ 98%] [33mimages/plugins6.png[39;49;00m                                                                                 [01mcopying images... [39;49;00m[ 98%] [33mimages/init.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[ 99%] [33mimages/ssh1.png[39;49;00m                                                                                     [01mcopying images... [39;49;00m[100%] [33mimages/webdav2.png[39;49;00m                                                                                  
+[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+[01mdumping search index... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded, 17 warnings.[39;49;00m
+
+Build finished. The HTML pages are in _build/html.
+01:01:32 ## run late customize scripts
+01:01:32 ## NANO_LATE_CUSTOMIZE:  freenas_custom
+01:01:32 ## [1/1] late customize "freenas_custom"
+01:01:32 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.late_cust.freenas_custom
++ pkg_version=-6a9c69e-d803767-cee4950
++ TOOLDIR=/tmp/bld/freenas/objs/os-base/amd64/_.pkgtools
++ mkdir -p /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools
++ rm -rf /tmp/bld/freenas/objs/os-base/amd64/_.packages
++ mkdir -p /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages
++ make -C /tmp/bld/freenas/src/freenas-pkgtools obj
+===> create_manifest (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/create_manifest created for /tmp/bld/freenas/src/freenas-pkgtools/create_manifest
+===> create_package (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/create_package created for /tmp/bld/freenas/src/freenas-pkgtools/create_package
+===> diff_packages (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/diff_packages created for /tmp/bld/freenas/src/freenas-pkgtools/diff_packages
+===> freenas-install (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/freenas-install created for /tmp/bld/freenas/src/freenas-pkgtools/freenas-install
+===> lib (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/lib created for /tmp/bld/freenas/src/freenas-pkgtools/lib
+===> manifest_util (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/manifest_util created for /tmp/bld/freenas/src/freenas-pkgtools/manifest_util
+===> pkgify (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/pkgify created for /tmp/bld/freenas/src/freenas-pkgtools/pkgify
+===> freenas-update (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/freenas-update created for /tmp/bld/freenas/src/freenas-pkgtools/freenas-update
+===> freenas-release (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/freenas-release created for /tmp/bld/freenas/src/freenas-pkgtools/freenas-release
+===> freenas-verify (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/freenas-verify created for /tmp/bld/freenas/src/freenas-pkgtools/freenas-verify
+===> verify_signature (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/verify_signature created for /tmp/bld/freenas/src/freenas-pkgtools/verify_signature
+===> certificates (obj)
+/tmp/bld/freenas/objs/os-base/amd64/tmp/bld/freenas/src/freenas-pkgtools/certificates created for /tmp/bld/freenas/src/freenas-pkgtools/certificates
++ make -C /tmp/bld/freenas/src/freenas-pkgtools all
+===> create_manifest (all)
+===> create_package (all)
+===> diff_packages (all)
+===> freenas-install (all)
+===> lib (all)
+===> manifest_util (all)
+===> pkgify (all)
+===> freenas-update (all)
+===> freenas-release (all)
+===> freenas-verify (all)
+===> verify_signature (all)
+cc -O2 -pipe  -std=gnu99  -fstack-protector  -c /tmp/bld/freenas/src/freenas-pkgtools/verify_signature/verify_signature.c
+/tmp/bld/freenas/src/freenas-pkgtools/verify_signature/verify_signature.c: In function 'spc_verify_cert_hostname':
+/tmp/bld/freenas/src/freenas-pkgtools/verify_signature/verify_signature.c:246: warning: passing argument 1 of 'meth->i2v' discards qualifiers from pointer target type
+cc -O2 -pipe  -std=gnu99  -fstack-protector   -o verify_signature verify_signature.o -lssl -lcrypto
+===> certificates (all)
++ make -C /tmp/bld/freenas/src/freenas-pkgtools install DESTDIR=/tmp/bld/freenas/objs/os-base/amd64/_.pkgtools PREFIX=/usr/local
+install -d /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin
+install -d /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/lib
+===> create_manifest (install)
+install -o root  -g wheel -m 555  /tmp/bld/freenas/src/freenas-pkgtools/create_manifest/create_manifest.py  /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_manifest
+===> create_package (install)
+install -o root  -g wheel -m 555  /tmp/bld/freenas/src/freenas-pkgtools/create_package/create_package.py  /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package
+===> diff_packages (install)
+install -o root  -g wheel -m 555  /tmp/bld/freenas/src/freenas-pkgtools/diff_packages/diff_packages.py  /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/diff_packages
+===> freenas-install (install)
+install -o root  -g wheel -m 555  /tmp/bld/freenas/src/freenas-pkgtools/freenas-install/freenas-install.py  /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/freenas-install
+===> lib (install)
+install -d /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/lib/freenasOS
+install -o root -g wheel  -m 444 /tmp/bld/freenas/src/freenas-pkgtools/lib/Configuration.py /tmp/bld/freenas/src/freenas-pkgtools/lib/Exceptions.py /tmp/bld/freenas/src/freenas-pkgtools/lib/Installer.py /tmp/bld/freenas/src/freenas-pkgtools/lib/Manifest.py /tmp/bld/freenas/src/freenas-pkgtools/lib/Package.py /tmp/bld/freenas/src/freenas-pkgtools/lib/Train.py /tmp/bld/freenas/src/freenas-pkgtools/lib/Update.py /tmp/bld/freenas/src/freenas-pkgtools/lib/PackageFile.py /tmp/bld/freenas/src/freenas-pkgtools/lib/__init__.py /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/lib/freenasOS
+===> manifest_util (install)
+install -o root  -g wheel -m 555  /tmp/bld/freenas/src/freenas-pkgtools/manifest_util/manifest_util.py  /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/manifest_util
+===> pkgify (install)
+install -o root  -g wheel -m 555  /tmp/bld/freenas/src/freenas-pkgtools/pkgify/pkgify.py  /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/pkgify
+===> freenas-update (install)
+install -o root  -g wheel -m 555  /tmp/bld/freenas/src/freenas-pkgtools/freenas-update/freenas-update.py  /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/freenas-update
+===> freenas-release (install)
+install -d /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/etc
+install -o root  -g wheel -m 555  /tmp/bld/freenas/src/freenas-pkgtools/freenas-release/freenas-release.py  /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/freenas-release
+install -o root -g wheel  -m 0644 /tmp/bld/freenas/src/freenas-pkgtools/freenas-release/freenas-release-default.conf /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/etc
+===> freenas-verify (install)
+install -o root  -g wheel -m 555  /tmp/bld/freenas/src/freenas-pkgtools/freenas-verify/freenas-verify.py  /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/freenas-verify
+===> verify_signature (install)
+install -d /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/libexec
+install -s -o root -g wheel -m 555   verify_signature /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/libexec/verify_signature
+===> certificates (install)
+install -d /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/share/certs
+install -o root -g wheel  -m 444 /tmp/bld/freenas/src/freenas-pkgtools/certificates/freenas-update.pem /tmp/bld/freenas/src/freenas-pkgtools/certificates/iX-CA.pem /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/share/certs
++ [ -f /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package ]
++ /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /tmp/bld/freenas/objs/os-base/amd64/_.w -T build/Templates/base-os -N base-os -V 9.3-MASTER-6a9c69e-d803767-cee4950 /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-6a9c69e-d803767-cee4950.tgz
+manifest = {'scripts': {'post-install': '/usr/bin/touch /boot/kernel/linker.hints\n/usr/bin/touch /boot/modules/linker.hints', 'post-upgrade': '/usr/bin/touch /boot/kernel/linker.hints\n/usr/bin/touch /boot/modules/linker.hints\n/bin/sh /etc/ix.rc.d/ix-device_hints start\ntest -f /usr/local/www/freenasUI/manage.py && yes | /usr/local/bin/python /usr/local/www/freenasUI/manage.py migrate --all --merge --delete-ghost-migrations > "/data/update.failed" 2>&1 && rm -f /data/update.failed\nif [ -c /dev/null -a -f /boot/grub/grub.cfg ]; then\nfor disk in $(sysctl -n kern.disks); do\ngpart show ${disk} | grep -q bios-boot && /usr/local/sbin/grub-install --modules="zfs part_gpt" /dev/${disk}\ndone\nfi'}, 'licenselogic': 'single', 'www': 'http://www.freenas.org/', 'arch': 'freebsd:9:x86:64', 'name': 'base-os', 'maintainer': 'dev@ixsystems.com', 'desc': '"FreeNAS OS (derived from FreeBSD)"', 'requires-reboot': True, 'licenses': '[BSD, MIT, GPL]', 'ix-package-services': {'Services': ['SMB', 'AFP', 'NFS', 'iSCSI', 'WebDAV', 'reboot']}, 'comment': '"FreeNAS OS"', 'origin': 'freenas/os', 'prefix': '/'}
++ PKG_FILES=/tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-6a9c69e-d803767-cee4950.tgz
++ /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /tmp/bld/freenas/objs/os-base/amd64/_.w -T build/Templates/freebsd-pkgdb -N freebsd-pkgdb -V 9.3-MASTER-6a9c69e-d803767-cee4950 /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-6a9c69e-d803767-cee4950.tgz
+manifest = {'maintainer': 'dev@ixsystems.com', 'name': 'freebsd-pkgdb', 'www': 'http://www.freenas.org/', 'arch': 'freebsd:9:x86:64', 'prefix': '/', 'comment': '"FreeBSD pkg db files"', 'requires-reboot': False, 'desc': '"FreeNAS OS (derived from FreeBSD)"', 'origin': 'freenas/os', 'licenses': '[BSD, MIT, GPL]', 'licenselogic': 'single'}
++ PKG_FILES='/tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-6a9c69e-d803767-cee4950.tgz'
++ /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /tmp/bld/freenas/objs/os-base/amd64/_.w -T build/Templates/freenasUI -N FreeNASUI -V 9.3-MASTER-6a9c69e-d803767-cee4950 /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-6a9c69e-d803767-cee4950.tgz
+manifest = {'licenselogic': 'single', 'scripts': {'post-upgrade': '\ntouch /tmp/.sqlite3_ha_skip\nyes | /usr/local/bin/python /usr/local/www/freenasUI/manage.py migrate --all --merge --delete-ghost-migrations > "/data/update.failed" 2>&1 && rm -f /data/update.failed\nrm -f /tmp/.sqlite3_ha_skip'}, 'origin': 'freenas/ui', 'www': 'http://www.freenas.org/', 'ix-package-services': {'Services': ['WebUI'], 'Restart': {'WebUI': True}}, 'requires-reboot': False, 'arch': 'freebsd:9:x86:64', 'name': 'freenasUI', 'comment': '"FreeNAS User Interface"', 'maintainer': 'dev@ixsystems.com', 'prefix': '/', 'licenses': '[BSD, MIT, GPL]', 'desc': '"FreeNAS UI (django-based)"'}
++ PKG_FILES='/tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-6a9c69e-d803767-cee4950.tgz'
++ /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools -T build/Templates/freenas-pkg-tools -N freenas-pkg-tools -V 9.3-MASTER-6a9c69e /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freenas-pkg-tools-9.3-MASTER-6a9c69e.tgz
+manifest = {'licenselogic': 'single', 'desc': '"FreeNAS Package tools"', 'origin': 'freenas/pkg-tools', 'licenses': '[BSD]', 'name': 'freenas-pkg-tools', 'prefix': '/', 'www': 'http://www.freenas.org/', 'scripts': {'post-upgrade': '\ntrue'}, 'arch': 'freebsd:9:x86:64', 'comment': '"FreeNAS Package Tools"', 'maintainer': 'dev@ixsystems.com', 'requires-reboot': False}
++ PKG_FILES='/tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freenas-pkg-tools-9.3-MASTER-6a9c69e.tgz'
++ /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /tmp/bld/freenas/objs/os-base/amd64/_.docs -T build/Templates/docs -N docs -V 9.3-MASTER-6a9c69e /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/docs-9.3-MASTER-6a9c69e.tgz
+manifest = {'licenses': '[BSD, MIT, GPL]', 'maintainer': 'dev@ixsystems.com', 'desc': '"Release documentation"', 'comment': '"Release documentation"', 'origin': 'freenas/os', 'licenselogic': 'single', 'requires-reboot': False, 'www': 'http://www.freenas.org/', 'arch': 'freebsd:9:x86:64', 'name': 'docs', 'prefix': '/'}
++ PKG_FILES='/tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freenas-pkg-tools-9.3-MASTER-6a9c69e.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/docs-9.3-MASTER-6a9c69e.tgz'
++ [ -n FreeNAS-9.3-MASTER-201507092316 ]
++ seq_arg='-S FreeNAS-9.3-MASTER-201507092316'
++ date +%s
++ env PYTHONPATH=/tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/lib /tmp/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_manifest -P /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages -o /tmp/bld/freenas/objs/os-base/amd64/_.packages/FreeNAS-FreeNAS-9.3-MASTER-201507092316 -R FreeNAS-9.3-MASTER -S FreeNAS-9.3-MASTER-201507092316 -T FreeNAS-9.3-MASTER -t 1436510161 /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-6a9c69e-d803767-cee4950.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/freenas-pkg-tools-9.3-MASTER-6a9c69e.tgz /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages/docs-9.3-MASTER-6a9c69e.tgz
+rr = True
+ix-package-services is not in pkg_json
+rr = False
+services = None
+rr = False
+services = {u'Restart': {u'WebUI': True}, u'Services': [u'WebUI']}
+Restart Services = [u'WebUI']
+ix-package-services is not in pkg_json
+rr = False
+services = None
+ix-package-services is not in pkg_json
+rr = False
+services = None
++ ln -sf FreeNAS-FreeNAS-9.3-MASTER-201507092316 /tmp/bld/freenas/objs/os-base/amd64/_.packages/FreeNAS-MANIFEST
++ set +x
+01:07:48 ## Creating ISO image
+01:07:48 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.cd_iso
+01:28:14 ## Compressing GUI upgrade image
+01:28:14 ### log: /tmp/bld/freenas/objs/os-base/amd64/_.gui_image
+01:36:47 # NanoBSD stuff FreeNAS-9.3-MASTER-201507092316 completed
+FreeNAS  build PASSED
+
+Script done on Fri Jul 10 00:05:04 2015
+Script started on Fri Jul 10 00:05:04 2015
+command: build/create_release_distribution.sh
++ set -e
++ OBJ=objs
++ STAGEDIR=FreeNAS-9.3-MASTER-201507092316
++ TARGET=/tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64
++ mkdir -p /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64
++ tfile=/tmp/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz
++ [ -f /tmp/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz ]
++ mv /tmp/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64
++ mv /tmp/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz.sha256.txt /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64
++ tfile=/tmp/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507092316.iso
++ [ -f /tmp/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507092316.iso ]
++ mv /tmp/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507092316.iso /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64
++ mv /tmp/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507092316.iso.sha256.txt /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64
++ sed -e s/VERSION/9.3-MASTER/ -e s/BUILD_TIMESTAMP/201507092316/
++ cp /tmp/bld/freenas/FreeBSD/repo-manifest /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64/../MANIFEST
++ echo 'Creating the JSON Checksums file...'
+Creating the JSON Checksums file...
++ create_json /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316 /tmp/bld/freenas
++ local dpath=/tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316
++ local milestone=
++ echo 9.3-MASTER
++ cut -d- -f1
++ local freenas_version=9.3
++ echo 9.3-MASTER
++ sed -n -e 's/^.*-//p'
++ local buildtype=MASTER
++ [ MASTER = CURRENT ]
++ [ 9.3 = 10.1 ]
++ local arch
++ local ftype
++ local hash
++ local filename
++ local json_file=/tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/CHECKSUMS.json
++ [ MASTER = RELEASE -o MASTER = BETA ]
++ [ -z ]
++ url=http://download.freenas.org/nightlies/FreeNAS-9.3-MASTER/201507092316/
++ cat
++ echo 9.3-MASTER
++ sed 's/ *-.*//'
++ sha256 /tmp/bld/freenas/ReleaseNotes
++ sed -n -e 's/^.*= //p'
++ sha256 /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/MANIFEST
++ sed -n -e 's/^.*= //p'
++ sha256 /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/README
++ sed -n -e 's/^.*= //p'
++ find /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316 -type d -mindepth 1 -maxdepth 1
++ local archdirs=/tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64
++ basename /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64
++ arch=x64
++ find /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64 -type f -name '*.iso'
++ iso=/tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64/FreeNAS-9.3-MASTER-201507092316.iso
++ find /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64 -type f -name '*.usb'
++ usb=''
++ find /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64 -type f -name '*.GUI_Upgrade.txz'
++ gui_upgrade=/tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64/FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz
++ find /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64 -type f -name '*.img'
++ img=''
++ cat
++ [ ! -z /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64/FreeNAS-9.3-MASTER-201507092316.iso ]
++ basename /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64/FreeNAS-9.3-MASTER-201507092316.iso
++ filename=FreeNAS-9.3-MASTER-201507092316.iso
++ cat /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64/FreeNAS-9.3-MASTER-201507092316.iso.sha256.txt
++ sed -n -e 's/^.*= //p'
++ hash=718b15c12b14de00ec8aa4e0f3385be1cf665e17423ae20b26821fcd51bf8fd1
++ json_block /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/CHECKSUMS.json FreeNAS-9.3-MASTER-201507092316.iso iso 718b15c12b14de00ec8aa4e0f3385be1cf665e17423ae20b26821fcd51bf8fd1 http://download.freenas.org/nightlies/FreeNAS-9.3-MASTER/201507092316/x64
++ cat
++ [ ! -z '' ]
++ [ ! -z /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64/FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz ]
++ basename /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64/FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz
++ filename=FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz
++ cat /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/x64/FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz.sha256.txt
++ sed -n -e 's/^.*= //p'
++ hash=b25ac7356c74e077e5b411e272fce34ab66168f8b9df283e601cf783012e6ef9
++ json_block /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/CHECKSUMS.json FreeNAS-9.3-MASTER-201507092316.GUI_Upgrade.txz gui_upgrade b25ac7356c74e077e5b411e272fce34ab66168f8b9df283e601cf783012e6ef9 http://download.freenas.org/nightlies/FreeNAS-9.3-MASTER/201507092316/x64
++ cat
++ [ ! -z '' ]
++ sed -i '' '$s/,$//' /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/CHECKSUMS.json
++ cat
++ sed -i '' '$s/,$//' /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316/CHECKSUMS.json
++ cat
+
+Script done on Fri Jul 10 00:05:04 2015
+Script started on Fri Jul 10 00:05:04 2015
+command: build/create_upgrade_distribution.sh
++ set -e
++ mkdir -p /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316-Update
++ cp /tmp/bld/freenas/objs/os-base/amd64/_.packages/FreeNAS-MANIFEST /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316-Update/FreeNAS-MANIFEST
++ cp -R /tmp/bld/freenas/objs/os-base/amd64/_.packages/Packages /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316-Update
++ test -f ReleaseNotes
++ cp ReleaseNotes /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316-Update
++ test -f ChangeLog
++ test -f NOTICE
++ [ -n '' -a -d '' ]
++ [ -n '' ]
++ [ -n '' ]
++ rm -f /tmp/bld/freenas/objs/LATEST
++ ln -sf /tmp/bld/freenas/objs/FreeNAS-9.3-MASTER-201507092316-Update /tmp/bld/freenas/objs/LATEST
++ exit 0
+
+Script done on Fri Jul 10 00:05:05 2015

@@ -1,0 +1,375 @@
+Script started on Wed Jul  8 14:30:13 2015
+command: make build
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/check_build_host.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/check_sandbox.sh
+NOTICE: You are building from the INTERNAL git repo.
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/build_jail.sh
+00:00:00 # NanoBSD image FreeNAS-9.3-MASTER-201507082130 build starting
+00:00:00 ## Construct build make.conf (/usr/home/lilit/bld/freenas/objs/os-base/amd64/make.conf.build)
+00:00:00 ## building make
+00:00:00 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.make
+00:00:00 ## run buildworld
+00:00:00 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.bw
+00:00:30 ## build kernel (/usr/home/lilit/bld/freenas/build/nanobsd-cfg/FREENAS.amd64)
+00:00:30 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.bk
+00:00:52 ## Construct install make.conf (/usr/home/lilit/bld/freenas/objs/os-base/amd64/make.conf.install)
+00:00:52 ## installworld
+00:00:52 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.ij
+00:01:12 ## install /etc
+00:01:12 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.etc
+00:01:13 ## configure nanobsd /etc
+00:01:13 ## install kernel (/usr/home/lilit/bld/freenas/build/nanobsd-cfg/FREENAS.amd64)
+00:01:13 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.ikj
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/create-poudriere-conf.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/create-poudriere-make.conf.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/prepare-jail.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/fetch-ports-srcs.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/create-ports-list.sh
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/ports/build-ports.sh
+[00:00:00] ====>>[0;0m Creating the reference jail...[0;0m done
+[00:00:02] ====>>[0;0m Mounting system devices for ja-p[0;0m
+[00:00:02] ====>>[0;0m Mounting ports/packages/distfiles[0;0m
+[00:00:02] ====>>[0;0m Stashing existing package repository[0;0m
+[00:00:02] ====>>[0;0m Mounting packages from: /usr/home/lilit/bld/freenas/objs/os-base/amd64/ports/packages/ja-p[0;0m
+[00:00:02] ====>>[0;0m Mounting /var/db/ports from: /usr/home/lilit/bld/freenas/objs/os-base/amd64/poudriere/etc/poudriere.d/options[0;0m
+[00:00:02] ====>>[0;0m Appending to make.conf: /usr/home/lilit/bld/freenas/objs/os-base/amd64/poudriere/etc/poudriere.d/make.conf[0;0m
+/etc/resolv.conf -> /usr/home/lilit/bld/freenas/objs/os-base/amd64/ports/.m/ja-p/ref/etc/resolv.conf
+[00:00:02] ====>>[0;0m Starting jail ja-p[0;0m
+[00:00:03] ====>>[0;0m Logs: /usr/home/lilit/bld/freenas/objs/os-base/amd64/ports/logs/bulk/ja-p/2015-07-08_14h31m34s[0;0m
+[00:00:03] ====>>[0;0m Loading MOVED[0;0m
+[00:00:03] ====>>[0;0m Calculating ports order and dependencies[0;0m
+[00:00:08] ====>>[0;0m Sanity checking the repository[0;0m
+[00:00:08] ====>>[0;0m Deleting arcsas-1.0_9e2be19.txz: new version: 1.0_7c05011[0;0m
+[00:00:08] ====>>[0;0m Deleting freenas-files-9.3_9e2be19.txz: new version: 9.3_7c05011[0;0m
+[00:00:08] ====>>[0;0m Deleting freenas-ui-9.3_9e2be19.txz: new version: 9.3_7c05011[0;0m
+[00:00:11] ====>>[0;0m Deleting pcbsd-pbi-1.0_9e2be19.txz: new version: 1.0_7c05011[0;0m
+[00:00:11] ====>>[0;0m Deleting pcbsd-warden-1.0_9e2be19.txz: new version: 1.0_7c05011[0;0m
+[00:00:11] ====>>[0;0m Deleting py27-licenselib-9.3_9e2be19.txz: new version: 9.3_7c05011[0;0m
+[00:00:14] ====>>[0;0m Deleting stale symlinks[0;0m
+[00:00:14] ====>>[0;0m Deleting empty directories[0;0m
+[00:00:14] ====>>[0;0m Cleaning the build queue[0;0m
+[00:00:15] ====>>[0;0m Recording filesystem state for prepkg...[0;0m done
+[00:00:16] ====>>[0;0m Building 6 packages using 6 builders[0;0m
+[00:00:16] ====>>[0;0m Starting/Cloning builders[0;0m
+[00:00:27] ====>>[0;0m Hit CTRL+t at any time to see build progress and stats[0;0m
+[00:00:27] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mfreenas/py-licenselib[0;0m[0;0m
+[00:00:27] ====>>[0;0m [[0;32m02[0;0m][00:00:00] Starting build of [0;36mfreenas/arcsas[0;0m[0;0m
+[00:00:27] ====>>[0;0m [[0;33m03[0;0m][00:00:00] Starting build of [0;36mfreenas/freenas-files[0;0m[0;0m
+[00:00:27] ====>>[0;0m [[0;34m04[0;0m][00:00:00] Starting build of [0;36mfreenas/pcbsd-pbi[0;0m[0;0m
+[00:00:27] ====>>[0;0m [[0;35m05[0;0m][00:00:00] Starting build of [0;36mfreenas/pcbsd-warden[0;0m[0;0m
+[00:00:29] [0;32m====>>[0;0m [[0;32m02[0;0m][00:00:02] [0;32mFinished build of [0;36mfreenas/arcsas[0;32m: Success[0;0m
+[00:00:29] [0;32m====>>[0;0m [[0;35m05[0;0m][00:00:02] [0;32mFinished build of [0;36mfreenas/pcbsd-warden[0;32m: Success[0;0m
+[00:00:29] [0;32m====>>[0;0m [[0;34m04[0;0m][00:00:02] [0;32mFinished build of [0;36mfreenas/pcbsd-pbi[0;32m: Success[0;0m
+[00:00:31] [0;32m====>>[0;0m [[0;33m03[0;0m][00:00:04] [0;32mFinished build of [0;36mfreenas/freenas-files[0;32m: Success[0;0m
+[00:00:33] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:06] [0;32mFinished build of [0;36mfreenas/py-licenselib[0;32m: Success[0;0m
+[00:00:34] ====>>[0;0m [[0;31m01[0;0m][00:00:00] Starting build of [0;36mfreenas/freenas-ui[0;0m[0;0m
+[00:00:55] [0;32m====>>[0;0m [[0;31m01[0;0m][00:00:21] [0;32mFinished build of [0;36mfreenas/freenas-ui[0;32m: Success[0;0m
+[00:00:58] ====>>[0;0m Stopping 6 builders[0;0m
+[00:01:05] ====>>[0;0m Creating pkgng repository[0;0m
+Creating repository in /tmp/packages:   0%Creating repository in /tmp/packages:   0%Creating repository in /tmp/packages:   1%Creating repository in /tmp/packages:   2%Creating repository in /tmp/packages:   3%Creating repository in /tmp/packages:   4%Creating repository in /tmp/packages:   5%Creating repository in /tmp/packages:   6%Creating repository in /tmp/packages:   7%Creating repository in /tmp/packages:   8%Creating repository in /tmp/packages:   9%Creating repository in /tmp/packages:  10%Creating repository in /tmp/packages:  11%Creating repository in /tmp/packages:  12%Creating repository in /tmp/packages:  13%Creating repository in /tmp/packages:  14%Creating repository in /tmp/packages:  15%Creating repository in /tmp/packages:  16%Creating repository in /tmp/packages:  17%Creating repository in /tmp/packages:  18%Creating repository in /tmp/packages:  19%Creating repository in /tmp/packages:  20%Creating repository in /tmp/packages:  21%Creating repository in /tmp/packages:  22%Creating repository in /tmp/packages:  23%Creating repository in /tmp/packages:  24%Creating repository in /tmp/packages:  25%Creating repository in /tmp/packages:  26%Creating repository in /tmp/packages:  27%Creating repository in /tmp/packages:  28%Creating repository in /tmp/packages:  29%Creating repository in /tmp/packages:  30%Creating repository in /tmp/packages:  31%Creating repository in /tmp/packages:  32%Creating repository in /tmp/packages:  33%Creating repository in /tmp/packages:  34%Creating repository in /tmp/packages:  35%Creating repository in /tmp/packages:  36%Creating repository in /tmp/packages:  37%Creating repository in /tmp/packages:  38%Creating repository in /tmp/packages:  39%Creating repository in /tmp/packages:  40%Creating repository in /tmp/packages:  41%Creating repository in /tmp/packages:  42%Creating repository in /tmp/packages:  43%Creating repository in /tmp/packages:  44%Creating repository in /tmp/packages:  45%Creating repository in /tmp/packages:  46%Creating repository in /tmp/packages:  47%Creating repository in /tmp/packages:  48%Creating repository in /tmp/packages:  49%Creating repository in /tmp/packages:  50%Creating repository in /tmp/packages:  51%Creating repository in /tmp/packages:  52%Creating repository in /tmp/packages:  53%Creating repository in /tmp/packages:  54%Creating repository in /tmp/packages:  55%Creating repository in /tmp/packages:  56%Creating repository in /tmp/packages:  57%Creating repository in /tmp/packages:  58%Creating repository in /tmp/packages:  59%Creating repository in /tmp/packages:  60%Creating repository in /tmp/packages:  61%Creating repository in /tmp/packages:  62%Creating repository in /tmp/packages:  63%Creating repository in /tmp/packages:  64%Creating repository in /tmp/packages:  65%Creating repository in /tmp/packages:  66%Creating repository in /tmp/packages:  67%Creating repository in /tmp/packages:  68%Creating repository in /tmp/packages:  69%Creating repository in /tmp/packages:  70%Creating repository in /tmp/packages:  71%Creating repository in /tmp/packages:  72%Creating repository in /tmp/packages:  73%Creating repository in /tmp/packages:  74%Creating repository in /tmp/packages:  75%Creating repository in /tmp/packages:  76%Creating repository in /tmp/packages:  77%Creating repository in /tmp/packages:  78%Creating repository in /tmp/packages:  79%Creating repository in /tmp/packages:  80%Creating repository in /tmp/packages:  81%Creating repository in /tmp/packages:  82%Creating repository in /tmp/packages:  83%Creating repository in /tmp/packages:  84%Creating repository in /tmp/packages:  85%Creating repository in /tmp/packages:  86%Creating repository in /tmp/packages:  87%Creating repository in /tmp/packages:  88%Creating repository in /tmp/packages:  89%Creating repository in /tmp/packages:  90%Creating repository in /tmp/packages:  91%Creating repository in /tmp/packages:  92%Creating repository in /tmp/packages:  93%Creating repository in /tmp/packages:  94%Creating repository in /tmp/packages: 100%
+Packing files for repository:   0%Packing files for repository:   0%Packing files for repository:  25%Packing files for repository:  50%Packing files for repository:  75%Packing files for repository: 100%
+[00:01:06] ====>>[0;0m Committing packages to repository[0;0m
+[00:01:06] ====>>[0;0m Removing old packages[0;0m
+[00:01:06] [0;32m====>>[0;0m [0;32mBuilt ports: [0;36mfreenas/arcsas freenas/pcbsd-warden freenas/pcbsd-pbi freenas/freenas-files freenas/py-licenselib freenas/freenas-ui[0;0m
+[ja-p] [2015-07-08_14h31m34s] [committing:] Queued: 6  [0;32mBuilt: 6  [0;31mFailed: 0  [1;33mSkipped: 0  [1;30mIgnored: 0 [0;0m Tobuild: 0   Time: 00:01:03
+[00:01:06] ====>>[0;0m Logs: /usr/home/lilit/bld/freenas/objs/os-base/amd64/ports/logs/bulk/ja-p/2015-07-08_14h31m34s[0;0m
+[00:01:06] ====>>[0;0m Cleaning up[0;0m
+[00:01:07] ====>>[0;0m Umounting file systems[0;0m
+Cleaning up jail....
+env _KEY=set NANO_LABEL=FreeNAS VERSION=9.3-MASTER GIT_LOCATION=INTERNAL BUILD_TIMESTAMP=201507082130 SEQUENCE=FreeNAS-9.3-MASTER-201507082130 TRAIN=FreeNAS-9.3-MASTER UPDATE_USER=sef UPDATE_HOST=update.freenas.org FREENAS_KEYFILE=Keys/ix-nightly-key.key /bin/sh build/do_build.sh
+/usr/home/lilit/bld/freenas/build/nanobsd/nanobsd.sh -c /usr/home/lilit/bld/freenas/build/nanobsd-cfg/os-base -w -k -j 10
+Sourcing /usr/home/lilit/bld/freenas/build/nanobsd-cfg/os-base
+Nano media size rounded down for SWAP backing 7812500 -> 7811072
+unmounting  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.w/usr/ports/packages
+ /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.w/dev
+00:00:00 # NanoBSD image FreeNAS-9.3-MASTER-201507082130 build starting
+00:00:00 ## Skipping buildworld (as instructed)
+00:00:00 ## Skipping buildkernel (as instructed)
+00:00:02 ## Construct install make.conf (/usr/home/lilit/bld/freenas/objs/os-base/amd64/make.conf.install)
+00:00:02 ## installworld
+00:00:02 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.iw
+00:00:18 ## install /etc
+00:00:18 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.etc
+00:00:18 ## configure nanobsd /etc
+00:00:18 ## install kernel (/usr/home/lilit/bld/freenas/build/nanobsd-cfg/FREENAS.amd64)
+00:00:18 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.ik
+00:00:23 ## run customize scripts
+00:00:23 ## NANO_CUSTOMIZE:  clean_packages cust_install_files cust_install_machine_files generate_avatar_conf build_debug_kernel install_debug_kernel write_version_file install_ports hack_nsswitch_conf move_data select_httpd remove_patch_divots configure_mnt_md shrink_md_fbsize clean_etc remove_gcc47 remove_gcc remove_packages remove_var_cache_pkg create_var_home_symlink
+00:00:23 ## [1/20] customize "clean_packages"
+00:00:23 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.clean_packages
+00:00:23 ## Clean and create world directory (/usr/home/lilit/bld/freenas/objs/os-base/amd64/_.w/usr/local)
+00:00:23 ## [2/20] customize "cust_install_files"
+00:00:23 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.cust_install_files
+00:00:23 ## [3/20] customize "cust_install_machine_files"
+00:00:23 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.cust_install_machine_files
+00:00:23 ## [4/20] customize "generate_avatar_conf"
+00:00:23 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.generate_avatar_conf
+00:00:23 ## [5/20] customize "build_debug_kernel"
+00:00:23 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.build_debug_kernel
+00:00:23 ## build kernel (/usr/home/lilit/bld/freenas/objs/os-base/amd64/FREENAS.amd64-DEBUG)
+00:00:23 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.bk_FREENAS.amd64-DEBUG
+00:00:47 ## [6/20] customize "install_debug_kernel"
+00:00:47 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.install_debug_kernel
+00:00:47 ## install kernel (/usr/home/lilit/bld/freenas/objs/os-base/amd64/FREENAS.amd64-DEBUG)
+00:00:47 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.ik_FREENAS.amd64-DEBUG
+00:00:52 ## [7/20] customize "write_version_file"
+00:00:52 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.write_version_file
+00:00:52 ## [8/20] customize "install_ports"
+00:00:52 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.install_ports
+00:03:35 ## [9/20] customize "hack_nsswitch_conf"
+00:03:35 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.hack_nsswitch_conf
+00:03:35 ## [10/20] customize "move_data"
+00:03:35 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.move_data
+00:03:35 ## [11/20] customize "select_httpd"
+00:03:35 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.select_httpd
+00:03:35 ## [12/20] customize "remove_patch_divots"
+00:03:35 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.remove_patch_divots
+00:03:37 ## [13/20] customize "configure_mnt_md"
+00:03:37 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.configure_mnt_md
+00:03:37 ## [14/20] customize "shrink_md_fbsize"
+00:03:37 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.shrink_md_fbsize
+00:03:37 ## [15/20] customize "clean_etc"
+00:03:37 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.clean_etc
+00:03:37 ## [16/20] customize "remove_gcc47"
+00:03:37 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.remove_gcc47
+00:03:58 ## [17/20] customize "remove_gcc"
+00:03:58 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.remove_gcc
+00:04:19 ## [18/20] customize "remove_packages"
+00:04:19 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.remove_packages
+00:04:22 ## [19/20] customize "remove_var_cache_pkg"
+00:04:22 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.remove_var_cache_pkg
+00:04:22 ## [20/20] customize "create_var_home_symlink"
+00:04:22 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cust.create_var_home_symlink
+00:04:22 ## configure nanobsd setup
+00:04:22 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.dl
+Building documentation
+sphinx-build -b html -d _build/doctrees   . _build/html
+Making output directory...
+[01mRunning Sphinx v1.2.3[39;49;00m
+[01mloading pickled environment... [39;49;00mdone
+[01mbuilding [html]: [39;49;00mtargets for 27 source files that are out of date
+[01mupdating environment: [39;49;00m0 added, 0 changed, 0 removed
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpreparing documents... [39;49;00mdone
+[01mwriting output... [39;49;00m[  3%] [32mfreenas[39;49;00m                                                             [01mwriting output... [39;49;00m[  7%] [32mfreenas_account[39;49;00m                                                     [01mwriting output... [39;49;00m[ 11%] [32mfreenas_alert[39;49;00m                                                       [01mwriting output... [39;49;00m[ 14%] [32mfreenas_api[39;49;00m                                                         [01mwriting output... [39;49;00m[ 18%] [32mfreenas_cli[39;49;00m                                                         [01mwriting output... [39;49;00m[ 22%] [32mfreenas_contribute[39;49;00m                                                  [01mwriting output... [39;49;00m[ 25%] [32mfreenas_directoryservice[39;49;00m                                            [01mwriting output... [39;49;00m[ 29%] [32mfreenas_help[39;49;00m                                                        [01mwriting output... [39;49;00m[ 33%] [32mfreenas_install[39;49;00m                                                     [01mwriting output... [39;49;00m[ 37%] [32mfreenas_intro[39;49;00m                                                       [01mwriting output... [39;49;00m[ 40%] [32mfreenas_jails[39;49;00m                                                       [01mwriting output... [39;49;00m[ 44%] [32mfreenas_logout[39;49;00m                                                      [01mwriting output... [39;49;00m[ 48%] [32mfreenas_network[39;49;00m                                                     [01mwriting output... [39;49;00m[ 51%] [32mfreenas_plugins[39;49;00m                                                     [01mwriting output... [39;49;00m[ 55%] [32mfreenas_processes[39;49;00m                                                   [01mwriting output... [39;49;00m[ 59%] [32mfreenas_quick[39;49;00m                                                       [01mwriting output... [39;49;00m[ 62%] [32mfreenas_reboot[39;49;00m                                                      [01mwriting output... [39;49;00m[ 66%] [32mfreenas_reporting[39;49;00m                                                   [01mwriting output... [39;49;00m[ 70%] [32mfreenas_services[39;49;00m                                                    [01mwriting output... [39;49;00m[ 74%] [32mfreenas_sharing[39;49;00m                                                     [01mwriting output... [39;49;00m[ 77%] [32mfreenas_shell[39;49;00m                                                       [01mwriting output... [39;49;00m[ 81%] [32mfreenas_shutdown[39;49;00m                                                    [01mwriting output... [39;49;00m[ 85%] [32mfreenas_storage[39;49;00m                                                     [01mwriting output... [39;49;00m[ 88%] [32mfreenas_support[39;49;00m                                                     [01mwriting output... [39;49;00m[ 92%] [32mfreenas_system[39;49;00m                                                      [01mwriting output... [39;49;00m[ 96%] [32mfreenas_tasks[39;49;00m                                                       [01mwriting output... [39;49;00m[100%] [32mzfsprimer[39;49;00m                                                           
+[01mwriting additional files...[39;49;00m genindex search
+[01mcopying images... [39;49;00m[  0%] [33mimages/esxi1a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[  1%] [33mimages/jails1.png[39;49;00m                                                   [01mcopying images... [39;49;00m[  1%] [33mimages/zvol1.png[39;49;00m                                                    [01mcopying images... [39;49;00m[  2%] [33mimages/mirror1.png[39;49;00m                                                  [01mcopying images... [39;49;00m[  2%] [33mimages/update2.png[39;49;00m                                                  [01mcopying images... [39;49;00m[  3%] [33mimages/cifs8.png[39;49;00m                                                    [01mcopying images... [39;49;00m[  3%] [33mimages/ca1a.png[39;49;00m                                                     [01mcopying images... [39;49;00m[  4%] [33mimages/system5a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[  4%] [33mimages/lagg3.png[39;49;00m                                                    [01mcopying images... [39;49;00m[  5%] [33mimages/volume1a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[  6%] [33mimages/ftp1.png[39;49;00m                                                     [01mcopying images... [39;49;00m[  6%] [33mimages/virtualbox9.png[39;49;00m                                              [01mcopying images... [39;49;00m[  7%] [33mimages/install3.png[39;49;00m                                                 [01mcopying images... [39;49;00m[  7%] [33mimages/extent2a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[  8%] [33mimages/jails6.png[39;49;00m                                                   [01mcopying images... [39;49;00m[  8%] [33mimages/jails7.png[39;49;00m                                                   [01mcopying images... [39;49;00m[  9%] [33mimages/cifs1.png[39;49;00m                                                    [01mcopying images... [39;49;00m[  9%] [33mimages/nfs1a.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 10%] [33mimages/nt1.png[39;49;00m                                                      [01mcopying images... [39;49;00m[ 10%] [33mimages/ipmi1.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 11%] [33mimages/virtualbox4.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 12%] [33mimages/shutdown.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 12%] [33mimages/cert3a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 13%] [33mimages/realm1a.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 13%] [33mimages/translate2.png[39;49;00m                                               [01mcopying images... [39;49;00m[ 14%] [33mimages/kerberos1.png[39;49;00m                                                [01mcopying images... [39;49;00m[ 14%] [33mimages/ca3.png[39;49;00m                                                      [01mcopying images... [39;49;00m[ 15%] [33mimages/scrub1.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 15%] [33mimages/virtualbox6.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 16%] [33mimages/manual.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 16%] [33mimages/ca2a.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 17%] [33mimages/jails3a.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 18%] [33mimages/virtualbox3.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 18%] [33mimages/jails10a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 19%] [33mimages/global1.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 19%] [33mimages/wizard5.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 20%] [33mimages/filezilla.png[39;49;00m                                                [01mcopying images... [39;49;00m[ 20%] [33mimages/jails4a.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 21%] [33mimages/view.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 21%] [33mimages/wizard.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 22%] [33mimages/process.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 22%] [33mimages/afp6.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 23%] [33mimages/wizard1.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 24%] [33mimages/plugins4.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 24%] [33mimages/tunable.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 25%] [33mimages/esxi5a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 25%] [33mimages/system2a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 26%] [33mimages/cifs7.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 26%] [33mimages/be1e.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 27%] [33mimages/boot1.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 27%] [33mimages/encrypt1.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 28%] [33mimages/volume2.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 28%] [33mimages/cert2a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 29%] [33mimages/plugins2.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 30%] [33mimages/afp2.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 30%] [33mimages/afp3.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 31%] [33mimages/lagg1.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 31%] [33mimages/nfs6.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 32%] [33mimages/nfs5.jpg[39;49;00m                                                     [01mcopying images... [39;49;00m[ 32%] [33mimages/nfs2.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 33%] [33mimages/jails11a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 33%] [33mimages/static.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 34%] [33mimages/directory1a.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 34%] [33mimages/install1.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 35%] [33mimages/be3a.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 36%] [33mimages/jails5.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 36%] [33mimages/upgrade4a.png[39;49;00m                                                [01mcopying images... [39;49;00m[ 37%] [33mimages/vmware1a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 37%] [33mimages/user1a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 38%] [33mimages/cert4.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 38%] [33mimages/system3a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 39%] [33mimages/system1a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 39%] [33mimages/interface.png[39;49;00m                                                [01mcopying images... [39;49;00m[ 40%] [33mimages/lagg2.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 40%] [33mimages/esxi3a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 41%] [33mimages/reboot.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 42%] [33mimages/smart2.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 42%] [33mimages/ports2.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 43%] [33mimages/auto2.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 43%] [33mimages/dataset.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 44%] [33mimages/webdav.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 44%] [33mimages/group3.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 45%] [33mimages/shell.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 45%] [33mimages/upgrade2.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 46%] [33mimages/afp9.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 46%] [33mimages/ports1.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 47%] [33mimages/system4b.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 48%] [33mimages/cron.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 48%] [33mimages/disk.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 49%] [33mimages/upgrade1.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 49%] [33mimages/api.png[39;49;00m                                                      [01mcopying images... [39;49;00m[ 50%] [33mimages/nfs3.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 50%] [33mimages/authorized2.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 51%] [33mimages/replace.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 51%] [33mimages/translate.png[39;49;00m                                                [01mcopying images... [39;49;00m[ 52%] [33mimages/lldp.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 53%] [33mimages/auto1.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 53%] [33mimages/replace2.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 54%] [33mimages/plugins1.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 54%] [33mimages/wizard4.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 55%] [33mimages/plugins5.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 55%] [33mimages/initiator1.png[39;49;00m                                               [01mcopying images... [39;49;00m[ 56%] [33mimages/esxi6a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 56%] [33mimages/afp8.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 57%] [33mimages/services.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 57%] [33mimages/periodic3a.png[39;49;00m                                               [01mcopying images... [39;49;00m[ 58%] [33mimages/cifs6.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 59%] [33mimages/network1.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 59%] [33mimages/target1.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 60%] [33mimages/ddns.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 60%] [33mimages/replication2a.png[39;49;00m                                            [01mcopying images... [39;49;00m[ 61%] [33mimages/snmp2a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 61%] [33mimages/rsyncd.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 62%] [33mimages/portal.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 62%] [33mimages/plugins3.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 63%] [33mimages/wizard6.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 63%] [33mimages/initiator2.png[39;49;00m                                               [01mcopying images... [39;49;00m[ 64%] [33mimages/wizard2.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 65%] [33mimages/upgrade3a.png[39;49;00m                                                [01mcopying images... [39;49;00m[ 65%] [33mimages/grow1.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 66%] [33mimages/rsync2.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 66%] [33mimages/esxi4a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 67%] [33mimages/afp1a.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 67%] [33mimages/support1a.png[39;49;00m                                                [01mcopying images... [39;49;00m[ 68%] [33mimages/pool1.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 68%] [33mimages/install4.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 69%] [33mimages/cdrom3.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 69%] [33mimages/vlan.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 70%] [33mimages/cert1a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 71%] [33mimages/authorized1.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 71%] [33mimages/zfs1a.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 72%] [33mimages/virtualbox7.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 72%] [33mimages/virtualbox11.png[39;49;00m                                             [01mcopying images... [39;49;00m[ 73%] [33mimages/virtualbox2.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 73%] [33mimages/tftp.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 74%] [33mimages/install2.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 74%] [33mimages/target2a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 75%] [33mimages/alert2.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 75%] [33mimages/update1a.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 76%] [33mimages/login.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 77%] [33mimages/virtualbox5.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 77%] [33mimages/detach1.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 78%] [33mimages/virtualbox1.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 78%] [33mimages/decrypt.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 79%] [33mimages/ups.png[39;49;00m                                                      [01mcopying images... [39;49;00m[ 79%] [33mimages/backup1.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 80%] [33mimages/mirror2.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 80%] [33mimages/console1a.png[39;49;00m                                                [01mcopying images... [39;49;00m[ 81%] [33mimages/virtualbox10.png[39;49;00m                                             [01mcopying images... [39;49;00m[ 81%] [33mimages/periodic1b.png[39;49;00m                                               [01mcopying images... [39;49;00m[ 82%] [33mimages/tmux.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 83%] [33mimages/cifs3.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 83%] [33mimages/rsync3.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 84%] [33mimages/smart1.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 84%] [33mimages/be2.png[39;49;00m                                                      [01mcopying images... [39;49;00m[ 85%] [33mimages/nis1.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 85%] [33mimages/iperf.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 86%] [33mimages/ntp1.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 86%] [33mimages/nfs4.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 87%] [33mimages/perms1.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 87%] [33mimages/import1.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 88%] [33mimages/cdrom4.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 89%] [33mimages/jails9.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 89%] [33mimages/afp5.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 90%] [33mimages/initial.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 90%] [33mimages/esxi2a.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 91%] [33mimages/ldap1.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 91%] [33mimages/group2.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 92%] [33mimages/reporting.png[39;49;00m                                                [01mcopying images... [39;49;00m[ 92%] [33mimages/user2.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 93%] [33mimages/virtualbox8.png[39;49;00m                                              [01mcopying images... [39;49;00m[ 93%] [33mimages/cifs2.png[39;49;00m                                                    [01mcopying images... [39;49;00m[ 94%] [33mimages/ad1.png[39;49;00m                                                      [01mcopying images... [39;49;00m[ 95%] [33mimages/replication1a.png[39;49;00m                                            [01mcopying images... [39;49;00m[ 95%] [33mimages/group1.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 96%] [33mimages/jails8.png[39;49;00m                                                   [01mcopying images... [39;49;00m[ 96%] [33mimages/rsync1a.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 97%] [33mimages/afp7.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 97%] [33mimages/wizard3.png[39;49;00m                                                  [01mcopying images... [39;49;00m[ 98%] [33mimages/plugins6.png[39;49;00m                                                 [01mcopying images... [39;49;00m[ 98%] [33mimages/init.png[39;49;00m                                                     [01mcopying images... [39;49;00m[ 99%] [33mimages/ssh1.png[39;49;00m                                                     [01mcopying images... [39;49;00m[100%] [33mimages/webdav2.png[39;49;00m                                                  
+[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+[01mdumping search index... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded.[39;49;00m
+
+Build finished. The HTML pages are in _build/html.
+00:04:33 ## run late customize scripts
+00:04:33 ## NANO_LATE_CUSTOMIZE:  freenas_custom
+00:04:33 ## [1/1] late customize "freenas_custom"
+00:04:33 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.late_cust.freenas_custom
++ pkg_version=-d803767-cee4950
++ TOOLDIR=/usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools
++ mkdir -p /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools
++ rm -rf /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages
++ mkdir -p /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages
++ make -C /usr/home/lilit/bld/freenas/src/freenas-pkgtools obj
+===> create_manifest (obj)
+===> create_package (obj)
+===> diff_packages (obj)
+===> freenas-install (obj)
+===> lib (obj)
+===> manifest_util (obj)
+===> pkgify (obj)
+===> freenas-update (obj)
+===> freenas-release (obj)
+===> freenas-verify (obj)
+===> verify_signature (obj)
+===> certificates (obj)
++ make -C /usr/home/lilit/bld/freenas/src/freenas-pkgtools all
+===> create_manifest (all)
+===> create_package (all)
+===> diff_packages (all)
+===> freenas-install (all)
+===> lib (all)
+===> manifest_util (all)
+===> pkgify (all)
+===> freenas-update (all)
+===> freenas-release (all)
+===> freenas-verify (all)
+===> verify_signature (all)
+===> certificates (all)
++ make -C /usr/home/lilit/bld/freenas/src/freenas-pkgtools install DESTDIR=/usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools PREFIX=/usr/local
+install -d /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin
+install -d /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/lib
+===> create_manifest (install)
+install -o root  -g wheel -m 555  /usr/home/lilit/bld/freenas/src/freenas-pkgtools/create_manifest/create_manifest.py  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_manifest
+===> create_package (install)
+install -o root  -g wheel -m 555  /usr/home/lilit/bld/freenas/src/freenas-pkgtools/create_package/create_package.py  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package
+===> diff_packages (install)
+install -o root  -g wheel -m 555  /usr/home/lilit/bld/freenas/src/freenas-pkgtools/diff_packages/diff_packages.py  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/diff_packages
+===> freenas-install (install)
+install -o root  -g wheel -m 555  /usr/home/lilit/bld/freenas/src/freenas-pkgtools/freenas-install/freenas-install.py  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/freenas-install
+===> lib (install)
+install -d /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/lib/freenasOS
+install -o root -g wheel  -m 444 /usr/home/lilit/bld/freenas/src/freenas-pkgtools/lib/Configuration.py /usr/home/lilit/bld/freenas/src/freenas-pkgtools/lib/Exceptions.py /usr/home/lilit/bld/freenas/src/freenas-pkgtools/lib/Installer.py /usr/home/lilit/bld/freenas/src/freenas-pkgtools/lib/Manifest.py /usr/home/lilit/bld/freenas/src/freenas-pkgtools/lib/Package.py /usr/home/lilit/bld/freenas/src/freenas-pkgtools/lib/Train.py /usr/home/lilit/bld/freenas/src/freenas-pkgtools/lib/Update.py /usr/home/lilit/bld/freenas/src/freenas-pkgtools/lib/PackageFile.py /usr/home/lilit/bld/freenas/src/freenas-pkgtools/lib/__init__.py /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/lib/freenasOS
+===> manifest_util (install)
+install -o root  -g wheel -m 555  /usr/home/lilit/bld/freenas/src/freenas-pkgtools/manifest_util/manifest_util.py  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/manifest_util
+===> pkgify (install)
+install -o root  -g wheel -m 555  /usr/home/lilit/bld/freenas/src/freenas-pkgtools/pkgify/pkgify.py  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/pkgify
+===> freenas-update (install)
+install -o root  -g wheel -m 555  /usr/home/lilit/bld/freenas/src/freenas-pkgtools/freenas-update/freenas-update.py  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/freenas-update
+===> freenas-release (install)
+install -d /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/etc
+install -o root  -g wheel -m 555  /usr/home/lilit/bld/freenas/src/freenas-pkgtools/freenas-release/freenas-release.py  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/freenas-release
+install -o root -g wheel  -m 0644 /usr/home/lilit/bld/freenas/src/freenas-pkgtools/freenas-release/freenas-release-default.conf /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/etc
+===> freenas-verify (install)
+install -o root  -g wheel -m 555  /usr/home/lilit/bld/freenas/src/freenas-pkgtools/freenas-verify/freenas-verify.py  /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/freenas-verify
+===> verify_signature (install)
+install -d /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/libexec
+install -s -o root -g wheel -m 555   verify_signature /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/libexec/verify_signature
+===> certificates (install)
+install -d /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/share/certs
+install -o root -g wheel  -m 444 /usr/home/lilit/bld/freenas/src/freenas-pkgtools/certificates/freenas-update.pem /usr/home/lilit/bld/freenas/src/freenas-pkgtools/certificates/iX-CA.pem /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/share/certs
++ [ -f /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package ]
++ /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.w -T build/Templates/base-os -N base-os -V 9.3-MASTER-d803767-cee4950 /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-d803767-cee4950.tgz
+manifest = {'www': 'http://www.freenas.org/', 'arch': 'freebsd:9:x86:64', 'name': 'base-os', 'ix-package-services': {'Services': ['SMB', 'AFP', 'NFS', 'iSCSI', 'WebDAV', 'reboot']}, 'scripts': {'post-install': '/usr/bin/touch /boot/kernel/linker.hints\n/usr/bin/touch /boot/modules/linker.hints', 'post-upgrade': '/usr/bin/touch /boot/kernel/linker.hints\n/usr/bin/touch /boot/modules/linker.hints\n/bin/sh /etc/ix.rc.d/ix-device_hints start\ntest -f /usr/local/www/freenasUI/manage.py && yes | /usr/local/bin/python /usr/local/www/freenasUI/manage.py migrate --all --merge --delete-ghost-migrations > "/data/update.failed" 2>&1 && rm -f /data/update.failed\nif [ -c /dev/null -a -f /boot/grub/grub.cfg ]; then\nfor disk in $(sysctl -n kern.disks); do\ngpart show ${disk} | grep -q bios-boot && /usr/local/sbin/grub-install --modules="zfs part_gpt" /dev/${disk}\ndone\nfi'}, 'prefix': '/', 'comment': '"FreeNAS OS"', 'requires-reboot': True, 'maintainer': 'dev@ixsystems.com', 'licenselogic': 'single', 'origin': 'freenas/os', 'desc': '"FreeNAS OS (derived from FreeBSD)"', 'licenses': '[BSD, MIT, GPL]'}
++ PKG_FILES=/usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-d803767-cee4950.tgz
++ /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.w -T build/Templates/freebsd-pkgdb -N freebsd-pkgdb -V 9.3-MASTER-d803767-cee4950 /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-d803767-cee4950.tgz
+manifest = {'comment': '"FreeBSD pkg db files"', 'licenses': '[BSD, MIT, GPL]', 'origin': 'freenas/os', 'www': 'http://www.freenas.org/', 'prefix': '/', 'desc': '"FreeNAS OS (derived from FreeBSD)"', 'name': 'freebsd-pkgdb', 'arch': 'freebsd:9:x86:64', 'licenselogic': 'single', 'maintainer': 'dev@ixsystems.com', 'requires-reboot': False}
++ PKG_FILES='/usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-d803767-cee4950.tgz'
++ /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.w -T build/Templates/freenasUI -N FreeNASUI -V 9.3-MASTER-d803767-cee4950 /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-d803767-cee4950.tgz
+manifest = {'maintainer': 'dev@ixsystems.com', 'scripts': {'post-upgrade': '\ntouch /tmp/.sqlite3_ha_skip\nyes | /usr/local/bin/python /usr/local/www/freenasUI/manage.py migrate --all --merge --delete-ghost-migrations > "/data/update.failed" 2>&1 && rm -f /data/update.failed\nrm -f /tmp/.sqlite3_ha_skip'}, 'name': 'freenasUI', 'www': 'http://www.freenas.org/', 'prefix': '/', 'origin': 'freenas/ui', 'comment': '"FreeNAS User Interface"', 'desc': '"FreeNAS UI (django-based)"', 'licenselogic': 'single', 'arch': 'freebsd:9:x86:64', 'ix-package-services': {'Restart': {'WebUI': True}, 'Services': ['WebUI']}, 'requires-reboot': False, 'licenses': '[BSD, MIT, GPL]'}
++ PKG_FILES='/usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-d803767-cee4950.tgz'
++ /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools -T build/Templates/freenas-pkg-tools -N freenas-pkg-tools -V 9.3-MASTER-7c05011 /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freenas-pkg-tools-9.3-MASTER-7c05011.tgz
+manifest = {'comment': '"FreeNAS Package Tools"', 'name': 'freenas-pkg-tools', 'prefix': '/', 'licenses': '[BSD]', 'arch': 'freebsd:9:x86:64', 'maintainer': 'dev@ixsystems.com', 'requires-reboot': False, 'desc': '"FreeNAS Package tools"', 'licenselogic': 'single', 'www': 'http://www.freenas.org/', 'origin': 'freenas/pkg-tools', 'scripts': {'post-upgrade': '\ntrue'}}
++ PKG_FILES='/usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freenas-pkg-tools-9.3-MASTER-7c05011.tgz'
++ /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_package -R /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.docs -T build/Templates/docs -N docs -V 9.3-MASTER-7c05011 /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/docs-9.3-MASTER-7c05011.tgz
+manifest = {'www': 'http://www.freenas.org/', 'name': 'docs', 'prefix': '/', 'desc': '"Release documentation"', 'comment': '"Release documentation"', 'arch': 'freebsd:9:x86:64', 'licenses': '[BSD, MIT, GPL]', 'licenselogic': 'single', 'requires-reboot': False, 'origin': 'freenas/os', 'maintainer': 'dev@ixsystems.com'}
++ PKG_FILES='/usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freenas-pkg-tools-9.3-MASTER-7c05011.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/docs-9.3-MASTER-7c05011.tgz'
++ [ -n FreeNAS-9.3-MASTER-201507082130 ]
++ seq_arg='-S FreeNAS-9.3-MASTER-201507082130'
++ date +%s
++ env PYTHONPATH=/usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/lib /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.pkgtools/usr/local/bin/create_manifest -P /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages -o /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/FreeNAS-FreeNAS-9.3-MASTER-201507082130 -R FreeNAS-9.3-MASTER -S FreeNAS-9.3-MASTER-201507082130 -T FreeNAS-9.3-MASTER -t 1436391695 /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/base-os-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freebsd-pkgdb-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/FreeNASUI-9.3-MASTER-d803767-cee4950.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/freenas-pkg-tools-9.3-MASTER-7c05011.tgz /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages/docs-9.3-MASTER-7c05011.tgz
+rr = True
+ix-package-services is not in pkg_json
+rr = False
+services = None
+rr = False
+services = {u'Services': [u'WebUI'], u'Restart': {u'WebUI': True}}
+Restart Services = [u'WebUI']
+ix-package-services is not in pkg_json
+rr = False
+services = None
+ix-package-services is not in pkg_json
+rr = False
+services = None
++ ln -sf FreeNAS-FreeNAS-9.3-MASTER-201507082130 /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/FreeNAS-MANIFEST
++ set +x
+00:08:52 ## Creating ISO image
+00:08:52 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.cd_iso
+00:09:24 ## Compressing GUI upgrade image
+00:09:24 ### log: /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.gui_image
+00:11:35 # NanoBSD stuff FreeNAS-9.3-MASTER-201507082130 completed
+FreeNAS  build PASSED
+
+Script done on Wed Jul  8 14:44:21 2015
+Script started on Wed Jul  8 14:44:21 2015
+command: build/create_release_distribution.sh
++ set -e
++ OBJ=objs
++ STAGEDIR=FreeNAS-9.3-MASTER-201507082130
++ TARGET=/usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64
++ mkdir -p /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64
++ tfile=/usr/home/lilit/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz
++ [ -f /usr/home/lilit/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz ]
++ mv /usr/home/lilit/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64
++ mv /usr/home/lilit/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz.sha256.txt /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64
++ tfile=/usr/home/lilit/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507082130.iso
++ [ -f /usr/home/lilit/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507082130.iso ]
++ mv /usr/home/lilit/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507082130.iso /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64
++ mv /usr/home/lilit/bld/freenas/objs/os-base/amd64/FreeNAS-9.3-MASTER-201507082130.iso.sha256.txt /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64
++ sed -e s/VERSION/9.3-MASTER/ -e s/BUILD_TIMESTAMP/201507082130/
++ cp /usr/home/lilit/bld/freenas/FreeBSD/repo-manifest /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64/../MANIFEST
++ echo 'Creating the JSON Checksums file...'
+Creating the JSON Checksums file...
++ create_json /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130 /usr/home/lilit/bld/freenas
++ local dpath=/usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130
++ local milestone=
++ echo 9.3-MASTER
++ cut -d- -f1
++ local freenas_version=9.3
++ echo 9.3-MASTER
++ sed -n -e 's/^.*-//p'
++ local buildtype=MASTER
++ [ MASTER = CURRENT ]
++ [ 9.3 = 10.1 ]
++ local arch
++ local ftype
++ local hash
++ local filename
++ local json_file=/usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/CHECKSUMS.json
++ [ MASTER = RELEASE -o MASTER = BETA ]
++ [ -z ]
++ url=http://download.freenas.org/nightlies/FreeNAS-9.3-MASTER/201507082130/
++ cat
++ echo 9.3-MASTER
++ sed 's/ *-.*//'
++ sha256 /usr/home/lilit/bld/freenas/ReleaseNotes
++ sed -n -e 's/^.*= //p'
++ sha256 /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/MANIFEST
++ sed -n -e 's/^.*= //p'
++ sha256 /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/README
++ sed -n -e 's/^.*= //p'
++ find /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130 -type d -mindepth 1 -maxdepth 1
++ local archdirs=/usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64
++ basename /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64
++ arch=x64
++ find /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64 -type f -name '*.iso'
++ iso=/usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64/FreeNAS-9.3-MASTER-201507082130.iso
++ find /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64 -type f -name '*.usb'
++ usb=''
++ find /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64 -type f -name '*.GUI_Upgrade.txz'
++ gui_upgrade=/usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64/FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz
++ find /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64 -type f -name '*.img'
++ img=''
++ cat
++ [ ! -z /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64/FreeNAS-9.3-MASTER-201507082130.iso ]
++ basename /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64/FreeNAS-9.3-MASTER-201507082130.iso
++ filename=FreeNAS-9.3-MASTER-201507082130.iso
++ cat /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64/FreeNAS-9.3-MASTER-201507082130.iso.sha256.txt
++ sed -n -e 's/^.*= //p'
++ hash=b3dee881b7e8d4891aa2a6bb8d0054c47dae8a6eb20a6de1b04e648c9ada62db
++ json_block /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/CHECKSUMS.json FreeNAS-9.3-MASTER-201507082130.iso iso b3dee881b7e8d4891aa2a6bb8d0054c47dae8a6eb20a6de1b04e648c9ada62db http://download.freenas.org/nightlies/FreeNAS-9.3-MASTER/201507082130/x64
++ cat
++ [ ! -z '' ]
++ [ ! -z /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64/FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz ]
++ basename /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64/FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz
++ filename=FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz
++ cat /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/x64/FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz.sha256.txt
++ sed -n -e 's/^.*= //p'
++ hash=36e3fd945146e19f59419b839b673b69d8387ffe900097ee8a7b171447134d19
++ json_block /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/CHECKSUMS.json FreeNAS-9.3-MASTER-201507082130.GUI_Upgrade.txz gui_upgrade 36e3fd945146e19f59419b839b673b69d8387ffe900097ee8a7b171447134d19 http://download.freenas.org/nightlies/FreeNAS-9.3-MASTER/201507082130/x64
++ cat
++ [ ! -z '' ]
++ sed -i '' '$s/,$//' /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/CHECKSUMS.json
++ cat
++ sed -i '' '$s/,$//' /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130/CHECKSUMS.json
++ cat
+
+Script done on Wed Jul  8 14:44:22 2015
+Script started on Wed Jul  8 14:44:22 2015
+command: build/create_upgrade_distribution.sh
++ set -e
++ mkdir -p /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130-Update
++ cp /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/FreeNAS-MANIFEST /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130-Update/FreeNAS-MANIFEST
++ cp -R /usr/home/lilit/bld/freenas/objs/os-base/amd64/_.packages/Packages /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130-Update
++ test -f ReleaseNotes
++ cp ReleaseNotes /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130-Update
++ test -f ChangeLog
++ test -f NOTICE
++ [ -n '' -a -d '' ]
++ [ -n '' ]
++ [ -n '' ]
++ rm -f /usr/home/lilit/bld/freenas/objs/LATEST
++ ln -sf /usr/home/lilit/bld/freenas/objs/FreeNAS-9.3-MASTER-201507082130-Update /usr/home/lilit/bld/freenas/objs/LATEST
++ exit 0
+
+Script done on Wed Jul  8 14:44:24 2015
