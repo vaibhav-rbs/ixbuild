@@ -79,35 +79,30 @@ def sh(command, halt=False):
     else:
         return err, out
 
-def report(log, info):
 
+def report(log, info):
+    '''
+    Old not used
+    '''
     with open(log, 'a+') as f:
         writeline(info)	
 
+
 def printlist(lst):
     '''
-    Just pretty print
+    Pretty print
     '''
     for l in lst:
         print l
 
 
-
-def errorNOTUSED(line):
-    '''
-    raise exception and print out message
-    TODO: rewrite 
-    '''
-     
-    raise Exception(line)
-
-
 def nmblookup(hostname):
      '''
      useful utility to get ip address
-     for example
+     for example, does not work...
      '''   
 
      command = 'nmblookup ' + hostname
+
 
 

@@ -12,36 +12,44 @@ import api_list as call
 import unitbase
 
 
-
-
-
 class TestSnmp(unitbase.TestBase):
     
     def setUp(self):
         super(TestSnmp, self).setUp()
-        
+        self.snmp = self.getsnmp()
         self.setSNMPService()
 
     def setSNMPService(self):
-        if not autils.isServiceSet(self.host, 'snmp', self.user, self.password):
-            
-            payload =   {
+        payload =   {
                               "snmp_options": "",
                               "snmp_community": "public",
                               "snmp_traps": "false",
                               "snmp_contact": "",
                               "snmp_location": "",
                               "id": 1
-                        }
-            url = hutils.make_url(self.host, 'services/snmp')
+                    }
+         # this activates the service           
+        if not autils.isServiceSet(self.host, 'snmp', self.user, self.password):
+            autils.setService(self.host, 'snmp', self.user, self.password)             
+        # now set the way we need it
+        url = hutils.make_url(self.host, 'services/services/snmp/')
             
-            res, text = call.post(url, self.auth, dataset = payload)
+        res, text = call.put(url, self.auth, dataset = payload)
             
         
+    def getsnmp(self):
+        if os.uname()[0] == 'FreeBSD':
+            return 'bsnmpwalk'
+        if os.uname()[0] == 'Linux':
+            return 'snmpwalk'       
 
+
+    @unittest.skipIf(os.uname()[0] == 'FreeBSD',
+                     "snmp utility not on FreeBSD")
     def test_snmp_1(self):
         
-        command = 'snmpwalk -v 2c -c public -t ' + self.host + 'FREENAS-MIB:zfsFilesystemAvailableKB'
+        command = self.snmp + ' -v 2c -C public -t ' + self.host + ' FREENAS-MIB:zfsFilesystemAvailableKB'
+        print command
         err, out = hutils.sh(command, halt = True)
         
         if err:
@@ -50,6 +58,7 @@ class TestSnmp(unitbase.TestBase):
 
     def test_snmp_2(self):
         pass
+
 
 if __name__ == '__main__':
 

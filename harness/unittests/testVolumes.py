@@ -12,25 +12,19 @@ import api_list as call
 import unitbase
 
 
-logger = logging.getLogger(__name__)
-
-
 
 class TestVolume(unitbase.TestBase):
-
 
     logger = logging.getLogger()
 
     def setUp(self):
-        print dir()
         self.user = 'testuser'
         self.sharename = 'testshare'
         self.userpass = self.password         # just for symplicity
         super(TestVolume, self).setUp()
-        #self.setCIFSService()
-        #self.createUser()
         self.createVolume()
 
+    '''
 
     def setCIFSService(self):
         if not autils.isServiceSet(self.host, 'cifs', self.user, self.password):
@@ -58,7 +52,7 @@ class TestVolume(unitbase.TestBase):
         if not found:        
             res, text = call.post(url, self.auth, dataset = payload)
         
-
+    '''
 
     def createVolume(self):
         payload = {

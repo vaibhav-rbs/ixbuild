@@ -68,7 +68,7 @@ API_LIST = {
     
     'network' : [ 'globalconfiguration', 'interface', 'interface/id', 'vlan', 'vlan/id', 'lagg', 'staticroute', ],
     
-    'services' : ['services', 'services/cifs', 'afp', 'cifs', 'domaincontroller', 
+    'services' : ['services', 'snmp', 'services/cifs', 'afp', 'cifs', 'domaincontroller', 
     'dynamicdns', 'ftp', 'iscsi/globalconfiguration', 'iscsi/extent', 'iscsi/extent/id', 
     'iscsi/authorizedinitiator', 'iscsi/authcredential', 
     'iscsi/authcredential/id', 'iscsi/target', 'iscsi/targettoextent','iscsi/targettoextent/id',
@@ -115,11 +115,11 @@ doNotPut = []
 
 
 
-def put(url, auth, dataset, log_status, log_out):
+def put(url, auth, dataset, log_status=sys.stdout, log_out=sys.stdout):
     '''
-    call put()
+    call python version of REST put()
     '''
-
+    callResult = False
     print '\n **** Updating ' + url + ' with dataset: ' + str(dataset)
     
     print " **** Calling PUT, " + str(url) + "  with dataset " + str(dataset)	
@@ -128,13 +128,14 @@ def put(url, auth, dataset, log_status, log_out):
     if r.status_code == codes['put']:
         print 'Update ' + url + ' --> Succeeded!'
         result = json.loads(r.text)
-
+        callResult = True
         print json.dumps(result, indent = 4, sort_keys = True)
     else:
-        print r.text    
+        #print r.text    
         print 'Update ' + url + ' --> Failed with status: ' + str(r.status_code)
         print 'With reason ' + str(r.reason)
-    return r.status_code, r.text
+
+    return callResult, r.text
 
 
 
@@ -184,24 +185,22 @@ def get(url, auth, dataset = None, log_status = sys.stdout, log_out = sys.stdout
     get existing value of setting
     dataset is ignored
     '''
-    print '\n****   Getting ' + url + ' ......'
+    #print '\n****   Getting ' + url + ' ......'
+    #logging.info('\n****   Getting ' + url + '....')
     r = requests.get(url=url, auth=auth)
-    
-    result = '' 
-    	
+    text = '' 
+    callResult = False	
     if r.status_code == 200:
-        	  
+      	callResult = True  
         try:
-            result = json.loads(r.text)
+            text = json.loads(r.text)
             #f_out.write('\n' + '#' + url + '\n')
             logging.info('\n' + '#' + url + '\n')
 
             logging.debug('Get ' + url + ' --> Succeeded!')
-            # send result to file
-            
             #json.dump(result, f_out, indent = 4, sort_keys = True)
 	     
-            logging.info(json.dumps(result, indent=4, sort_keys=True))    
+            logging.info(json.dumps(text, indent=4, sort_keys=True))    
             logging.error('\n **** Get ' + url + ': ' + str(r.status_code) + ' succeeded!\n')  
 
         except ValueError, data:
@@ -214,7 +213,7 @@ def get(url, auth, dataset = None, log_status = sys.stdout, log_out = sys.stdout
     else:
         logging.error( '****  Get ' + url + ' --> Failed with code ' + str(r.status_code) + ' for reason ' + str(r.reason))
     
-    return r.status_code, result 
+    return callResult, text
 
 
     	

@@ -1,10 +1,49 @@
 import json
 import requests
 import commands
+import logging
 
 import api_list as call
+from api_list import API_LIST
 import hutils
 
+#############################
+##  input info form api calls
+#############################
+
+def make_common_url(name):
+    '''
+    Used to create URL string
+    for using in API calls
+    '''
+
+    common_url = "http://%s/api/v1.0/" % name
+    return common_url
+
+def make_url(server, api):
+    '''
+    Returns whole url for server and api name
+    '''
+    url = "http://%s/api/v1.0/%s/" % (server, api)
+    return url
+
+
+def make_auth(user, passw):
+    '''
+      
+    '''
+    auth = (user,passw)
+    return auth
+
+
+def headers():
+    headers = {'Content-Type':'application/json'}   
+    return headers
+
+
+######################
+##  SERVICES Menu calls
+######################
 
 def isServiceSet(hostname, serviceName, user, password):
 
@@ -13,13 +52,31 @@ def isServiceSet(hostname, serviceName, user, password):
     result, servicelist = call.get(url, auth)
     for service in servicelist:
         if service['srv_service'] == serviceName:
-            #print service['srv_service']
-            #print service['srv_enable']
-            if service['srv_enable'] == True:
-                return True
             
-    return False    
+            if service['srv_enable'] == True:
+                logging.debug(serviceName + 'service is set ')
+                return True
+    return False  
 
+
+def setService(hostname, serviceName, user, password):
+    servicenames = API_LIST['services']
+    if serviceName not in servicenames:
+        logging.error('No such service ' + serviceName)
+        raise Exception ("No service " + serviceName)
+    url = hutils.make_url(hostname, 'services/services/')
+    auth = hutils.make_auth(user, password)
+    payload = {
+          "srv_service": serviceName,
+          "srv_enable": true
+          }
+    result, servicelist = call.put(url, auth, payload)
+    logging.debug("Activating service " + serviceName + ' ' + str(result))
+     
+
+##############################
+## Account menu calls
+##############################
 
 def userExists(server, username, passw):
     '''
@@ -34,6 +91,10 @@ def userExists(server, username, passw):
     
     return False  
 
+
+##############################
+##  Storage menu calls
+##############################
 
 def volumeExists(server, username, auth, volume):
     '''
@@ -60,6 +121,10 @@ def datasetExists(host, user, auth, volumename, datasetname):
     return False        
 
 
+###########################
+## Sharing menu calls
+###########################
+
 def cifsShareExists(host, user, auth, sharename):
     url = hutils.make_url(host, 'sharing/cifs')
     res, text = call.get(url, (user,auth))
@@ -69,7 +134,13 @@ def cifsShareExists(host, user, auth, sharename):
 
     return False          
 
-###########################
+
+
+
+
+##############################
+## move to utils.py
+##############################
 
 def reboot(hostname, user, passwd):
     '''

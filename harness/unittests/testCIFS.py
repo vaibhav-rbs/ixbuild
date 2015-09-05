@@ -15,19 +15,15 @@ from autils import (
 import api_list as call
 import unitbase
 
-#TODO: logging, utils, etc
+#TODO: logging, utils, skipping, test runs
 
-
-logger = logging.getLogger(__name__)
 
 class TestCIFS(unitbase.TestBase):
     
     importantFile = '/usr/local/etc/smb4.conf'
-
-    logger = logging.getLogger()
-
+    
     def setUp(self):
-        # add stuff after this call
+        # parent first 
         super(TestCIFS, self).setUp()
 
         # names 
@@ -39,7 +35,7 @@ class TestCIFS(unitbase.TestBase):
 
         self.userpass = self.password         # use same for everything
         
-        # setup operations
+        # setup sequence
         self.setCIFSService()
         self.createUser()
         self.createStorage()
@@ -49,14 +45,16 @@ class TestCIFS(unitbase.TestBase):
 
     def setCIFSService(self):
         '''
-        TODO: move to general use once realize the best payload
+        TODO: move to general use once finalize most common payload
         '''
         if not isServiceSet(self.host, 'cifs', self.user, self.password):
             
-            payload =   { "cifs_srv_hostlookup": false  }
+            payload =   { "cifs_srv_guest": self.user,
+                          "cifs_srv_loglevel": "3", 
+                        }
             url = hutils.make_url(self.host, 'services/cifs')
             
-            res, text = call.post(url, self.auth, dataset = payload)
+            res, text = call.put(url, self.auth, dataset = payload)
             
     
     def createUser(self):
@@ -72,17 +70,17 @@ class TestCIFS(unitbase.TestBase):
         if not self.userExists(self.testuser):
             url = hutils.make_url(self.host, 'account/users')
             res, text = call.post(url, self.auth, dataset = payload)
-            
+            self.log.info('User ' + self.testuser + ' created') 
       
 
     def userExists(self, bsdusr_username):
         '''
-        TODO: Use one from autils
+        TODO: Use from autils
         '''
         url = hutils.make_url(self.host, 'account/users')
         res, text = call.get(url, self.auth)
         for user in text:
-            #print user['bsdusr_username']
+            
             if user['bsdusr_username'] == bsdusr_username:
                 return True
 
@@ -102,7 +100,7 @@ class TestCIFS(unitbase.TestBase):
  
         if not volumeExists(self.host, self.user, self.auth, self.volumename):   
             res, text = call.post(url, self.auth, payload)
-        
+            self.log.info('Volume ' + self.volumename + ' created')
 
     def createDataset(self):
 
@@ -112,7 +110,7 @@ class TestCIFS(unitbase.TestBase):
         if not datasetExists(self.host, self.user, self.password, self.volumename, self.datasetname):
             
             res, text = call.post(url, self.auth, payload)
-         
+            self.log('Dataset ' + self.datasetname + ' created')
 
     def createCifsShare(self):
 
@@ -127,7 +125,7 @@ class TestCIFS(unitbase.TestBase):
         url = hutils.make_url(self.host, 'sharing/cifs')
         if not cifsShareExists(self.host, self.user, self.password, self.sharename):
             res, text = call.post(url, self.auth, payload)     
-
+            self.log.info('Cifs share ' + self.sharename + ' created') 
             
 
     def test_smbclient_1(self):
@@ -139,16 +137,17 @@ class TestCIFS(unitbase.TestBase):
         # create cifs share
         # command = "smbclient //10.5.0.171/tomsshare -U 'VM-IP171\tomford' -password abcd1234"
         command = "smbclient //" + self.host + "/" + self.sharename +  " -U '" + self.host + "\\" + self.testuser +"' + -password " + self.password
-        print command
+        self.log.info('Running ' + command + '...')
         err, out = hutils.sh(command, halt = True)
         # we are in the client now
+        err, out = hutils.sh('ls')
         err, out = hutils.sh('showconnect', halt=True)
-        
+        self.log.error(err)
         err, out = hutils.sh('exit')
 
         if err:
-          logging.error(err)
-        logging.info(out)  
+          self.log.error(err)
+        self.log.info(out)  
 
     def test_cifs_SMB2(self):
         '''
