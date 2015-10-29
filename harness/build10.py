@@ -260,6 +260,7 @@ class ParseResults:
         self.failure_phrase = 'ERROR: '
         # if this is found, supposedly everything went well
         self.success_phrase = 'build succeeded, ' 
+        self.iso_image_phrase = 'ISO image produced'
         self.port_start_phrase = 'Starting jail ja-p'
         self.build_environment_phrase = 'Build environment is OK'
 
@@ -330,7 +331,8 @@ class ParseResults:
                     stage['result'] = True
                 self.build_result = True    
                 print "Looks like build has gone to the end!!!" 
-                   
+            elif line.count(self.iso_image_phrase):
+                self.build_result = True       
         return result                 
 
     def parseFailure(self, lines, index):
@@ -366,6 +368,7 @@ class ParseResults:
 
 
     def toHTML(self):
+        os.chdir(self.html_output)
         # Top HTML document
         doc = HTMLgen.SimpleDocument(title='index')
 
@@ -386,24 +389,25 @@ class ParseResults:
             if self.failed_port_logs:
                 for log in self.failed_port_logs:
                     newpath = self.file_to_html(log)
-                    href = HTMLgen.Href(newpath, HTMLgen.Paragraph(HTMLgen.Text(log)))
+                    href = HTMLgen.Href(os.path.split(newpath)[1], HTMLgen.Paragraph(HTMLgen.Text(log)))
                     doc.append(HTMLgen.Paragraph(href))
                     
             else:
-                href = HTMLgen.Href(self.faulty_log, HTMLgen.Text("Top failing log: " + str(self.faulty_log)))
+                print self.faulty_log
+                href = HTMLgen.Href(os.path.split(self.faulty_log)[1], HTMLgen.Text("Top failing log: " + str(self.faulty_log)))
                 doc.append(HTMLgen.Paragraph(href))
 
-        #ERROR MESSAGE
-        doc_message = HTMLgen.SimpleDocument(title='error snippet')
-        lst = HTMLgen.List()
-        for line in self.error_to_html:
-            lst.append(line)
-        doc_message.append(lst)
-        doc_message.write(self.html_error)
+            #ERROR MESSAGE
+            doc_message = HTMLgen.SimpleDocument(title='error snippet')
+            lst = HTMLgen.List()
+            for line in self.error_to_html:
+                lst.append(line)
+            doc_message.append(lst)
+            doc_message.write(self.html_error)
         
-        # reference from main doc
-        href = HTMLgen.Href(self.html_error, HTMLgen.Text("Error Message in " + self.buildlog ))    
-        doc.append(href)
+            # reference from main doc
+            href = HTMLgen.Href(os.path.split(self.html_error)[1], HTMLgen.Text("Error Message in " + self.buildlog ))    
+            doc.append(href)
 
         doc.append(HTMLgen.Paragraph('Build logs:'))
         #print self.collected_logs
@@ -413,7 +417,7 @@ class ParseResults:
                 log = log.replace('storage', 'tmp')
             if os.path.exists(log):
                 newpath = self.file_to_html(log)
-                href = HTMLgen.Href(newpath, HTMLgen.Paragraph(HTMLgen.Text(log)))
+                href = HTMLgen.Href(os.path.split(newpath)[1], HTMLgen.Paragraph(HTMLgen.Text(log)))
                 doc.append(href)
        
         # commit to log
@@ -445,7 +449,8 @@ class ParseResults:
         doc = HTMLgen.SimpleDocument(title=f_path)
         lst = HTMLgen.List()
         # TEMPORARY
-        f_path = f_path.replace('storage', 'tmp')
+        
+        #f_path = f_path.replace('storage', 'tmp')
         if os.path.exists(f_path):
             for line in open(f_path, 'r').readlines():
                 lst.append(line)
