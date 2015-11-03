@@ -1,4 +1,5 @@
 import os
+import sys
 import re
 import time
 import logging
@@ -377,6 +378,8 @@ class ParseResults:
         doc.append(HTMLgen.Paragraph(text))
         text = HTMLgen.Text('Build date: ' + str(time.strftime("%c")))
         doc.append(HTMLgen.Paragraph(text)) 
+               
+        buildlog = self.file_to_html(self.buildlog) 
 
         # FAILING LOGS
         if not self.build_result:
@@ -393,10 +396,16 @@ class ParseResults:
                     doc.append(HTMLgen.Paragraph(href))
                     
             else:
-                print self.faulty_log
-                href = HTMLgen.Href(os.path.split(self.faulty_log)[1], HTMLgen.Text("Top failing log: " + str(self.faulty_log)))
-                doc.append(HTMLgen.Paragraph(href))
-
+                if self.faulty_log and os.path.exists(self.faulty_log):
+                    # maybe top log has the error
+                    newpath = self.file_to_html(self.faulty_log)
+                    href = HTMLgen.Href(os.path.split(newpath)[1], HTMLgen.Text("Top failing log: " + str(self.faulty_log)))
+                    doc.append(HTMLgen.Paragraph(href))
+                else:
+                    print 'No faulty log found,'
+                       
+                    href = HTMLgen.Href(os.path.split(buildlog)[1], HTMLgen.Text("Top failing log: " + str(self.buildlog)))
+                    doc.append(HTMLgen.Paragraph(href))
             #ERROR MESSAGE
             doc_message = HTMLgen.SimpleDocument(title='error snippet')
             lst = HTMLgen.List()
@@ -507,6 +516,7 @@ def main():
     For testing 
     sync, build, package, report
     '''
+    result = True
     argparse.add_option(
         '-l', '--location',  
         type = "string",
@@ -528,14 +538,26 @@ def main():
         default = False,
         help='Clean build, default: %default')
     args, rest = argparse.parse_args()
-    bld = ParseResults(args.location, args.html_logs, args.debug)
-    result = bld.parse()
-    if args.debug:
-        bld.prettyPrint()
-    bld.toHTML()
-    print 'OVERALL RESULT'
-    print result
-    return result
+    try:
+        bld = ParseResults(args.location, args.html_logs, args.debug)
+        result = bld.parse()
+        if args.debug:
+            bld.prettyPrint()
+        bld.toHTML()
+        print 'PARSE RESULT'
+        print result
+        # TODO: proper returns
+        if result == True:
+            sys.exit(0)
+        else:
+            sys.exit(-1) 
+    except Exception, data:
+        import traceback
+        traceback.print_exc()
+        print data
+        sys.exit(-1)
+
+
 
 
 if __name__ == '__main__':
