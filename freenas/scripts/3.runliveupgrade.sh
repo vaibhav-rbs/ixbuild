@@ -25,6 +25,10 @@ else
   FLAVOR="FREENAS"
 fi
 
+echo "LIVEHOST is $LIVEHOST"
+echo "LIVEUSER is $LIVEUSER"
+echo "LIVEPASS is $LIVEPASS"
+
 # Source our resty / jsawk functions
 . ${PROGDIR}/../utils/resty -W "http://${LIVEHOST}:80/api/v1.0" -H "Accept: application/json" -H "Content-Type: application/json" -u ${LIVEUSER}:${LIVEPASS}
 
