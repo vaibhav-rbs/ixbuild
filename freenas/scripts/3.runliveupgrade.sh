@@ -50,6 +50,7 @@ if [ "$FLAVOR" = "FREENAS" ] ; then
   check_rest_response "200 OK"
 
   # Do the update now
+  echo "LH is $LIVEHOST"
   echo_test_title "Performing upgrade of system"
   rest_request "POST" "/system/update/update/" "{}"
   check_rest_response "200 OK"
