@@ -105,8 +105,11 @@ setup_usr_uzip() {
     # Figure out disk size and set up a vnode
     UFSFILE=${PDESTDIR9}/uzip/usr.ufs
     USRMNT=${PDESTDIR9}/usrmnt
+    sync
     DIRSIZE=$(($(du -kd 0 | cut -f 1)))
-    FSSIZE=$(($DIRSIZE + $DIRSIZE + 500))
+    echo "DIRSIZE: $DIRSIZE"
+    FSSIZE=$(($DIRSIZE + $DIRSIZE + $DIRSIZE))
+    echo "FSSIZE: $FSSIZE"
     rc_halt "dd if=/dev/zero of=${UFSFILE} bs=1k count=${FSSIZE}"
 
     USRDEVICE=/dev/$(mdconfig -a -t vnode -f ${UFSFILE})
@@ -116,10 +119,14 @@ setup_usr_uzip() {
 
     # Now copy the usr filesystem
     rc_halt "cd ${PDESTDIR9}/usr"
-    find . -print -depth 2>/dev/null | cpio -dump -v ${USRMNT} 2>/dev/null
+    find . -print -depth 2>/dev/null | cpio -dump -v ${USRMNT}
+    if [ $? -ne 0 ] ; then
+      echo "WARNING: cpio error!"
+    fi
 
     # Remove old usrmnt and remount
-    sleep 3
+    sync
+    sleep 10
     rc_halt "umount -f ${USRDEVICE}"
     rc_halt "cd ${PDESTDIR9}/"
     rm -rf ${PDESTDIR9}/usr 2>/dev/null
@@ -135,17 +142,17 @@ setup_usr_uzip() {
 
     rc_halt "cd ${PDESTDIR9}/"
 	    
-    echo "Filling the uncompressed fs with zeros to compress better"
-    echo "Don't worry if you see a 'filesystem full' message here"
-    zerofile=$(env TMPDIR=${PDESTDIR9}/usr mktemp -t zero)
-    dd if=/dev/zero of=${zerofile} >/dev/null 2>/dev/null
-    rm ${zerofile}
+    #echo "Filling the uncompressed fs with zeros to compress better"
+    #echo "Don't worry if you see a 'filesystem full' message here"
+    #zerofile=$(env TMPDIR=${PDESTDIR9}/usr mktemp -t zero)
+    #dd if=/dev/zero of=${zerofile} >/dev/null 2>/dev/null
+    #rm ${zerofile}
     set -e
 
     umount_md_devices ${DEVICES}
     trap "" INT
     echo "Compressing with uzip..."
-    rc_halt "uzip ${PDESTDIR9}/uzip/usr.ufs ${PDESTDIR9}/uzip/usr.uzip" >/dev/null 2>/dev/null
+    rc_halt "uzip ${PDESTDIR9}/uzip/usr.ufs ${PDESTDIR9}/uzip/usr.uzip"
     md5 -q ${PDESTDIR9}/uzip/usr.uzip > ${PDESTDIR9}/uzip/usr.uzip.md5
 
 }
@@ -192,11 +199,13 @@ rc_halt "${PKGSTATIC} -c ${PDESTDIR9} add /mnt/All/pkg.txz"
 rc_halt "rm ${PKGSTATIC}"
 
 echo '#!/bin/sh
+PATH="${PATH}:/usr/local/bin:/usr/local/sbin"
+export PATH
 cd /mnt/All
 while read pkg
 do
   echo "Adding PACKAGE: $pkg"
-  pkg-static add -f ${pkg} >/tmp/pkg-log 2>/tmp/pkg-log
+  pkg-static add -f ${pkg}
   if [ $? -ne 0 ] ; then
      sleep 5
      echo "FAILED adding: $pkg"
