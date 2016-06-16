@@ -53,6 +53,8 @@ fi
 . functions.sh
 ######################################################
 
+set -x 
+
 case $TYPE in
   world) jenkins_world ;;
    jail) jenkins_jail ;;
