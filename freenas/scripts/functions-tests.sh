@@ -1,3 +1,15 @@
+# Set the default FreeNAS testing IP address
+if [ -z "${FNASTESTIP}" ] ; then
+  FNASTESTIP="192.168.56.100"
+fi 
+export FNASTESTIP
+
+# Default IP4 Pool of addresses
+DEFAULT_IP4POOL="$(grep ^IP4POOL: /ixbuild/build.conf | cut -d' ' -f2)"
+if [ -z "$DEFAULT_IP4POOL" ] ; then
+   DEFAULT_IP4POOL="192.168.0.220"
+fi
+export DEFAULT_IP4POOL
 
 # Log files
 export RESTYOUT=/tmp/resty.out

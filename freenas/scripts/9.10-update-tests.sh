@@ -26,11 +26,6 @@ TESTSET="SMOKE"
 export TESTSET
 
 
-# Set the default FreeNAS testing IP address
-if [ -z "${FNASTESTIP}" ] ; then
-  FNASTESTIP="192.168.56.100"
-fi
-
 # Set the defaults for connecting to the VM
 ip="$FNASTESTIP"
 manualip="NO"
