@@ -30,6 +30,9 @@ ldap_tests() {
   rest_request "PUT" "/directoryservice/ldap/1/" '{ "ldap_basedn": "'${LDAPBASEDN2}'", "ldap_binddn": "'${LDAPBINDDN2}'", "ldap_bindpw": "'${LDAPBINDPASSWORD2}'", "ldap_netbiosname_a": "'${BRIDGEHOST}'", "ldap_hostname": "'${LDAPHOSTNAME2}'", "ldap_has_samba_schema": true, "ldap_enable": true }'
   check_rest_response "200 OK"
 
+  # Set auxilary parameters to allow mount_smbfs to work with ldap
+  PUT /services/cifs/ '{ "cifs_srv_smb_options": "lanman auth = yes\nntlm auth = yes \nraw NTLMv2 auth = yes" }'
+
   # Check LDAP
   echo_test_title "Checking LDAP.."
   rest_request GET "/directoryservice/ldap/"
