@@ -124,7 +124,7 @@ if [ -d "${FNASBDIR}" ]; then
   rc_halt "ln -fs ${FNASBDIR} ${FNASSRC}"
   git_fnas_up "${FNASSRC}" "${FNASSRC}"
 else
-  rc_halt "git clone --depth=1 -b ${GITFNASBRANCH} ${GITFNASURL} ${FNASBDIR}"
+  rc_halt "git clone -b ${GITFNASBRANCH} ${GITFNASURL} ${FNASBDIR}"
   rc_halt "ln -fs ${FNASBDIR} ${FNASSRC}"
   git_fnas_up "${FNASSRC}" "${FNASSRC}"
 fi
