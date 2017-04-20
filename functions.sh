@@ -44,7 +44,7 @@ create_workdir()
 
   MASTERWRKDIR=`mktemp -d /tmp/build/XXXX` 
 
-  cocmd="git clone -b ${IXBUILDBRANCH} ${GITREPO} ${MASTERWRKDIR}"
+  cocmd="git clone --depth=1 -b ${IXBUILDBRANCH} ${GITREPO} ${MASTERWRKDIR}"
   echo "Cloning with: $cocmd"
   $cocmd
   if [ $? -ne 0 ] ; then exit_clean; fi
@@ -631,7 +631,7 @@ jenkins_truenas_docs()
 
   DDIR=`mktemp -d /tmp/build/XXXX` 
 
-  git clone  https://github.com/freenas/freenas-docs ${DDIR}
+  git clone --depth=1 https://github.com/freenas/freenas-docs ${DDIR}
   if [ $? -ne 0 ] ; then rm -rf ${DDIR} ; exit 1 ; fi
 
   cd ${DDIR}/userguide
@@ -672,7 +672,7 @@ jenkins_freenas_docs()
 
   DDIR=`mktemp -d /tmp/build/XXXX` 
 
-  git clone https://github.com/freenas/freenas-docs ${DDIR}
+  git clone --depth=1 https://github.com/freenas/freenas-docs ${DDIR}
   if [ $? -ne 0 ] ; then rm -rf ${DDIR} ; exit 1 ; fi
 
   cd ${DDIR}/userguide
@@ -704,7 +704,7 @@ jenkins_freenas_api()
 
   DDIR=`mktemp -d /tmp/build/XXXX` 
 
-  git clone https://github.com/freenas/freenas ${DDIR}
+  git clone --depth=1 https://github.com/freenas/freenas ${DDIR}
   if [ $? -ne 0 ] ; then rm -rf ${DDIR} ; exit 1 ; fi
 
   cd ${DDIR}/docs/api
@@ -736,7 +736,7 @@ jenkins_sysadm_api()
 
   DDIR=`mktemp -d /tmp/build/XXXX` 
 
-  git clone https://github.com/trueos/sysadm-docs ${DDIR}
+  git clone --depth=1 https://github.com/trueos/sysadm-docs ${DDIR}
   if [ $? -ne 0 ] ; then rm -rf ${DDIR} ; exit 1 ; fi
 
   cd ${DDIR}/api_reference
@@ -767,7 +767,7 @@ jenkins_sysadm_docs()
 
   DDIR=`mktemp -d /tmp/build/XXXX` 
 
-  git clone https://github.com/trueos/sysadm-docs ${DDIR}
+  git clone --depth=1 https://github.com/trueos/sysadm-docs ${DDIR}
   if [ $? -ne 0 ] ; then rm -rf ${DDIR} ; exit 1 ; fi
 
   cd ${DDIR}/client_handbook
@@ -814,7 +814,7 @@ jenkins_trueos_docs()
 
   DDIR=`mktemp -d /tmp/build/XXXX` 
 
-  git clone https://github.com/trueos/trueos-docs ${DDIR}
+  git clone --depth=1 https://github.com/trueos/trueos-docs ${DDIR}
   if [ $? -ne 0 ] ; then rm -rf ${DDIR} ; exit 1 ; fi
 
   cd ${DDIR}/trueos-handbook
@@ -879,7 +879,7 @@ jenkins_trueos_lumina_docs()
 
   DDIR=`mktemp -d /tmp/build/XXXX` 
 
-  git clone https://github.com/trueos/lumina-docs ${DDIR}
+  git clone --depth=1 https://github.com/trueos/lumina-docs ${DDIR}
   if [ $? -ne 0 ] ; then rm -rf ${DDIR} ; exit 1 ; fi
 
   cd ${DDIR}

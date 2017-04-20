@@ -19,7 +19,7 @@ pip install requests
 
 echo "Using API Address: http://${FNASTESTIP}/api/v2.0"
 
-git clone https://www.github.com/freenas/freenas /freenas
+git clone https://www.github.com/freenas/freenas --depth=1 /freenas
 cd /freenas/src/middlewared/middlewared/pytest
 echo [Target] > target.conf
 echo uri = http://${FNASTESTIP} >> target.conf
