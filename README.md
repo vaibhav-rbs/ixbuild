@@ -32,7 +32,7 @@ A system running TrueOS, with at minimum 16GB of memory.
 (Building TrueOS packages in a reasonable time works best with 48GB or more)
 
 Recommended:
-* CPU: 8 Cores or more
+* CPU: 16 Cores or more
 * Memory: 16GB (For FreeNAS) 48GB (For TrueOS)
 * Disk: 20GB (For FreeNAS) 200GB (For TrueOS)
 
